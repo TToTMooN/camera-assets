@@ -23,6 +23,25 @@ center of mass, and inertia remain estimates; imaging parameters are uncalibrate
 
 ## Use the delivered assets
 
+For another Python project, install the lightweight resolver and download only
+the model you need:
+
+```bash
+python -m pip install https://github.com/TToTMooN/camera-assets/releases/download/v0.1.0/camera_assets-0.1.0-py3-none-any.whl
+camera-assets fetch go3s --version v0.1.0
+```
+
+```python
+from camera_assets import get_model
+
+camera = get_model("go3s", version="v0.1.0")  # Offline lookup.
+print(camera.urdf, camera.mjcf, camera.visual)
+```
+
+[Package usage](docs/PACKAGE.md) covers shared caches, local checkouts, pinned
+versions, integrity checks, and calibration handling. Each release also provides
+per-model ZIPs for applications that use other languages.
+
 Copy the entire `models/<id>/` folder into your project and preserve its relative
 paths. `model.json` identifies the visual, URDF, MJCF, and sensor manifest files.
 The GLB embeds its visual materials and textures. URDF and MJCF provide geometry,
@@ -43,8 +62,8 @@ closed or folded, and modular camera configurations are rigid assemblies.
 Run from the repository root with Python 3.11 or later:
 
 ```bash
-git clone https://github.com/TToTMooN/insta360-urdf.git
-cd insta360-urdf
+git clone https://github.com/TToTMooN/camera-assets.git
+cd camera-assets
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt

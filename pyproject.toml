@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=77.0.3", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "camera-assets"
+version = "0.1.0"
+description = "Versioned camera model downloads and offline asset paths for robotics and simulation"
+readme = "docs/PACKAGE.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = []
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering",
+]
+
+[project.urls]
+Repository = "https://github.com/TToTMooN/camera-assets"
+Documentation = "https://github.com/TToTMooN/camera-assets/blob/main/docs/PACKAGE.md"
+Issues = "https://github.com/TToTMooN/camera-assets/issues"
+
+[project.scripts]
+camera-assets = "camera_assets.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["camera_assets*"]
+
+[tool.setuptools.package-data]
+camera_assets = ["catalog.json"]

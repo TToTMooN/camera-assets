@@ -1,0 +1,64 @@
+name: Publish camera asset release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      OPENBLAS_NUM_THREADS: "1"
+      RELEASE_TAG: ${{ github.ref_name }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: python -m pip install -r requirements-sim.txt -r requirements-build.txt
+      - name: Validate the complete library and distribution client
+        run: |
+          python scripts/sync_package_catalog.py --check
+          python scripts/validate.py --model all --no-write
+          python scripts/sensor_manifest.py --model all --check
+          python -m unittest discover -s tests -v
+      - name: Build versioned SDK and model archives
+        run: |
+          python -m build --no-isolation
+          python scripts/verify_package.py dist --version "$RELEASE_TAG"
+          python scripts/package_release.py --version "$RELEASE_TAG" --output "$RUNNER_TEMP/camera-assets-release" --sdk-dist dist
+      - name: Consume every release archive and compile the portable MJCF
+        run: python scripts/verify_release.py "$RUNNER_TEMP/camera-assets-release" --version "$RELEASE_TAG" --compile-mjcf
+      - name: Publish the verified artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          SDK_VERSION="${RELEASE_TAG#v}"
+          cat > "$RUNNER_TEMP/camera-assets-release-notes.md" <<EOF
+          Versioned camera and accessory models for robotics and simulation.
+
+          Install the lightweight Python resolver:
+
+              python -m pip install https://github.com/TToTMooN/camera-assets/releases/download/$RELEASE_TAG/camera_assets-$SDK_VERSION-py3-none-any.whl
+
+          Download a model and resolve its URDF offline:
+
+              camera-assets fetch go3s --version $RELEASE_TAG
+              camera-assets path go3s --version $RELEASE_TAG --format urdf
+
+          Downloads include one runtime ZIP per model, a source distribution,
+          manifest.json, and SHA256SUMS. The Python package has no runtime
+          dependencies; model meshes are downloaded separately and cached across
+          environments. Each model archive is consumed through the SDK and its
+          MJCF compiled before publication.
+
+          See docs/PACKAGE.md in the repository for Python usage, local models,
+          shared caches, and calibration handling. Imaging templates remain
+          uncalibrated; nominal geometry is not a measured optical sensor model.
+          EOF
+          gh release create "$RELEASE_TAG" "$RUNNER_TEMP/camera-assets-release"/* --verify-tag --draft --title "Camera assets $RELEASE_TAG" --notes-file "$RUNNER_TEMP/camera-assets-release-notes.md"
+          gh release edit "$RELEASE_TAG" --draft=false

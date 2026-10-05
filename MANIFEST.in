@@ -1,0 +1,10 @@
+include LICENSE
+include docs/PACKAGE.md
+recursive-include src/camera_assets *.py *.json
+prune models
+prune catalog
+prune references
+prune scripts
+prune tests
+prune .github
+global-exclude __pycache__ *.py[cod] .DS_Store

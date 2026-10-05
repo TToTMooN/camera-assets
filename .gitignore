@@ -4,6 +4,9 @@ __pycache__/
 *.log
 .DS_Store
 *.zip
+build/
+dist/
+*.egg-info/
 # Manufacturer reference imagery stays local; source URL indexes are portable.
 references/**/*.png
 references/**/*.jpg

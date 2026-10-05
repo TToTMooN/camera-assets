@@ -2,7 +2,11 @@ name: Camera asset validation
 
 on:
   push:
+    branches: ["**"]
   pull_request:
+
+permissions:
+  contents: read
 
 jobs:
   camera-assets:
@@ -22,3 +26,36 @@ jobs:
         run: python scripts/sensor_manifest.py --model all --check
       - name: Compile, relocate and simulate every MJCF
         run: python -m unittest discover -s tests -v
+
+  sdk:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            python: "3.10"
+          - os: windows-latest
+            python: "3.11"
+          - os: macos-latest
+            python: "3.13"
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install -r requirements-build.txt
+      - run: python scripts/sync_package_catalog.py --check
+      - name: Test downloads, offline paths, and portable release archives
+        run: |
+          python -m unittest discover -s tests -p 'test_distribution_client.py' -v
+          python -m unittest discover -s tests -p 'test_release_packaging.py' -v
+      - name: Build and install the lightweight SDK
+        run: |
+          python -m build --no-isolation
+          python scripts/verify_package.py dist
+          python -m pip install --no-deps dist/*.whl
+          python -I -m camera_assets list
