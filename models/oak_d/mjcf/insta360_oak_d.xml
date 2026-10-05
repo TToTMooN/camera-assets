@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="insta360_oak_d">
+  <!--Independent approximate geometry; fixed sites are geometric references, not calibrated optical frames.-->
+  <compiler angle="radian" inertiafromgeom="false" strippath="false" />
+  <option timestep="0.002" gravity="0 0 -9.81" />
+  <asset>
+    <mesh name="oak_d_visual_mesh_0" file="../assets/meshes/visual/contact_gold.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="oak_d_visual_mesh_1" file="../assets/meshes/visual/glass_coating.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="oak_d_visual_mesh_2" file="../assets/meshes/visual/housing.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="oak_d_visual_mesh_3" file="../assets/meshes/visual/lens_ring.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="oak_d_visual_mesh_4" file="../assets/meshes/visual/markings.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="oak_d_visual_mesh_5" file="../assets/meshes/visual/optical_glass.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="oak_d_visual_mesh_6" file="../assets/meshes/visual/rubber.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="oak_d_visual_mesh_7" file="../assets/meshes/visual/screw_metal.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="oak_d_visual_mesh_8" file="../assets/meshes/visual/seam.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="oak_d_collision_mesh_0" file="../assets/meshes/collision/body.stl" scale="1 1 1" inertia="convex" />
+    <mesh name="oak_d_collision_mesh_1" file="../assets/meshes/collision/body_bar.stl" scale="1 1 1" inertia="convex" />
+    <mesh name="oak_d_collision_mesh_2" file="../assets/meshes/collision/body_stem.stl" scale="1 1 1" inertia="convex" />
+  </asset>
+  <worldbody>
+    <body name="oak_d_link">
+      <inertial pos="0 0 0.02725" mass="0.115" diaginertia="0.000144423229167 3.89011458333e-05 0.000126394583333" quat="1 0 0 0" />
+      <geom name="oak_d_visual_0" type="mesh" mesh="oak_d_visual_mesh_0" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.64 0.48 0.2 1" />
+      <geom name="oak_d_visual_1" type="mesh" mesh="oak_d_visual_mesh_1" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.075 0.09 0.125 1" />
+      <geom name="oak_d_visual_2" type="mesh" mesh="oak_d_visual_mesh_2" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.19 0.195 0.2 1" />
+      <geom name="oak_d_visual_3" type="mesh" mesh="oak_d_visual_mesh_3" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.14 0.15 0.17 1" />
+      <geom name="oak_d_visual_4" type="mesh" mesh="oak_d_visual_mesh_4" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.74 0.75 0.76 1" />
+      <geom name="oak_d_visual_5" type="mesh" mesh="oak_d_visual_mesh_5" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.021 0.035 0.044 1" />
+      <geom name="oak_d_visual_6" type="mesh" mesh="oak_d_visual_mesh_6" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.027 0.029 0.032 1" />
+      <geom name="oak_d_visual_7" type="mesh" mesh="oak_d_visual_mesh_7" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.31 0.32 0.34 1" />
+      <geom name="oak_d_visual_8" type="mesh" mesh="oak_d_visual_mesh_8" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.008 0.009 0.012 1" />
+      <geom name="oak_d_collision_0" type="mesh" mesh="oak_d_collision_mesh_0" pos="0 0 0" quat="1 0 0 0" density="0" group="3" contype="1" conaffinity="1" rgba="0 0 0 0" />
+      <geom name="oak_d_collision_1" type="mesh" mesh="oak_d_collision_mesh_1" pos="0 0 0" quat="1 0 0 0" density="0" group="3" contype="1" conaffinity="1" rgba="0 0 0 0" />
+      <geom name="oak_d_collision_2" type="mesh" mesh="oak_d_collision_mesh_2" pos="0 0 0" quat="1 0 0 0" density="0" group="3" contype="1" conaffinity="1" rgba="0 0 0 0" />
+      <site name="oak_d_mount" pos="0 0 0" quat="1 0 0 0" type="sphere" size="0.001" group="4" rgba="0 0 0 0" />
+      <site name="oak_d_left_lens_surface" pos="0.0165 -0.0375 0.0425" quat="0.500000000002 -0.5 0.499999999998 -0.5" type="sphere" size="0.001" group="4" rgba="0 0 0 0" />
+      <site name="oak_d_rgb_lens_surface" pos="0.0165 0 0.0425" quat="0.500000000002 -0.5 0.499999999998 -0.5" type="sphere" size="0.001" group="4" rgba="0 0 0 0" />
+      <site name="oak_d_right_lens_surface" pos="0.0165 0.0375 0.0425" quat="0.500000000002 -0.5 0.499999999998 -0.5" type="sphere" size="0.001" group="4" rgba="0 0 0 0" />
+    </body>
+  </worldbody>
+</mujoco>

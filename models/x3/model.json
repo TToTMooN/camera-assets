@@ -1,0 +1,37 @@
+{
+  "name": "Insta360 X3",
+  "family": "360",
+  "brand": "Insta360",
+  "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Body depth and the division between body and lens protrusion are estimates.",
+  "visual": "assets/meshes/x3_visual.glb",
+  "urdf": "urdf/insta360_x3.urdf",
+  "config": "config/x3.json",
+  "root_link": "x3_link",
+  "mount_link": "x3_mount",
+  "status": "Reference-informed detailed exterior; unmeasured component geometry",
+  "fidelity": "reference_detailed_exterior",
+  "origin_description": "Bottom center of total envelope; nominal attachment reference, not a measured mount interface",
+  "appearance_revision": 2,
+  "component_count": 70,
+  "lens_surface_frames": [
+    "x3_rear_lens_surface",
+    "x3_front_lens_surface"
+  ],
+  "sources": [
+    {
+      "url": "https://onlinemanual.insta360.com/x6/en-us/specs/hardware",
+      "title": "Insta360 X6 hardware specifications: X3 comparison column",
+      "fields": [
+        "width_mm",
+        "height_mm",
+        "overall_depth_mm",
+        "mass_kg"
+      ]
+    }
+  ],
+  "appearance_sources": [
+    "https://onlinemanual.insta360.com/x3/en-us/camera/firstuse/introduction"
+  ],
+  "mjcf": "mjcf/insta360_x3.xml",
+  "sensor_manifest": "config/sensors.json"
+}

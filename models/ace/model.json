@@ -1,0 +1,36 @@
+{
+  "name": "Insta360 Ace",
+  "family": "action",
+  "brand": "Insta360",
+  "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Body depth and the division between body and lens protrusion are estimates.",
+  "visual": "assets/meshes/ace_visual.glb",
+  "urdf": "urdf/insta360_ace.urdf",
+  "config": "config/ace.json",
+  "root_link": "ace_link",
+  "mount_link": "ace_mount",
+  "status": "Reference-informed detailed exterior; unmeasured component geometry",
+  "fidelity": "reference_detailed_exterior",
+  "origin_description": "Bottom center of total envelope; nominal attachment reference, not a measured mount interface",
+  "appearance_revision": 2,
+  "component_count": 54,
+  "lens_surface_frames": [
+    "ace_front_lens_surface"
+  ],
+  "sources": [
+    {
+      "url": "https://onlinemanual.insta360.com/acepro2/en-us/specs/hardware",
+      "title": "Insta360 Ace Pro 2 hardware specifications: Ace comparison column",
+      "fields": [
+        "width_mm",
+        "height_mm",
+        "overall_depth_mm",
+        "mass_kg"
+      ]
+    }
+  ],
+  "appearance_sources": [
+    "https://www.insta360.com/product/insta360-ace-pro"
+  ],
+  "mjcf": "mjcf/insta360_ace.xml",
+  "sensor_manifest": "config/sensors.json"
+}

@@ -1,0 +1,24 @@
+{
+  "units": "millimeters for geometry, kilograms for mass",
+  "width_mm": 71.9,
+  "height_mm": 52.2,
+  "body_depth_mm": 31.54,
+  "overall_depth_mm": 38.0,
+  "mass_kg": 0.182,
+  "com_height_mm": 26.1,
+  "corner_radius_mm": 6.264,
+  "collision_tolerance_mm": 0.2,
+  "notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Body depth and the division between body and lens protrusion are estimates. Uses the standard-version manual mass of 182 g. The relaunched version is listed at 184 g, and another official product comparison lists 177.2 g; use the actual hardware version for precise payload calculations.",
+  "sources": [
+    {
+      "url": "https://onlinemanual.insta360.com/acepro2/en-us/specs/hardware",
+      "title": "Insta360 Ace Pro 2 hardware specifications: standard version",
+      "fields": [
+        "width_mm",
+        "height_mm",
+        "overall_depth_mm",
+        "mass_kg"
+      ]
+    }
+  ]
+}

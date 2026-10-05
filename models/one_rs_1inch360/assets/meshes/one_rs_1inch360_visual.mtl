@@ -1,0 +1,104 @@
+newmtl aperture
+Kd 0.006 0.008 0.012
+d 1
+illum 2
+
+newmtl coating_edge
+Kd 0.075 0.09 0.12
+d 1
+illum 2
+
+newmtl control
+Kd 0.13 0.14 0.155
+d 1
+illum 2
+
+newmtl display_edge
+Kd 0.115 0.126 0.144
+d 1
+illum 2
+
+newmtl glass_coating
+Kd 0.025 0.047 0.04
+d 1
+illum 2
+
+newmtl glass_outer
+Kd 0.035 0.045 0.058
+d 1
+illum 2
+
+newmtl grip_ridge
+Kd 0.077 0.084 0.094
+d 1
+illum 2
+
+newmtl housing
+Kd 0.115 0.12 0.132
+d 1
+illum 2
+
+newmtl housing_face
+Kd 0.092 0.099 0.108
+d 1
+illum 2
+
+newmtl housing_lens_head
+Kd 0.19 0.2 0.22
+d 1
+illum 2
+
+newmtl lens_barrel
+Kd 0.06 0.068 0.078
+d 1
+illum 2
+
+newmtl lens_ring
+Kd 0.19 0.205 0.225
+d 1
+illum 2
+
+newmtl marking
+Kd 0.72 0.73 0.75
+d 1
+illum 2
+
+newmtl marking_dark
+Kd 0.45 0.46 0.48
+d 1
+illum 2
+
+newmtl marking_dim
+Kd 0.4 0.42 0.45
+d 1
+illum 2
+
+newmtl mount_metal
+Kd 0.27 0.285 0.31
+d 1
+illum 2
+
+newmtl optical_glass
+Kd 0.008 0.014 0.02
+d 1
+illum 2
+
+newmtl record_red
+Kd 0.57 0.032 0.048
+d 1
+illum 2
+
+newmtl rubber
+Kd 0.065 0.075 0.085
+d 1
+illum 2
+
+newmtl screen
+Kd 0.015 0.019 0.027
+d 1
+illum 2
+
+newmtl seam
+Kd 0.025 0.03 0.035
+d 1
+illum 2

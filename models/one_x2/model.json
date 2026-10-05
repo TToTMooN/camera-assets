@@ -1,0 +1,37 @@
+{
+  "name": "Insta360 ONE X2",
+  "family": "360",
+  "brand": "Insta360",
+  "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Body depth and the division between body and lens protrusion are estimates. ONE X2 is labelled X2 in the official comparison table; dimension axes are normalized to width, height and depth.",
+  "visual": "assets/meshes/one_x2_visual.glb",
+  "urdf": "urdf/insta360_one_x2.urdf",
+  "config": "config/one_x2.json",
+  "root_link": "one_x2_link",
+  "mount_link": "one_x2_mount",
+  "status": "Reference-informed detailed exterior; unmeasured component geometry",
+  "fidelity": "reference_detailed_exterior",
+  "origin_description": "Bottom center of total envelope; nominal attachment reference, not a measured mount interface",
+  "appearance_revision": 2,
+  "component_count": 66,
+  "lens_surface_frames": [
+    "one_x2_rear_lens_surface",
+    "one_x2_front_lens_surface"
+  ],
+  "sources": [
+    {
+      "url": "https://onlinemanual.insta360.com/x6/en-us/specs/hardware",
+      "title": "Insta360 X6 hardware specifications: X2 comparison column",
+      "fields": [
+        "width_mm",
+        "height_mm",
+        "overall_depth_mm",
+        "mass_kg"
+      ]
+    }
+  ],
+  "appearance_sources": [
+    "https://www.insta360.com/product/insta360-onex2"
+  ],
+  "mjcf": "mjcf/insta360_one_x2.xml",
+  "sensor_manifest": "config/sensors.json"
+}

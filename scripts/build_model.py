@@ -1,6 +1,6 @@
 """Independent procedural X5 visual asset. Run in Python with bpy installed.
 
-Coordinates: +X = screen/front, +Y = left, +Z = up; origin = bottom mount.
+Coordinates: +X = screen/front, +Y = screen-facing right, +Z = up; origin = bottom mount.
 All authoring dimensions below are mm; stored geometry is in meters.
 No downloaded geometry, photographs, or third-party texture assets are used.
 """
@@ -350,7 +350,7 @@ def export_obj(path,group,mtl=False):
     # Ten decimal places avoid degenerate faces caused by six-decimal meter OBJ
     # exports when serializing sub-millimeter text and thin lens rim geometry.
     with path.open("w") as f:
-        f.write("# Original procedural X5 mesh; meters; +X front, +Y left, +Z up\n")
+        f.write("# Original procedural X5 mesh; meters; +X front, +Y screen-facing right, +Z up\n")
         if mtl:f.write("mtllib x5_visual.mtl\n")
         voff=1; loff=1
         for obj in group:

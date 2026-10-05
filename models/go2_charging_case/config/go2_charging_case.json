@@ -1,0 +1,25 @@
+{
+  "units": "millimeters for geometry, kilograms for mass",
+  "width_mm": 48.5,
+  "height_mm": 68.1,
+  "body_depth_mm": 26.5,
+  "overall_depth_mm": 26.5,
+  "mass_kg": 0.0635,
+  "com_height_mm": 34.05,
+  "corner_radius_mm": 6.790000000000001,
+  "collision_tolerance_mm": 0.2,
+  "notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Closed Charging Case only, upright orientation. Mass excludes the camera. The generic accessory exterior approximates the shell; internal cavity, folding legs and hinge are not modeled. Manufacturer dimensions list the long axis first; this entry uses width 48.5 mm and height 68.1 mm for an upright closed case.",
+  "sources": [
+    {
+      "url": "https://www.insta360.com/product/insta360-go2",
+      "title": "Insta360 GO 2 official specifications: closed Charging Case",
+      "fields": [
+        "width_mm",
+        "height_mm",
+        "overall_depth_mm",
+        "mass_kg",
+        "body_depth_mm"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "retrieved_on": "2026-10-03",
+  "purpose": "Manufacturer reference views for local exterior modeling and review only. These images are not model texture maps and are not included in GLB/OBJ/URDF/MJCF exports. Manufacturer copyright applies; no redistribution license is asserted.",
+  "geometry_status": "Independent reference-informed exterior reconstruction. Published envelope/display dimensions are used; small geometry, lens profiles, control positions, threads, seams, COM and inertia are estimates, not measured scans or calibrated optical data.",
+  "product_pages": {
+    "x6": "https://onlinemanual.insta360.com/x6/en-us/camera/product-introduction/insta360-x6",
+    "x4_air": "https://onlinemanual.insta360.com/x4air/en-us/camera/product-description/introduction",
+    "x4": "https://onlinemanual.insta360.com/x4/en-us/camera/productdescription/first",
+    "x3": "https://onlinemanual.insta360.com/x3/en-us/camera/firstuse/introduction",
+    "one_x2": "https://www.insta360.com/product/insta360-onex2",
+    "one_x": "https://www.insta360.com/product/insta360-onex",
+    "one_rs_1inch360": "https://www.insta360.com/product/insta360-oners/1inch-360"
+  },
+  "published_display_dimension_source": "https://onlinemanual.insta360.com/x6/en-us/specs/hardware",
+  "images": [
+    {
+      "file": "xseries/x6_front.jpeg",
+      "source_url": "https://wassets.insta360.com/common/2ecc72ef0ad04a149538b065f4179a32/image3.jpeg",
+      "applies_to": [
+        "x6"
+      ],
+      "observation": "Official front view: lens, front wind guard, ambient window, OLED and lower indicator.",
+      "sha256": "4572763af25744de5255e1e7a1f0d379b93cd9cf04adb75ca8bd0cc4b0e31614"
+    },
+    {
+      "file": "xseries/x6_control_side.jpeg",
+      "source_url": "https://wassets.insta360.com/common/7dc2f83e99ee4014805c6be3879155ec/image4.jpeg",
+      "applies_to": [
+        "x6"
+      ],
+      "observation": "Official control side: upper wind guard, power key, red-ring side shutter, lower USB cover.",
+      "sha256": "a8425736d31af88337a8f52b8c30084b9916e3e7caf7d72f63742d4f57e441ea"
+    },
+    {
+      "file": "xseries/x6_back.jpeg",
+      "source_url": "https://wassets.insta360.com/common/be2fe552ccf14dc0b6ac6443d3ba9100/image5.jpeg",
+      "applies_to": [
+        "x6"
+      ],
+      "observation": "Official rear view: six-sided wind guard, ambient window, vertical wordmark, lower Quick key.",
+      "sha256": "69fc0c2524923115218d458761eed05cb5aa5719e253cfc77fdc55294bd33878"
+    },
+    {
+      "file": "xseries/x6_battery_side.jpeg",
+      "source_url": "https://wassets.insta360.com/common/b818bb1901a94d69b9ef63c96f979455/image6.jpeg",
+      "applies_to": [
+        "x6"
+      ],
+      "observation": "Official battery side: wind guard, speaker apertures, cover and lower latch.",
+      "sha256": "0e46cc64ce2ebf86f9d8e67ef0f687570d1290d385ef7eb740f7ef27cc960d07"
+    },
+    {
+      "file": "xseries/x6_bottom.jpeg",
+      "source_url": "https://wassets.insta360.com/common/db945097e86a4e3d8e8e23ba8829976f/image7.jpeg",
+      "applies_to": [
+        "x6"
+      ],
+      "observation": "Official bottom: 1/4 inch thread, quick mount openings, connector pins.",
+      "sha256": "309be5bb3b23331af4e6094a2a3c0dd5ab37ef7b5282ead5000ba73ad81f1ea0"
+    },
+    {
+      "file": "xseries/x6_lens.jpg",
+      "source_url": "https://wassets.insta360.com/common/94cd6f9469a54d06b107209b9356253d/replaceable-lens.jpg",
+      "applies_to": [
+        "x6"
+      ],
+      "observation": "Official exploded optical close-up: locking flats, retaining rim, curved coated glass, molded surface texture. Not a calibrated lens scan.",
+      "sha256": "0136b0b5695e1c57b464886c9e8e24d15b9f0efba7432ef75a199e5a67c86076"
+    },
+    {
+      "file": "xseries/x4_air_front.png",
+      "source_url": "https://res.insta360.com/static/706f0bbbd23dbb690da92f5666d44e1d/1.PNG",
+      "applies_to": [
+        "x4_air"
+      ],
+      "observation": "Official front diagram: replaceable lens, portrait touchscreen, single round shutter, bottom indicator.",
+      "sha256": "aebc9c7c94a3395bb54449d977a407ebda471aa71872a5e23f5d1a4c14ba9b74"
+    },
+    {
+      "file": "xseries/x4_air_back.png",
+      "source_url": "https://res.insta360.com/static/0720d8774b4f2a6948122b1dce1dfb26/2.PNG",
+      "applies_to": [
+        "x4_air"
+      ],
+      "observation": "Official rear diagram: wind guard, vertical wordmark, tapered back outline.",
+      "sha256": "1055e70736e9bebe92e58f200b6abedf653924d536a2f733961d8a6e86239546"
+    },
+    {
+      "file": "xseries/x4_air_side.png",
+      "source_url": "https://res.insta360.com/static/a7133231372e9e68ecf8ecb555d10914/4.PNG",
+      "applies_to": [
+        "x4_air"
+      ],
+      "observation": "Official side diagram: speaker, power, Quick key, USB-C cover.",
+      "sha256": "b9c223d07f61986ad326f38c473747abe7516fbeaa0ab9875d160752786f7689"
+    },
+    {
+      "file": "xseries/x4_front.png",
+      "source_url": "https://res.insta360.com/static/abf0e833c2229efe29761c435212b84d/%E8%B5%84%E6%BA%90%20102X4.png",
+      "applies_to": [
+        "x4"
+      ],
+      "observation": "Official front diagram: large display and separate lower shutter/lens-select buttons.",
+      "sha256": "bd870e13c379390bc8238c591077eaa9429357af18f94822739af1ccf9444c02"
+    },
+    {
+      "file": "xseries/x4_back.png",
+      "source_url": "https://res.insta360.com/static/3f8787a07975f76887171563e993d218/%E8%B5%84%E6%BA%90%20101X4.png",
+      "applies_to": [
+        "x4"
+      ],
+      "observation": "Official rear diagram: diagonal cooling ribs and inset vertical logo panel.",
+      "sha256": "6906af97368add81e0507b8107ba39e92a0c57e20bd85fb7fce3f512d61f9bc2"
+    },
+    {
+      "file": "xseries/x4_battery_side.png",
+      "source_url": "https://res.insta360.com/static/4854173359ad57e5c50b3f8912d4d67c/%E8%B5%84%E6%BA%90%20100X4.png",
+      "applies_to": [
+        "x4"
+      ],
+      "observation": "Official side diagram: waterproof cover, separate latches and microphone.",
+      "sha256": "ab7f994c4e8380195e8b2c3ee352642f727f5ae0db7315bc26af89aa86e97ba0"
+    },
+    {
+      "file": "xseries/x3_front.jpg",
+      "source_url": "https://res.insta360.com/static/infr_base/602e6729fcb595b95d927842c7617af7/EN_1.jpg",
+      "applies_to": [
+        "x3"
+      ],
+      "observation": "Official front diagram: 2.29 inch display, two lower control buttons.",
+      "sha256": "b206dd71af4a2cdec3b4fab77fae2b876910fcfdf19f0144c65871fb1c711545"
+    },
+    {
+      "file": "xseries/x3_back.jpg",
+      "source_url": "https://res.insta360.com/static/infr_base/406ef371522eef26aaf7239212b124e7/EN_2.jpg",
+      "applies_to": [
+        "x3"
+      ],
+      "observation": "Official rear diagram: smooth panel, microphone, vertical wordmark and indicator.",
+      "sha256": "e2f6afaea25fbaa2c310d27268c20fa6f63cbb85ef8880e3adc04fc5ae8a55f7"
+    },
+    {
+      "file": "xseries/x3_battery_side.jpg",
+      "source_url": "https://res.insta360.com/static/infr_base/07d1334391b574fe36a51ee49517e8c9/EN_3.jpg",
+      "applies_to": [
+        "x3"
+      ],
+      "observation": "Official side diagram: waterproof USB-C cover, battery door and latches.",
+      "sha256": "3e605b8de9c150f18554111b52660f737f4e0f185caba009a45622acc0c84450"
+    },
+    {
+      "file": "xseries/one_x2_quickstart.pdf",
+      "source_url": "https://res.insta360.com/static/infr_base/9773c6759c7837738db3dca3c0518376/ONE%20X2%20QuickStart%20Guide.pdf",
+      "applies_to": [
+        "one_x2"
+      ],
+      "observation": "Official quick start, PDF page 4: circular touchscreen, lower round shutter, speaker and side power key.",
+      "sha256": "c7ec343330e62babb65d9ddb3ef394469cdb5a7657873a458116543f3c47e680"
+    },
+    {
+      "file": "xseries/one_x_design.png",
+      "source_url": "https://static.insta360.com/assets/www/project/official/product/onex/pc/sec15/cam%20design%402x.png",
+      "applies_to": [
+        "one_x"
+      ],
+      "observation": "Official product exploded exterior: slim smooth shell, circular status display, two vertically stacked round keys.",
+      "sha256": "3c5b72f542b7b79960d8e479d16a5b8b8daec2dd3f76210c5704ebcd00ae8c92"
+    },
+    {
+      "file": "xseries/one_rs_1inch360.png",
+      "source_url": "https://res.insta360.com/static/infr_base/3e1cbc2c868b391d97161b32c8d3f7d2/Product_2x.png",
+      "applies_to": [
+        "one_rs_1inch360"
+      ],
+      "observation": "Official complete product photo: gray wide Leica head, narrower black core and vertical battery, fixed mounting bracket, battery ribbing.",
+      "sha256": "5fdd76a385b3625d67bf170bebd54eadca6b71659f4a151b07bed22f89824f06"
+    }
+  ]
+}

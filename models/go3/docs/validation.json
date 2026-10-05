@@ -1,0 +1,94 @@
+{
+  "model": "go3",
+  "status": "PASS",
+  "checks": [
+    "URDF graph and portable local mesh references",
+    "URDF load after relocation",
+    "meter dimensions and bottom reference origin",
+    "OBJ and GLB nondegenerate triangles",
+    "self-contained GLB and matching visual bounds",
+    "consistent linear RGB material factors",
+    "positive definite physically admissible nominal inertia",
+    "watertight convex URDF collision meshes",
+    "visual vertex coverage within 0.2 mm"
+  ],
+  "visual_triangles": 45904,
+  "visual_bounds_m": [
+    [
+      -0.0116,
+      -0.0128,
+      0.0
+    ],
+    [
+      0.0116,
+      0.0128,
+      0.0544
+    ]
+  ],
+  "dimension_order": "depth X, width Y, height Z",
+  "visual_dimensions_m": [
+    0.0232,
+    0.0256,
+    0.0544
+  ],
+  "materials": 14,
+  "embedded_texture_images": 4,
+  "collision": [
+    {
+      "name": "body",
+      "triangles": 636,
+      "watertight": true,
+      "convex": true
+    },
+    {
+      "name": "front_lens",
+      "triangles": 524,
+      "watertight": true,
+      "convex": true
+    }
+  ],
+  "collision_tolerance_mm": 0.2,
+  "max_visual_vertex_collision_halfspace_gap_mm": 0.0005560552610930913,
+  "mass_kg": 0.0355,
+  "inertia": [
+    {
+      "link": "go3_link",
+      "matrix_kg_m2": [
+        [
+          1.06935466667e-05,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.03470666667e-05,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          3.53106666667e-06
+        ]
+      ],
+      "principal_moments_kg_m2": [
+        3.53106666667e-06,
+        1.03470666667e-05,
+        1.06935466667e-05
+      ]
+    }
+  ],
+  "inertia_diagonal_kg_m2": [
+    1.06935466667e-05,
+    1.03470666667e-05,
+    3.53106666667e-06
+  ],
+  "inertia_basis": "Unmeasured nominal homogeneous-body-box approximation",
+  "glb_sha256": "3dc08cf2b5484d7d53ad2e2df1f5f15224a00c66b647aea1db0a63e2cc1714d5",
+  "not_validated": [
+    "dimensional agreement with a measured physical specimen",
+    "optical calibration",
+    "mount interface fit",
+    "mass distribution",
+    "physics simulator-specific rendering and dynamics"
+  ]
+}

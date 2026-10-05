@@ -1,0 +1,39 @@
+{
+  "units": "millimeters for geometry, kilograms for mass",
+  "width_mm": 63.5,
+  "height_mm": 47.6,
+  "body_depth_mm": 29.5,
+  "overall_depth_mm": 29.5,
+  "mass_kg": 0.0963,
+  "com_height_mm": 23.8,
+  "corner_radius_mm": 5.712,
+  "collision_tolerance_mm": 0.2,
+  "notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Action Pod only, with its screen folded. Mass excludes the standalone camera. Docking cavity, hinge and exact connection geometry are approximate; no docked or articulated assembly is supplied. Manufacturer confirms GO 3 and GO 3S Action Pod compatibility; the original GO 3 Action Pod requires updated firmware when used with GO 3S. The geometric proxy does not validate docking fit.",
+  "sources": [
+    {
+      "url": "https://onlinemanual.insta360.com/go3s/en-us/specs/hardware",
+      "title": "Insta360 GO 3S hardware specifications: folded Action Pod",
+      "fields": [
+        "width_mm",
+        "height_mm",
+        "overall_depth_mm",
+        "mass_kg",
+        "body_depth_mm"
+      ]
+    },
+    {
+      "url": "https://store.insta360.com/product/go-3s-action-pod",
+      "title": "Insta360 GO 3S Action Pod: GO 3S and GO 3 compatibility",
+      "fields": [
+        "supported_models"
+      ]
+    },
+    {
+      "url": "https://res.insta360.com/static/d70a8e271d0c8e5a4b14a658777c1e31/GO%203S_UserManual_EN.pdf",
+      "title": "Insta360 GO 3S user manual: GO 3 Action Pod firmware requirement",
+      "fields": [
+        "supported_models"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "model": "zed2i",
+  "status": "PASS",
+  "checks": [
+    "URDF graph and portable local mesh references",
+    "URDF load after relocation",
+    "meter dimensions and bottom reference origin",
+    "OBJ and GLB nondegenerate triangles",
+    "self-contained GLB and matching visual bounds",
+    "consistent linear RGB material factors",
+    "positive definite physically admissible nominal inertia",
+    "watertight convex URDF collision meshes",
+    "visual vertex coverage within 0.2 mm"
+  ],
+  "visual_triangles": 99996,
+  "visual_bounds_m": [
+    [
+      -0.02155,
+      -0.087625,
+      0.0
+    ],
+    [
+      0.02155,
+      0.087625,
+      0.03025
+    ]
+  ],
+  "dimension_order": "depth X, width Y, height Z",
+  "visual_dimensions_m": [
+    0.0431,
+    0.17525,
+    0.03025
+  ],
+  "materials": 10,
+  "embedded_texture_images": 2,
+  "collision": [
+    {
+      "name": "body",
+      "triangles": 612,
+      "watertight": true,
+      "convex": true
+    }
+  ],
+  "collision_tolerance_mm": 0.2,
+  "max_visual_vertex_collision_halfspace_gap_mm": 0.0002241745348657842,
+  "mass_kg": 0.23,
+  "inertia": [
+    {
+      "link": "zed2i_link",
+      "matrix_kg_m2": [
+        [
+          0.000606196145833,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          5.31428895833e-05,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.000624261639583
+        ]
+      ],
+      "principal_moments_kg_m2": [
+        5.31428895833e-05,
+        0.000606196145833,
+        0.000624261639583
+      ]
+    }
+  ],
+  "inertia_diagonal_kg_m2": [
+    0.000606196145833,
+    5.31428895833e-05,
+    0.000624261639583
+  ],
+  "inertia_basis": "Unmeasured nominal homogeneous-body-box approximation",
+  "glb_sha256": "20fa17d6652b65339ded1122c772c620177e7e7f1d11c54806d6a6fb901152c1",
+  "not_validated": [
+    "dimensional agreement with a measured physical specimen",
+    "optical calibration",
+    "mount interface fit",
+    "mass distribution",
+    "physics simulator-specific rendering and dynamics"
+  ]
+}

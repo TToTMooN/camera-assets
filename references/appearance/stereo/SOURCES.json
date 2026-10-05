@@ -1,0 +1,12 @@
+{
+  "retrieved_on": "2026-10-03",
+  "purpose": "Official images and mechanical drawings used only for local exterior modeling. They are not model textures. Manufacturer copyright applies; no redistribution license is asserted.",
+  "sources": [
+    {"models": ["realsense_d435i", "realsense_d455"], "url": "https://www.realsenseai.com/wp-content/uploads/2023/07/Intel-RealSense-D400-Series-Datasheet-July-2023.pdf", "observed_features": ["alloy capsule enclosure", "sensor layout and D455 95mm stereo baseline", "rear interface and mounting sockets"]},
+    {"models": ["realsense_d455"], "url": "https://www.realsenseai.com/products/real-sense-depth-camera-d455/", "image_url": "https://www.realsenseai.com/wp-content/uploads/2025/06/D455-3.png", "observed_features": ["four front apertures including projector", "RGB window surround", "rounded silver mask border"]},
+    {"models": ["zed2i"], "url": "https://www.stereolabs.com/store/products/zed-2i", "observed_features": ["dark capsule alloy housing", "two large front optical barrels", "blue indicator and ZED mark", "back seam, mounting sockets and locking USB connector"]},
+    {"models": ["zed2i"], "url": "https://docs.stereolabs.com/docs/products/cameras/zed/specifications", "observed_features": ["front/rear mounting layout", "1/4-inch and M3 socket types", "USB-C dual screw lock"]},
+    {"models": ["oak_d"], "url": "https://docs.luxonis.com/hardware/products/OAK-D", "image_url": "https://shop.luxonis.com/cdn/shop/files/f_502f0305-a60e-4a45-b2b7-b68288bc9866_360x.png?v=1683804325", "observed_features": ["original T shaped enclosure", "capsule optical mask", "three front lenses", "four front enclosure screws"]}
+  ],
+  "limits": "Nominal envelope is source-grounded. Fine dimensions, screw locations and optical layers are independent estimates; no calibrated sensor frame or measured mount interface is supplied. Cables and tripods are omitted."
+}

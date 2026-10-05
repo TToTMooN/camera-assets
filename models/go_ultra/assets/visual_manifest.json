@@ -1,0 +1,178 @@
+[
+  {
+    "name": "ambient_sensor",
+    "file": "../assets/meshes/visual/ambient_sensor.obj",
+    "rgba": [
+      0.5870163508936885,
+      0.6382832153523972,
+      0.6559306827469925,
+      1.0
+    ],
+    "triangles": 288
+  },
+  {
+    "name": "front_polymer",
+    "file": "../assets/meshes/visual/front_polymer.obj",
+    "rgba": [
+      0.0432336359153358,
+      0.04773199376700342,
+      0.05290079053734631,
+      1.0
+    ],
+    "triangles": 4480
+  },
+  {
+    "name": "gasket",
+    "file": "../assets/meshes/visual/gasket.obj",
+    "rgba": [
+      0.01341174889765847,
+      0.016338144740016113,
+      0.018478473287962097,
+      1.0
+    ],
+    "triangles": 12672
+  },
+  {
+    "name": "gold",
+    "file": "../assets/meshes/visual/gold.obj",
+    "rgba": [
+      0.47699978456654196,
+      0.22341399352485986,
+      0.024515013703524748,
+      1.0
+    ],
+    "triangles": 1120
+  },
+  {
+    "name": "housing",
+    "file": "../assets/meshes/visual/housing.obj",
+    "rgba": [
+      0.033104766570885055,
+      0.03797231989168777,
+      0.0432336359153358,
+      1.0
+    ],
+    "triangles": 4480
+  },
+  {
+    "name": "lens_coating",
+    "file": "../assets/meshes/visual/lens_coating.obj",
+    "rgba": [
+      0.006941255573522422,
+      0.013970183234932964,
+      0.015928428673288298,
+      1.0
+    ],
+    "triangles": 4480
+  },
+  {
+    "name": "lens_ring",
+    "file": "../assets/meshes/visual/lens_ring.obj",
+    "rgba": [
+      0.010816382958706206,
+      0.012510408999112432,
+      0.013782561407972177,
+      1.0
+    ],
+    "triangles": 2048
+  },
+  {
+    "name": "optical_glass",
+    "file": "../assets/meshes/visual/optical_glass.obj",
+    "rgba": [
+      0.00108359133126935,
+      0.0018575851393188856,
+      0.0021671826625387,
+      1.0
+    ],
+    "triangles": 1024
+  },
+  {
+    "name": "pupil",
+    "file": "../assets/meshes/visual/pupil.obj",
+    "rgba": [
+      0.00030959752321981426,
+      0.000541795665634675,
+      0.000696594427244582,
+      1.0
+    ],
+    "triangles": 256
+  },
+  {
+    "name": "rear_polymer",
+    "file": "../assets/meshes/visual/rear_polymer.obj",
+    "rgba": [
+      0.025842879545199027,
+      0.028622072468987392,
+      0.03248503564942535,
+      1.0
+    ],
+    "triangles": 15616
+  },
+  {
+    "name": "rib",
+    "file": "../assets/meshes/visual/rib.obj",
+    "rgba": [
+      0.010816382958706206,
+      0.01341174889765847,
+      0.01532520332062848,
+      1.0
+    ],
+    "triangles": 288
+  },
+  {
+    "name": "rim_edge",
+    "file": "../assets/meshes/visual/rim_edge.obj",
+    "rgba": [
+      0.05087608817155679,
+      0.06281455064159135,
+      0.06838485415816624,
+      1.0
+    ],
+    "triangles": 2304
+  },
+  {
+    "name": "silver",
+    "file": "../assets/meshes/visual/silver.obj",
+    "rgba": [
+      0.40644830114675407,
+      0.46236136930676214,
+      0.4994581635400763,
+      1.0
+    ],
+    "triangles": 768
+  },
+  {
+    "name": "slot",
+    "file": "../assets/meshes/visual/slot.obj",
+    "rgba": [
+      0.0019349845201238392,
+      0.0025541795665634678,
+      0.003018575851393189,
+      1.0
+    ],
+    "triangles": 17728
+  },
+  {
+    "name": "status",
+    "file": "../assets/meshes/visual/status.obj",
+    "rgba": [
+      0.033104766570885055,
+      0.5870163508936885,
+      0.7677687605549981,
+      1.0
+    ],
+    "triangles": 2688
+  },
+  {
+    "name": "subtle_print",
+    "file": "../assets/meshes/visual/subtle_print.obj",
+    "rgba": [
+      0.07323895587840543,
+      0.0835351274258047,
+      0.09462962659456918,
+      1.0
+    ],
+    "triangles": 6400
+  }
+]

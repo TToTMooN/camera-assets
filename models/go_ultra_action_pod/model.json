@@ -1,0 +1,38 @@
+{
+  "name": "Insta360 GO Ultra Action Pod (folded)",
+  "family": "accessory",
+  "brand": "Insta360",
+  "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Action Pod only, with its screen folded. Mass excludes the standalone camera. Docking cavity, hinge and exact connection geometry are approximate; no docked or articulated assembly is supplied.",
+  "visual": "assets/meshes/go_ultra_action_pod_visual.glb",
+  "urdf": "urdf/insta360_go_ultra_action_pod.urdf",
+  "config": "config/go_ultra_action_pod.json",
+  "root_link": "go_ultra_action_pod_link",
+  "mount_link": "go_ultra_action_pod_mount",
+  "status": "Reference-informed detailed exterior; unmeasured component geometry",
+  "fidelity": "reference_detailed_exterior",
+  "origin_description": "Bottom center of total envelope; nominal attachment reference, not a measured mount interface",
+  "appearance_revision": 2,
+  "component_count": 57,
+  "lens_surface_frames": [],
+  "sources": [
+    {
+      "url": "https://onlinemanual.insta360.com/go3s/en-us/specs/hardware",
+      "title": "Insta360 GO series hardware specifications: GO Ultra folded Action Pod",
+      "fields": [
+        "width_mm",
+        "height_mm",
+        "body_depth_mm",
+        "overall_depth_mm",
+        "mass_kg"
+      ]
+    }
+  ],
+  "appearance_sources": [
+    "https://store.insta360.com/product/go-ultra",
+    "https://wassets.insta360.com/store/0370798f2c02498da040ca036d35c709/7539_77a07db3-e5b1-46d4-9bef-eabbd77d16bf.png",
+    "https://res.insta360.com/dynamic/store/e4dec99e2983ce0b30ed231da0defc1f/314_3375f88e-d083-4b48-90b4-64332703e15d.jpg",
+    "https://res.insta360.com/static/780b3076f6404c5ea75e6d56ad04dc34/GOUltra_UserManual_EN.pdf"
+  ],
+  "mjcf": "mjcf/insta360_go_ultra_action_pod.xml",
+  "sensor_manifest": "config/sensors.json"
+}

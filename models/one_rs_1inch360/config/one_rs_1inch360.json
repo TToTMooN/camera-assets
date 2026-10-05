@@ -1,0 +1,24 @@
+{
+  "units": "millimeters for geometry, kilograms for mass",
+  "width_mm": 53.2,
+  "height_mm": 129.3,
+  "body_depth_mm": 38.61,
+  "overall_depth_mm": 49.5,
+  "mass_kg": 0.239,
+  "com_height_mm": 64.65,
+  "corner_radius_mm": 7.448000000000001,
+  "collision_tolerance_mm": 0.2,
+  "notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Body depth and the division between body and lens protrusion are estimates. Complete manufacturer configuration. Lens, vertical battery and core outlines are approximations; modules are fixed in this model.",
+  "sources": [
+    {
+      "url": "https://www.insta360.com/product/insta360-oners/1inch-360",
+      "title": "Insta360 ONE RS 1-Inch 360 Edition official specifications",
+      "fields": [
+        "width_mm",
+        "height_mm",
+        "overall_depth_mm",
+        "mass_kg"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "model": "go3_action_pod",
+  "status": "PASS",
+  "checks": [
+    "URDF graph and portable local mesh references",
+    "URDF load after relocation",
+    "meter dimensions and bottom reference origin",
+    "OBJ and GLB nondegenerate triangles",
+    "self-contained GLB and matching visual bounds",
+    "consistent linear RGB material factors",
+    "positive definite physically admissible nominal inertia",
+    "watertight convex URDF collision meshes",
+    "visual vertex coverage within 0.2 mm"
+  ],
+  "visual_triangles": 111340,
+  "visual_bounds_m": [
+    [
+      -0.01475,
+      -0.03175,
+      0.0
+    ],
+    [
+      0.01475,
+      0.03175,
+      0.0476
+    ]
+  ],
+  "dimension_order": "depth X, width Y, height Z",
+  "visual_dimensions_m": [
+    0.0295,
+    0.0635,
+    0.0476
+  ],
+  "materials": 14,
+  "embedded_texture_images": 4,
+  "collision": [
+    {
+      "name": "body",
+      "triangles": 636,
+      "watertight": true,
+      "convex": true
+    }
+  ],
+  "collision_tolerance_mm": 0.2,
+  "max_visual_vertex_collision_halfspace_gap_mm": 0.0003133682560108042,
+  "mass_kg": 0.0963,
+  "inertia": [
+    {
+      "link": "go3_action_pod_link",
+      "matrix_kg_m2": [
+        [
+          5.054153025e-05,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.516648025e-05,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          3.93425625e-05
+        ]
+      ],
+      "principal_moments_kg_m2": [
+        2.516648025e-05,
+        3.93425625e-05,
+        5.054153025e-05
+      ]
+    }
+  ],
+  "inertia_diagonal_kg_m2": [
+    5.054153025e-05,
+    2.516648025e-05,
+    3.93425625e-05
+  ],
+  "inertia_basis": "Unmeasured nominal homogeneous-body-box approximation",
+  "glb_sha256": "ec219177573747b15243869e4933c65a05dbbd91268367a259d9a7033041ff41",
+  "not_validated": [
+    "dimensional agreement with a measured physical specimen",
+    "optical calibration",
+    "mount interface fit",
+    "mass distribution",
+    "physics simulator-specific rendering and dynamics"
+  ]
+}

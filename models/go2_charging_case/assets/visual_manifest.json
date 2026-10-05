@@ -1,0 +1,79 @@
+[
+  {
+    "name": "front_polymer",
+    "file": "../assets/meshes/visual/front_polymer.obj",
+    "rgba": [
+      0.8480882574948619,
+      0.8584570348404981,
+      0.8377929057741235,
+      1.0
+    ],
+    "triangles": 4908
+  },
+  {
+    "name": "gasket",
+    "file": "../assets/meshes/visual/gasket.obj",
+    "rgba": [
+      0.01341174889765847,
+      0.016338144740016113,
+      0.018478473287962097,
+      1.0
+    ],
+    "triangles": 288
+  },
+  {
+    "name": "housing",
+    "file": "../assets/meshes/visual/housing.obj",
+    "rgba": [
+      0.8073459089125289,
+      0.8174218814871332,
+      0.7973427619385429,
+      1.0
+    ],
+    "triangles": 4480
+  },
+  {
+    "name": "rear_polymer",
+    "file": "../assets/meshes/visual/rear_polymer.obj",
+    "rgba": [
+      0.7293470915734015,
+      0.7580553995365051,
+      0.7388447188680396,
+      1.0
+    ],
+    "triangles": 14976
+  },
+  {
+    "name": "silver",
+    "file": "../assets/meshes/visual/silver.obj",
+    "rgba": [
+      0.40644830114675407,
+      0.46236136930676214,
+      0.4994581635400763,
+      1.0
+    ],
+    "triangles": 3456
+  },
+  {
+    "name": "slot",
+    "file": "../assets/meshes/visual/slot.obj",
+    "rgba": [
+      0.0019349845201238392,
+      0.0025541795665634678,
+      0.003018575851393189,
+      1.0
+    ],
+    "triangles": 2976
+  },
+  {
+    "name": "subtle_print",
+    "file": "../assets/meshes/visual/subtle_print.obj",
+    "rgba": [
+      0.5704815954749093,
+      0.6038273388553378,
+      0.5870163508936885,
+      1.0
+    ],
+    "triangles": 23812
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "units": "millimeters for geometry, kilograms for mass",
+  "width_mm": 46.0,
+  "height_mm": 45.7,
+  "body_depth_mm": 18.3,
+  "overall_depth_mm": 22.4,
+  "mass_kg": 0.0529,
+  "com_height_mm": 22.85,
+  "corner_radius_mm": 5.484,
+  "collision_tolerance_mm": 0.2,
+  "notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Camera only. The 22.4 mm depth includes the Lens Guard; 18.3 mm is the published depth without it. Lens Guard shape is approximated.",
+  "sources": [
+    {
+      "url": "https://www.insta360.com/product/insta360-go-ultra",
+      "title": "Insta360 GO Ultra official specifications",
+      "fields": [
+        "width_mm",
+        "height_mm",
+        "overall_depth_mm",
+        "mass_kg",
+        "body_depth_mm"
+      ]
+    }
+  ]
+}

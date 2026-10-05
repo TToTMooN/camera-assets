@@ -1,0 +1,112 @@
+{
+  "model": "one_r_360",
+  "status": "PASS",
+  "checks": [
+    "URDF graph and portable local mesh references",
+    "URDF load after relocation",
+    "meter dimensions and bottom reference origin",
+    "OBJ and GLB nondegenerate triangles",
+    "self-contained GLB and matching visual bounds",
+    "consistent linear RGB material factors",
+    "positive definite physically admissible nominal inertia",
+    "watertight convex URDF collision meshes",
+    "visual vertex coverage within 0.2 mm"
+  ],
+  "visual_triangles": 98508,
+  "visual_bounds_m": [
+    [
+      -0.0215,
+      -0.036,
+      0.0
+    ],
+    [
+      0.0215,
+      0.036,
+      0.048
+    ]
+  ],
+  "dimension_order": "depth X, width Y, height Z",
+  "visual_dimensions_m": [
+    0.043,
+    0.072,
+    0.048
+  ],
+  "materials": 12,
+  "embedded_texture_images": 3,
+  "collision": [
+    {
+      "name": "body",
+      "triangles": 636,
+      "watertight": true,
+      "convex": true
+    },
+    {
+      "name": "core",
+      "triangles": 636,
+      "watertight": true,
+      "convex": true
+    },
+    {
+      "name": "lens_-1",
+      "triangles": 564,
+      "watertight": true,
+      "convex": true
+    },
+    {
+      "name": "lens_1",
+      "triangles": 564,
+      "watertight": true,
+      "convex": true
+    },
+    {
+      "name": "lens_module",
+      "triangles": 636,
+      "watertight": true,
+      "convex": true
+    }
+  ],
+  "collision_tolerance_mm": 0.2,
+  "max_visual_vertex_collision_halfspace_gap_mm": 0.00036036914079912163,
+  "mass_kg": 0.1305,
+  "inertia": [
+    {
+      "link": "one_r_360_link",
+      "matrix_kg_m2": [
+        [
+          8.1432e-05,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          4.5163875e-05,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          7.6483875e-05
+        ]
+      ],
+      "principal_moments_kg_m2": [
+        4.5163875e-05,
+        7.6483875e-05,
+        8.1432e-05
+      ]
+    }
+  ],
+  "inertia_diagonal_kg_m2": [
+    8.1432e-05,
+    4.5163875e-05,
+    7.6483875e-05
+  ],
+  "inertia_basis": "Unmeasured nominal homogeneous-body-box approximation",
+  "glb_sha256": "afc11a6024282cda293c336b3496df74a95b7442e2b82cf04bc32fdd3bb19123",
+  "not_validated": [
+    "dimensional agreement with a measured physical specimen",
+    "optical calibration",
+    "mount interface fit",
+    "mass distribution",
+    "physics simulator-specific rendering and dynamics"
+  ]
+}

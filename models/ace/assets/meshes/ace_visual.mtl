@@ -1,0 +1,64 @@
+newmtl accent_red
+Kd 0.86 0.075 0.105
+d 1
+illum 2
+
+newmtl display_black
+Kd 0.01 0.013 0.015
+d 1
+illum 2
+
+newmtl housing
+Kd 0.12 0.125 0.13
+d 1
+illum 2
+
+newmtl lens_ring
+Kd 0.21 0.215 0.22
+d 1
+illum 2
+
+newmtl markings
+Kd 0.72 0.73 0.73
+d 1
+illum 2
+
+newmtl muted_markings
+Kd 0.36 0.38 0.39
+d 1
+illum 2
+
+newmtl optical_glass
+Kd 0.026 0.045 0.042
+d 1
+illum 2
+
+newmtl optics_black
+Kd 0.022 0.025 0.026
+d 1
+illum 2
+
+newmtl optics_coating
+Kd 0.033 0.059 0.078
+d 1
+illum 2
+
+newmtl rubber
+Kd 0.068 0.072 0.076
+d 1
+illum 2
+
+newmtl screen
+Kd 0.037 0.043 0.047
+d 1
+illum 2
+
+newmtl screw_metal
+Kd 0.19 0.2 0.21
+d 1
+illum 2
+
+newmtl seam
+Kd 0.018 0.02 0.022
+d 1
+illum 2

@@ -1,0 +1,39 @@
+{
+  "name": "RealSense D455",
+  "family": "depth_stereo",
+  "brand": "RealSense",
+  "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent approximate enclosure, aperture positions, ports, mounting reference, center of mass and uniform-envelope inertia. No optical calibration, calibrated stereo baseline or simulated depth output. Nominal mass tolerance is ±10%; bulk units may omit the USB cap (approximately 2.3 g). No cable or bracket included.",
+  "visual": "assets/meshes/realsense_d455_visual.glb",
+  "urdf": "urdf/insta360_realsense_d455.urdf",
+  "config": "config/realsense_d455.json",
+  "root_link": "realsense_d455_link",
+  "mount_link": "realsense_d455_mount",
+  "status": "Reference-informed detailed exterior; unmeasured component geometry",
+  "fidelity": "reference_detailed_exterior",
+  "origin_description": "Bottom center of total envelope; nominal attachment reference, not a measured mount interface",
+  "appearance_revision": 2,
+  "component_count": 62,
+  "lens_surface_frames": [
+    "realsense_d455_left_lens_surface",
+    "realsense_d455_projector_lens_surface",
+    "realsense_d455_rgb_lens_surface",
+    "realsense_d455_right_lens_surface"
+  ],
+  "sources": [
+    {
+      "url": "https://dev.realsenseai.com/download/42003/",
+      "title": "RealSense D400 series datasheet, Revision 021 (October 2025), Table 3-53",
+      "fields": [
+        "width_mm",
+        "height_mm",
+        "overall_depth_mm",
+        "mass_kg"
+      ]
+    }
+  ],
+  "appearance_sources": [
+    "https://www.realsenseai.com/products/real-sense-depth-camera-d455/"
+  ],
+  "mjcf": "mjcf/insta360_realsense_d455.xml",
+  "sensor_manifest": "config/sensors.json"
+}

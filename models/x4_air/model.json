@@ -1,0 +1,38 @@
+{
+  "name": "Insta360 X4 Air",
+  "family": "360",
+  "brand": "Insta360",
+  "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration.",
+  "visual": "assets/meshes/x4_air_visual.glb",
+  "urdf": "urdf/insta360_x4_air.urdf",
+  "config": "config/x4_air.json",
+  "root_link": "x4_air_link",
+  "mount_link": "x4_air_mount",
+  "status": "Reference-informed detailed exterior; unmeasured component geometry",
+  "fidelity": "reference_detailed_exterior",
+  "origin_description": "Bottom center of total envelope; nominal attachment reference, not a measured mount interface",
+  "appearance_revision": 2,
+  "component_count": 89,
+  "lens_surface_frames": [
+    "x4_air_rear_lens_surface",
+    "x4_air_front_lens_surface"
+  ],
+  "sources": [
+    {
+      "url": "https://onlinemanual.insta360.com/x6/en-us/specs/hardware",
+      "title": "Insta360 X6 hardware specifications: X4 Air comparison column",
+      "fields": [
+        "width_mm",
+        "height_mm",
+        "overall_depth_mm",
+        "mass_kg",
+        "body_depth_mm"
+      ]
+    }
+  ],
+  "appearance_sources": [
+    "https://onlinemanual.insta360.com/x4air/en-us/camera/product-description/introduction"
+  ],
+  "sensor_manifest": "config/sensors.json",
+  "mjcf": "mjcf/insta360_x4_air.xml"
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Insta360 ONE RS 1-Inch Wide Angle configuration",
+  "family": "modular_action",
+  "brand": "Insta360",
+  "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Body depth and the division between body and lens protrusion are estimates. Complete nominal ONE RS Core, Battery Base and 1-Inch Wide Angle Lens configuration; independent fixed exterior, with no module separation or assembly mechanics.",
+  "visual": "assets/meshes/one_rs_1inch_visual.glb",
+  "urdf": "urdf/insta360_one_rs_1inch.urdf",
+  "config": "config/one_rs_1inch.json",
+  "root_link": "one_rs_1inch_link",
+  "mount_link": "one_rs_1inch_mount",
+  "status": "Reference-informed detailed exterior; unmeasured component geometry",
+  "fidelity": "reference_detailed_exterior",
+  "origin_description": "Bottom center of total envelope; nominal attachment reference, not a measured mount interface",
+  "appearance_revision": 2,
+  "component_count": 48,
+  "lens_surface_frames": [
+    "one_rs_1inch_front_lens_surface"
+  ],
+  "sources": [
+    {
+      "url": "https://www.insta360.com/product/insta360-oners",
+      "title": "Insta360 ONE RS official specifications: 1-Inch Wide Angle Lens configuration",
+      "fields": [
+        "width_mm",
+        "height_mm",
+        "overall_depth_mm",
+        "mass_kg"
+      ]
+    }
+  ],
+  "appearance_sources": [
+    "https://onlinemanual.insta360.com/oners/en-us/camera/firstuse/introduction"
+  ],
+  "mjcf": "mjcf/insta360_one_rs_1inch.xml",
+  "sensor_manifest": "config/sensors.json"
+}

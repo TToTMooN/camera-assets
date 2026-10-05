@@ -53,11 +53,12 @@ for name,_ in collisions:
 
 # Mount is exactly the URDF root origin. Lens surface frames are geometric markers,
 # deliberately not named optical frames because optical centers are uncalibrated.
-for name,pos in [("x5_mount",(0,0,0)),("x5_front_lens_surface",(.0191,0,P["lens_center_height_mm"]*.001)),("x5_rear_lens_surface",(-.0191,0,P["lens_center_height_mm"]*.001))]:
+# Local +Z follows the outward surface normal, matching the catalog builders.
+for name,pos,rpy in [("x5_mount",(0,0,0),(0,0,0)),("x5_front_lens_surface",(.0191,0,P["lens_center_height_mm"]*.001),(-math.pi/2,0,-math.pi/2)),("x5_rear_lens_surface",(-.0191,0,P["lens_center_height_mm"]*.001),(-math.pi/2,0,math.pi/2))]:
     ET.SubElement(robot,"link",name=name)
     joint=ET.SubElement(robot,"joint",name=name+"_fixed",type="fixed")
     ET.SubElement(joint,"parent",link="x5_link");ET.SubElement(joint,"child",link=name)
-    ET.SubElement(joint,"origin",xyz=" ".join(map(str,pos)),rpy="0 0 0")
+    ET.SubElement(joint,"origin",xyz=" ".join(map(str,pos)),rpy=" ".join(f"{value:.12g}" for value in rpy))
 ET.indent(robot,space="  ")
 ET.ElementTree(robot).write(ROOT/"urdf/insta360_x5.urdf",encoding="utf-8",xml_declaration=True)
 print(json.dumps({"inertia_kg_m2":I,"collision_triangles":{n:len(mesh.faces) for n,mesh in collisions}},indent=2))

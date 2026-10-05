@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "KIWI camera imaging parameter manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "model_id", "sensor_class", "status", "root_frame", "conventions", "geometry_frames", "T_robot_body", "imagers", "emitters", "derived_outputs", "calibration", "backends", "notes"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "model_id": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+    "sensor_class": {"enum": ["monocular", "dual_fisheye_360", "stereo_rgb", "stereo_rgbd", "accessory_none"]},
+    "status": {"enum": ["uncalibrated", "calibrated", "not_applicable"]},
+    "root_frame": {"type": "string", "minLength": 1},
+    "conventions": {"const": {"length": "meters", "intrinsics": "pixels", "quaternion": "xyzw", "optical_axes": "+X right, +Y down, +Z forward", "transform": "p_body = R_body_optical * p_optical + t_body_optical"}},
+    "geometry_frames": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["name", "translation_m", "quaternion_xyzw", "source", "usage"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "translation_m": {"$ref": "#/$defs/vector3"},
+          "quaternion_xyzw": {"$ref": "#/$defs/quaternion"},
+          "source": {"const": "reference_geometry"},
+          "usage": {"const": "placement_only"}
+        }
+      }
+    },
+    "T_robot_body": {
+      "type": "object", "additionalProperties": false,
+      "required": ["parent_frame", "translation_m", "quaternion_xyzw"],
+      "properties": {
+        "parent_frame": {"$ref": "#/$defs/textOrNull"},
+        "translation_m": {"anyOf": [{"$ref": "#/$defs/vector3"}, {"type": "null"}]},
+        "quaternion_xyzw": {"anyOf": [{"$ref": "#/$defs/quaternion"}, {"type": "null"}]}
+      }
+    },
+    "imagers": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["id", "semantic_role", "geometry_frame_candidates", "geometry_mapping_status", "optical_frame", "T_body_optical", "modes"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "semantic_role": {"type": "string", "minLength": 1},
+          "geometry_frame_candidates": {"$ref": "#/$defs/referenceNames"},
+          "geometry_mapping_status": {"enum": ["unverified", "verified"]},
+          "optical_frame": {"$ref": "#/$defs/textOrNull"},
+          "T_body_optical": {
+            "type": "object", "additionalProperties": false,
+            "required": ["translation_m", "quaternion_xyzw"],
+            "properties": {
+              "translation_m": {"anyOf": [{"$ref": "#/$defs/vector3"}, {"type": "null"}]},
+              "quaternion_xyzw": {"anyOf": [{"$ref": "#/$defs/quaternion"}, {"type": "null"}]}
+            }
+          },
+          "modes": {"type": "array", "items": {"$ref": "#/$defs/mode"}}
+        }
+      }
+    },
+    "emitters": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["id", "geometry_frame_candidates", "pattern", "wavelength_nm"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "geometry_frame_candidates": {"$ref": "#/$defs/referenceNames"},
+          "pattern": {"$ref": "#/$defs/textOrNull"},
+          "wavelength_nm": {"type": ["number", "null"], "exclusiveMinimum": 0}
+        }
+      }
+    },
+    "derived_outputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "kind", "inputs", "encoding", "algorithm", "synchronization"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "kind": {"enum": ["panorama", "depth"]},
+          "inputs": {"$ref": "#/$defs/referenceNames"},
+          "encoding": {"$ref": "#/$defs/textOrNull"},
+          "projection": {"$ref": "#/$defs/textOrNull"},
+          "depth_semantics": {"enum": [null, "z_depth", "radial_range", "disparity"]},
+          "units": {"$ref": "#/$defs/textOrNull"},
+          "algorithm": {"type": ["object", "null"]},
+          "synchronization": {"type": ["object", "null"]}
+        }
+      }
+    },
+    "calibration": {
+      "type": "object", "additionalProperties": false,
+      "required": ["device_serial", "firmware", "source", "date", "quality"],
+      "properties": {
+        "device_serial": {"$ref": "#/$defs/textOrNull"},
+        "firmware": {"$ref": "#/$defs/textOrNull"},
+        "source": {"$ref": "#/$defs/textOrNull"},
+        "date": {"$ref": "#/$defs/textOrNull"},
+        "quality": {"type": ["object", "null"]}
+      }
+    },
+    "backends": {
+      "type": "object", "additionalProperties": false,
+      "required": ["isaac_sim", "mujoco", "gazebo"],
+      "properties": {
+        "isaac_sim": {"$ref": "#/$defs/backend"},
+        "mujoco": {"$ref": "#/$defs/backend"},
+        "gazebo": {"$ref": "#/$defs/backend"}
+      }
+    },
+    "notes": {"type": "array", "items": {"type": "string"}}
+  },
+  "$defs": {
+    "textOrNull": {"type": ["string", "null"], "minLength": 1},
+    "vector3": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "number"}},
+    "quaternion": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"type": "number"}},
+    "resolution": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "integer", "minimum": 1}},
+    "referenceNames": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "backend": {
+      "type": "object", "additionalProperties": false,
+      "required": ["version", "configuration_status", "validation_status"],
+      "properties": {
+        "version": {"$ref": "#/$defs/textOrNull"},
+        "configuration_status": {"enum": ["missing", "configured"]},
+        "validation_status": {"enum": ["not_run", "passed", "failed"]}
+      }
+    },
+    "mode": {
+      "type": "object", "additionalProperties": false,
+      "required": ["mode_id", "image_state", "projection_model", "resolution_px", "rate_hz", "K_px", "distortion_model", "distortion_coefficients", "crop", "stabilization", "shutter", "clipping_range_m", "encoding", "calibration_source"],
+      "properties": {
+        "mode_id": {"type": "string", "minLength": 1},
+        "image_state": {"enum": [null, "raw", "rectified", "processed"]},
+        "projection_model": {"$ref": "#/$defs/textOrNull"},
+        "resolution_px": {"anyOf": [{"$ref": "#/$defs/resolution"}, {"type": "null"}]},
+        "rate_hz": {"type": ["number", "null"], "exclusiveMinimum": 0},
+        "K_px": {"anyOf": [{"type": "array", "minItems": 3, "maxItems": 3, "items": {"$ref": "#/$defs/vector3"}}, {"type": "null"}]},
+        "distortion_model": {"$ref": "#/$defs/textOrNull"},
+        "distortion_coefficients": {"type": ["array", "null"], "items": {"type": "number"}},
+        "crop": {"type": ["object", "null"]},
+        "stabilization": {"type": ["object", "null"]},
+        "shutter": {"type": ["object", "null"]},
+        "clipping_range_m": {"type": ["array", "null"], "minItems": 2, "maxItems": 2, "items": {"type": "number", "exclusiveMinimum": 0}},
+        "encoding": {"$ref": "#/$defs/textOrNull"},
+        "calibration_source": {"$ref": "#/$defs/textOrNull"}
+      }
+    }
+  }
+}

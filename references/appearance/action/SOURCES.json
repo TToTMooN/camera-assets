@@ -1,0 +1,22 @@
+{
+  "purpose": "Manufacturer photographs and parts diagrams used to estimate fine exterior proportions. Not a measured CAD source.",
+  "captured_on": "2026-10-03",
+  "files": [
+    {"file": "acepro2.png", "url": "https://res.insta360.com/static/ceff5cd870e33e6c14441edb0ee21d04/acepro2.png", "page": "https://www.insta360.com/product/insta360-ace-pro2", "observed_features": ["red square lens-guard border", "independent left front display and horizontal indicator", "lower removable perforated wind guard", "lower-left model badge"]},
+    {"file": "ace_pro.png", "url": "https://res.insta360.com/static/f565e2ebba6fbd3c66c279d86bcaed7f/ace-pro.png", "page": "https://www.insta360.com/product/insta360-ace-pro2", "observed_features": ["red square lens-guard border", "horizontal indicator beneath front display", "lower brand panel", "no Ace Pro 2 wind guard"]},
+    {"file": "ace.png", "url": "https://res.insta360.com/static/23c16209ebbd00918fe1c9a095520959/spec-ace.png", "page": "https://www.insta360.com/product/insta360-ace-pro", "observed_features": ["smaller front display", "vertical red indicator", "brand wordmark inside lower screen bezel", "three front microphone holes", "no Leica label"]},
+    {"file": "oners_core.jpg", "url": "https://res.insta360.com/static/infr_base/10533aba76f7d1f5b6e4d3da643977ca/coreEN.jpg", "page": "https://onlinemanual.insta360.com/oners/en-us/camera/firstuse/introduction", "observed_features": ["separate front and rear Core faces", "small rear touch display", "horizontal speaker and microphone apertures", "top shutter and power buttons", "closed USB/microSD door and buckle"]},
+    {"file": "oners_4k.jpg", "url": "https://res.insta360.com/static/infr_base/e883359c35b7ad475b29da8c239e0f37/4kCN.jpg", "page": "https://onlinemanual.insta360.com/oners/en-us/camera/firstuse/introduction", "observed_features": ["square 4K Boost housing", "concentric optical circles", "rounded filter border"]},
+    {"file": "oners_360.jpg", "url": "https://res.insta360.com/static/infr_base/e66cc1a371240abaa9fe7cf7e722c22e/360CN.jpg", "page": "https://onlinemanual.insta360.com/oners/en-us/camera/firstuse/introduction", "observed_features": ["rounded square module housing", "separate curved fisheye lens and surround", "asymmetric side connection"]},
+    {"file": "oners_1inch.jpg", "url": "https://res.insta360.com/static/infr_base/1fe04f3d64c8ee3bc59734ecf02e5549/1inch.jpg", "page": "https://onlinemanual.insta360.com/oners/en-us/camera/firstuse/introduction", "observed_features": ["large circular filter housing", "outer knurled edge", "Leica and Super-Elmar lettering", "concentric protective optical rings"]},
+    {"file": "oner_core.png", "url": "https://static.insta360.com/assets/storage/20200106/1d96b66cd56cea88a00edfaec291895c/Screen_Shot_2020_01_06_at_2.44.54_PM.png", "page": "https://onlinemanual.insta360.com/oner/en-us/camera/basic", "observed_features": ["ONE R front badge", "diagonal speaker slots", "small Core-only rear touchscreen", "closed USB/microSD compartment", "separate shutter and power buttons"]},
+    {"file": "oner_4k.png", "url": "https://static.insta360.com/assets/storage/20191219/fb728b7c1c9ad2516162e7489c8e32b1/Screen_Shot_2019_12_19_at_4.55.12_PM.png", "page": "https://onlinemanual.insta360.com/oner/en-us/camera/basic", "observed_features": ["smaller original 4K Wide filter", "square mod envelope"]}
+  ],
+  "additional_primary_sources": [
+    {"url": "https://res.insta360.com/static/affce54abdcb36e121573fa1034e18bf/Ace%20Pro%202_UserManual_EN.pdf", "page_index": 3, "use": "Ace Pro 2 parts locations, folded flip display, battery and USB doors, mounting latches, release switches"},
+    {"url": "https://res.insta360.com/static/0dd36c5e326aba40e0dec3eb6d4d0c7d/AcePro_UserManual_EN.pdf", "use": "Ace Pro parts layout and folded touchscreen state"},
+    {"url": "https://onlinemanual.insta360.com/acepro/en-us/faq/specs/hardware", "use": "Different nominal front-display sizes in Ace and Ace Pro"},
+    {"url": "https://onlinemanual.insta360.com/oners/en-us/faq/specs", "use": "Core, lens and boosted-battery component proportions"}
+  ],
+  "limits": ["Fine feature positions and dimensions are photo-derived estimates.", "Lens-surface frames are schematic, with no optical calibration.", "Folded displays and fixed modules only; no articulated mechanism.", "The Ace Pro 2 wind-guard design follows the manufacturer standard product image; hardware batches may differ."]
+}

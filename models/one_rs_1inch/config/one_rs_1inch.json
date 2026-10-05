@@ -1,0 +1,24 @@
+{
+  "units": "millimeters for geometry, kilograms for mass",
+  "width_mm": 78.7,
+  "height_mm": 55.7,
+  "body_depth_mm": 39.176,
+  "overall_depth_mm": 47.2,
+  "mass_kg": 0.163,
+  "com_height_mm": 27.85,
+  "corner_radius_mm": 6.684,
+  "collision_tolerance_mm": 0.2,
+  "notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Body depth and the division between body and lens protrusion are estimates. Complete nominal ONE RS Core, Battery Base and 1-Inch Wide Angle Lens configuration; independent fixed exterior, with no module separation or assembly mechanics.",
+  "sources": [
+    {
+      "url": "https://www.insta360.com/product/insta360-oners",
+      "title": "Insta360 ONE RS official specifications: 1-Inch Wide Angle Lens configuration",
+      "fields": [
+        "width_mm",
+        "height_mm",
+        "overall_depth_mm",
+        "mass_kg"
+      ]
+    }
+  ]
+}

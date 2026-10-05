@@ -1,0 +1,19 @@
+{
+  "glb_sha256": "e9ab0537869a9acbdf8eb1796b8aba2ed40ee43a1dfff71db59ae41fb0e2449d",
+  "renderer": "Blender Cycles",
+  "light_scale": 0.04,
+  "world_strength": 0.6,
+  "exposure": 0.6,
+  "views": {
+    "hero": {
+      "file": "studio_hero.png",
+      "size_px": 900,
+      "samples": 48
+    },
+    "back": {
+      "file": "studio_back.png",
+      "size_px": 900,
+      "samples": 48
+    }
+  }
+}

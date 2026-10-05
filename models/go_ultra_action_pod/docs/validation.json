@@ -1,0 +1,88 @@
+{
+  "model": "go_ultra_action_pod",
+  "status": "PASS",
+  "checks": [
+    "URDF graph and portable local mesh references",
+    "URDF load after relocation",
+    "meter dimensions and bottom reference origin",
+    "OBJ and GLB nondegenerate triangles",
+    "self-contained GLB and matching visual bounds",
+    "consistent linear RGB material factors",
+    "positive definite physically admissible nominal inertia",
+    "watertight convex URDF collision meshes",
+    "visual vertex coverage within 0.2 mm"
+  ],
+  "visual_triangles": 126992,
+  "visual_bounds_m": [
+    [
+      -0.016625,
+      -0.0352,
+      0.0
+    ],
+    [
+      0.016625,
+      0.0352,
+      0.0488
+    ]
+  ],
+  "dimension_order": "depth X, width Y, height Z",
+  "visual_dimensions_m": [
+    0.03325,
+    0.0704,
+    0.0488
+  ],
+  "materials": 12,
+  "embedded_texture_images": 4,
+  "collision": [
+    {
+      "name": "body",
+      "triangles": 636,
+      "watertight": true,
+      "convex": true
+    }
+  ],
+  "collision_tolerance_mm": 0.2,
+  "max_visual_vertex_collision_halfspace_gap_mm": 0.00031397811545152976,
+  "mass_kg": 0.1085,
+  "inertia": [
+    {
+      "link": "go_ultra_action_pod_link",
+      "matrix_kg_m2": [
+        [
+          6.63441333333e-05,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.15283142708e-05,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          5.48080742708e-05
+        ]
+      ],
+      "principal_moments_kg_m2": [
+        3.15283142708e-05,
+        5.48080742708e-05,
+        6.63441333333e-05
+      ]
+    }
+  ],
+  "inertia_diagonal_kg_m2": [
+    6.63441333333e-05,
+    3.15283142708e-05,
+    5.48080742708e-05
+  ],
+  "inertia_basis": "Unmeasured nominal homogeneous-body-box approximation",
+  "glb_sha256": "2906d565e522214e9d3e9c75fd4919fa61b8288d6d983e5348da64ea28ee4c36",
+  "not_validated": [
+    "dimensional agreement with a measured physical specimen",
+    "optical calibration",
+    "mount interface fit",
+    "mass distribution",
+    "physics simulator-specific rendering and dynamics"
+  ]
+}

@@ -4,3 +4,7 @@ trimesh==4.12.2
 pillow==12.3.0
 viser==1.1.0
 yourdfpy==0.0.60
+fonttools==4.66.1
+shapely==2.1.2
+mapbox-earcut==2.1.0
+jsonschema==4.26.0

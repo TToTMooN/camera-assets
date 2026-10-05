@@ -1,0 +1,44 @@
+newmtl aluminum
+Kd 0.69 0.7 0.71
+d 1
+illum 2
+
+newmtl contact_gold
+Kd 0.64 0.48 0.2
+d 1
+illum 2
+
+newmtl glass_coating
+Kd 0.075 0.09 0.125
+d 1
+illum 2
+
+newmtl lens_ring
+Kd 0.14 0.15 0.17
+d 1
+illum 2
+
+newmtl markings
+Kd 0.74 0.75 0.76
+d 1
+illum 2
+
+newmtl optical_glass
+Kd 0.021 0.035 0.044
+d 1
+illum 2
+
+newmtl rubber
+Kd 0.027 0.029 0.032
+d 1
+illum 2
+
+newmtl screw_metal
+Kd 0.31 0.32 0.34
+d 1
+illum 2
+
+newmtl seam
+Kd 0.008 0.009 0.012
+d 1
+illum 2

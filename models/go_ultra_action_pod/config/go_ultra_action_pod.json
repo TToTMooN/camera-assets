@@ -1,0 +1,25 @@
+{
+  "units": "millimeters for geometry, kilograms for mass",
+  "width_mm": 70.4,
+  "height_mm": 48.8,
+  "body_depth_mm": 33.25,
+  "overall_depth_mm": 33.25,
+  "mass_kg": 0.1085,
+  "com_height_mm": 24.4,
+  "corner_radius_mm": 5.856,
+  "collision_tolerance_mm": 0.2,
+  "notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Action Pod only, with its screen folded. Mass excludes the standalone camera. Docking cavity, hinge and exact connection geometry are approximate; no docked or articulated assembly is supplied.",
+  "sources": [
+    {
+      "url": "https://onlinemanual.insta360.com/go3s/en-us/specs/hardware",
+      "title": "Insta360 GO series hardware specifications: GO Ultra folded Action Pod",
+      "fields": [
+        "width_mm",
+        "height_mm",
+        "body_depth_mm",
+        "overall_depth_mm",
+        "mass_kg"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+[
+  {
+    "name": "accent_red",
+    "file": "../assets/meshes/visual/accent_red.obj",
+    "rgba": [
+      0.7105664902244221,
+      0.006571403616195705,
+      0.010816382958706206,
+      1.0
+    ],
+    "triangles": 6528
+  },
+  {
+    "name": "display_black",
+    "file": "../assets/meshes/visual/display_black.obj",
+    "rgba": [
+      0.0007739938080495357,
+      0.0010061919504643962,
+      0.0011609907120743034,
+      1.0
+    ],
+    "triangles": 5376
+  },
+  {
+    "name": "housing",
+    "file": "../assets/meshes/visual/housing.obj",
+    "rgba": [
+      0.01341174889765847,
+      0.014349874706802563,
+      0.01532520332062848,
+      1.0
+    ],
+    "triangles": 10752
+  },
+  {
+    "name": "lens_ring",
+    "file": "../assets/meshes/visual/lens_ring.obj",
+    "rgba": [
+      0.036306484118193906,
+      0.03797231989168777,
+      0.039681909478526005,
+      1.0
+    ],
+    "triangles": 4736
+  },
+  {
+    "name": "markings",
+    "file": "../assets/meshes/visual/markings.obj",
+    "rgba": [
+      0.47699978456654196,
+      0.49190504085677866,
+      0.49190504085677866,
+      1.0
+    ],
+    "triangles": 15100
+  },
+  {
+    "name": "muted_markings",
+    "file": "../assets/meshes/visual/muted_markings.obj",
+    "rgba": [
+      0.10653922395082352,
+      0.1192801876221121,
+      0.12596738774090202,
+      1.0
+    ],
+    "triangles": 11644
+  },
+  {
+    "name": "optical_glass",
+    "file": "../assets/meshes/visual/optical_glass.obj",
+    "rgba": [
+      0.0020123839009287925,
+      0.0035010160107980036,
+      0.0032542151238735876,
+      1.0
+    ],
+    "triangles": 1280
+  },
+  {
+    "name": "optics_black",
+    "file": "../assets/meshes/visual/optics_black.obj",
+    "rgba": [
+      0.0017027863777089782,
+      0.0019349845201238392,
+      0.0020123839009287925,
+      1.0
+    ],
+    "triangles": 3456
+  },
+  {
+    "name": "optics_coating",
+    "file": "../assets/meshes/visual/optics_coating.obj",
+    "rgba": [
+      0.0025541795665634678,
+      0.004794747485689938,
+      0.006941255573522422,
+      1.0
+    ],
+    "triangles": 256
+  },
+  {
+    "name": "rubber",
+    "file": "../assets/meshes/visual/rubber.obj",
+    "rgba": [
+      0.005753953718244932,
+      0.006213310068848936,
+      0.006693375757990333,
+      1.0
+    ],
+    "triangles": 22656
+  },
+  {
+    "name": "screen",
+    "file": "../assets/meshes/visual/screen.obj",
+    "rgba": [
+      0.0028637770897832816,
+      0.0033353136322752906,
+      0.0036714237171942177,
+      1.0
+    ],
+    "triangles": 5376
+  },
+  {
+    "name": "screw_metal",
+    "file": "../assets/meshes/visual/screw_metal.obj",
+    "rgba": [
+      0.030074104146591292,
+      0.033104766570885055,
+      0.036306484118193906,
+      1.0
+    ],
+    "triangles": 384
+  },
+  {
+    "name": "seam",
+    "file": "../assets/meshes/visual/seam.obj",
+    "rgba": [
+      0.001393188854489164,
+      0.0015479876160990713,
+      0.0017027863777089782,
+      1.0
+    ],
+    "triangles": 34016
+  }
+]

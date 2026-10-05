@@ -1,0 +1,94 @@
+{
+  "model": "ace",
+  "status": "PASS",
+  "checks": [
+    "URDF graph and portable local mesh references",
+    "URDF load after relocation",
+    "meter dimensions and bottom reference origin",
+    "OBJ and GLB nondegenerate triangles",
+    "self-contained GLB and matching visual bounds",
+    "consistent linear RGB material factors",
+    "positive definite physically admissible nominal inertia",
+    "watertight convex URDF collision meshes",
+    "visual vertex coverage within 0.2 mm"
+  ],
+  "visual_triangles": 110960,
+  "visual_bounds_m": [
+    [
+      -0.01925,
+      -0.03595,
+      0.0
+    ],
+    [
+      0.01925,
+      0.03595,
+      0.05215
+    ]
+  ],
+  "dimension_order": "depth X, width Y, height Z",
+  "visual_dimensions_m": [
+    0.0385,
+    0.0719,
+    0.05215
+  ],
+  "materials": 13,
+  "embedded_texture_images": 2,
+  "collision": [
+    {
+      "name": "body",
+      "triangles": 636,
+      "watertight": true,
+      "convex": true
+    },
+    {
+      "name": "front_lens",
+      "triangles": 636,
+      "watertight": true,
+      "convex": true
+    }
+  ],
+  "collision_tolerance_mm": 0.2,
+  "max_visual_vertex_collision_halfspace_gap_mm": 0.00040127482413970794,
+  "mass_kg": 0.1768,
+  "inertia": [
+    {
+      "link": "ace_link",
+      "matrix_kg_m2": [
+        [
+          0.000116234692167,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          6.19075881667e-05,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          9.80040706667e-05
+        ]
+      ],
+      "principal_moments_kg_m2": [
+        6.19075881667e-05,
+        9.80040706667e-05,
+        0.000116234692167
+      ]
+    }
+  ],
+  "inertia_diagonal_kg_m2": [
+    0.000116234692167,
+    6.19075881667e-05,
+    9.80040706667e-05
+  ],
+  "inertia_basis": "Unmeasured nominal homogeneous-body-box approximation",
+  "glb_sha256": "c82e740fbf9dcd5c40d84ad84dfe2bb8321487f07335b4b34168c9eefa5d0f0f",
+  "not_validated": [
+    "dimensional agreement with a measured physical specimen",
+    "optical calibration",
+    "mount interface fit",
+    "mass distribution",
+    "physics simulator-specific rendering and dynamics"
+  ]
+}

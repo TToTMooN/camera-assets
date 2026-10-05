@@ -1,25 +1,17 @@
 {
+  "model": "x5",
   "status": "PASS",
   "checks": [
-    "URDF graph and local mesh references",
+    "URDF graph and portable local mesh references",
     "URDF load after relocation",
-    "meter dimensions and bottom origin",
-    "OBJ nondegenerate triangles",
-    "GLB embedded textures and matching geometry",
-    "positive definite nominal inertia",
-    "watertight convex collision meshes",
+    "meter dimensions and bottom reference origin",
+    "OBJ and GLB nondegenerate triangles",
+    "self-contained GLB and matching visual bounds",
+    "consistent linear RGB material factors",
+    "positive definite physically admissible nominal inertia",
+    "watertight convex URDF collision meshes",
     "visual vertex coverage within 0.2 mm"
   ],
-  "appearance_acceptance": {
-    "active_display_size_mm": [
-      33.900003880262375,
-      53.700003772974014
-    ],
-    "screen_facing_controls": "right (+Y)",
-    "screen_facing_battery": "left (-Y)",
-    "lower_front_controls": "outlined shutter at -Y; overlapping menu outlines at +Y",
-    "basis": "Official X5 specification and product photograph; detail positions remain inferred"
-  },
   "visual_triangles": 66921,
   "visual_bounds_m": [
     [
@@ -43,26 +35,54 @@
   "embedded_texture_images": 2,
   "collision": [
     {
-      "file": "assets/meshes/collision/body.stl",
+      "name": "body",
       "triangles": 2848,
       "watertight": true,
       "convex": true
     },
     {
-      "file": "assets/meshes/collision/front_lens.stl",
+      "name": "front_lens",
       "triangles": 478,
       "watertight": true,
       "convex": true
     },
     {
-      "file": "assets/meshes/collision/rear_lens.stl",
+      "name": "rear_lens",
       "triangles": 478,
       "watertight": true,
       "convex": true
     }
   ],
+  "collision_tolerance_mm": 0.2,
   "max_visual_vertex_collision_halfspace_gap_mm": 0.15065973754532086,
   "mass_kg": 0.2,
+  "inertia": [
+    {
+      "link": "x5_link",
+      "matrix_kg_m2": [
+        [
+          0.000293604166667,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.000269778166667,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          4.67073333333e-05
+        ]
+      ],
+      "principal_moments_kg_m2": [
+        4.67073333333e-05,
+        0.000269778166667,
+        0.000293604166667
+      ]
+    }
+  ],
   "inertia_diagonal_kg_m2": [
     0.000293604166667,
     0.000269778166667,
@@ -73,7 +93,18 @@
   "not_validated": [
     "dimensional agreement with a measured physical specimen",
     "optical calibration",
+    "mount interface fit",
     "mass distribution",
     "physics simulator-specific rendering and dynamics"
-  ]
+  ],
+  "appearance_acceptance": {
+    "active_display_size_mm": [
+      33.900003880262375,
+      53.700003772974014
+    ],
+    "screen_facing_controls": "right (+Y)",
+    "screen_facing_battery": "left (-Y)",
+    "lower_front_controls": "outlined shutter at -Y; overlapping menu outlines at +Y",
+    "basis": "Official X5 specification and product photograph; detail positions remain inferred"
+  }
 }

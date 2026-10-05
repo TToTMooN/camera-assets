@@ -1,0 +1,77 @@
+{
+  "scope": "Reference-informed exterior modeling for GO cameras and folded or closed accessories",
+  "usage": "Manufacturer imagery and diagrams are modeling references only. They are not used as exported photographs, output model textures, or measured dimensional calibration.",
+  "detail_accuracy": "Small component sizes and depths are estimated from the referenced views. Catalog envelope and mass values remain the manufacturer's nominal specifications. Docking clearance, optical centers, internal construction and mass distribution are unmeasured.",
+  "sources": [
+    {
+      "models": ["go3s"],
+      "url": "https://res.insta360.com/static/a3b716298df7f6da544fcdaf70ffe21f/GO3S.png",
+      "page_url": "https://www.insta360.com/product/insta360-go3s",
+      "local_filename": "go3s_official.png",
+      "observed_features": ["Larger black replaceable lens guard", "White capsule camera front", "Integrated quick-capture face", "Small microphone under lens", "Horizontal lower status window"]
+    },
+    {
+      "models": ["go3"],
+      "url": "https://res.insta360.com/static/d78e79ba23e097dc53578184664348ca/GO3.png",
+      "page_url": "https://www.insta360.com/product/insta360-go3s",
+      "local_filename": "go3_official.png",
+      "observed_features": ["Smaller GO 3 protective lens ring", "Shared smooth white capsule silhouette", "Integrated white capture face"]
+    },
+    {
+      "models": ["go3_action_pod"],
+      "url": "https://res.insta360.com/dynamic/store/eb7db16e0bde83d9b32b97c18c4fc12e/731_5501c62c-446e-4e6f-a6f6-7c8719e046bf.png",
+      "page_url": "https://store.insta360.com/product/go-3s-action-pod",
+      "local_filename": "go3s_actionpod_official.png",
+      "observed_features": ["Empty horizontal rounded docking well", "Raised diagonal traction ribs", "Circular six-contact plate at the right end", "Side retention clips", "Front identifier on lower shell"]
+    },
+    {
+      "models": ["go3s", "go3", "go3_action_pod"],
+      "url": "https://res.insta360.com/static/d70a8e271d0c8e5a4b14a658777c1e31/GO%203S_UserManual_EN.pdf",
+      "local_filename": "go3s_manual.pdf",
+      "reference_pages": "PDF page 4, printed page 1",
+      "observed_features": ["Top microphone", "Front integrated button and lower status window", "Rear circular charging contact plate", "Six diagonal rear ribs", "Lower speaker slit", "Pod top shutter", "Pod power and Q buttons", "Pod release switch and USB-C port", "Flip display hinge", "Bottom mounting latch"]
+    },
+    {
+      "models": ["go_ultra", "go_ultra_action_pod"],
+      "url": "https://wassets.insta360.com/store/0370798f2c02498da040ca036d35c709/7539_77a07db3-e5b1-46d4-9bef-eabbd77d16bf.png",
+      "page_url": "https://store.insta360.com/product/go-ultra",
+      "local_filename": "go_ultra_official.png",
+      "observed_features": ["Square camera with rounded corners", "Upper-right large protective lens guard", "Circular perforated microphone at upper left", "Pale ambient light sensor below microphone", "Horizontal lower status window", "Continuous front push area with no visible circular button outline", "Vertical grip patch and identifier on pod"]
+    },
+    {
+      "models": ["go_ultra", "go_ultra_action_pod"],
+      "url": "https://res.insta360.com/dynamic/store/e4dec99e2983ce0b30ed231da0defc1f/314_3375f88e-d083-4b48-90b4-64332703e15d.jpg",
+      "page_url": "https://store.insta360.com/product/go-ultra",
+      "local_filename": "go_ultra_gallery.jpg",
+      "observed_features": ["Camera and Action Pod proportions", "Black polymer and separate lens materials", "Folded-screen assembly"]
+    },
+    {
+      "models": ["go_ultra", "go_ultra_action_pod"],
+      "url": "https://res.insta360.com/static/780b3076f6404c5ea75e6d56ad04dc34/GOUltra_UserManual_EN.pdf",
+      "local_filename": "go_ultra_manual.pdf",
+      "reference_pages": "PDF page 3, printed page 1",
+      "observed_features": ["Rear magnetic ring", "Contacts arranged along the lower rear arc", "Side locking tabs", "MicroSD card door", "Side speaker", "Bottom lanyard anchor", "Square empty pod well", "Flip-screen hinge", "Power and Q side buttons", "Release switch and USB-C", "Bottom mounting latch"]
+    },
+    {
+      "models": ["go2", "go2_charging_case"],
+      "url": "https://res.insta360.com/static/infr_base/ec55c2c18e0035eb799da088ec11ffe8/GO2%20QuickStart%20Guide.pdf",
+      "local_filename": "go2_quickstart.pdf",
+      "reference_pages": "PDF page 3, printed page 1",
+      "observed_features": ["Capsule camera and upper lens", "Round indicator beneath lens", "Integrated front action button", "Six rear charging contacts", "Top microphone", "Closed case horizontal lid seam", "Rear pinhole", "USB-C", "Threaded mounting socket", "Folded tripod legs", "No exterior controller display in the closed pose"]
+    },
+    {
+      "models": ["go2"],
+      "url": "https://res.insta360.com/static/assets/storage/20210127/2a37389e65d816eea73be97237aec926/ic_inthebox01_pc.svg",
+      "page_url": "https://www.insta360.com/product/insta360-go2",
+      "local_filename": "go2_camera_official.svg",
+      "observed_features": ["Official camera silhouette and protective guard"]
+    },
+    {
+      "models": ["go2_charging_case"],
+      "url": "https://res.insta360.com/static/assets/storage/20210127/73827105fc1bab7e11a13bd11e293383/ic_inthebox02_pc.svg",
+      "page_url": "https://www.insta360.com/product/insta360-go2",
+      "local_filename": "go2_case_official.svg",
+      "observed_features": ["Rounded closed clamshell silhouette", "Lid joint and folded leg seam"]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "model_id": "go2_charging_case",
+  "sensor_class": "accessory_none",
+  "status": "not_applicable",
+  "root_frame": "go2_charging_case_link",
+  "conventions": {
+    "length": "meters",
+    "intrinsics": "pixels",
+    "quaternion": "xyzw",
+    "optical_axes": "+X right, +Y down, +Z forward",
+    "transform": "p_body = R_body_optical * p_optical + t_body_optical"
+  },
+  "geometry_frames": [
+    {
+      "name": "go2_charging_case_mount",
+      "translation_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "quaternion_xyzw": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "source": "reference_geometry",
+      "usage": "placement_only"
+    }
+  ],
+  "T_robot_body": {
+    "parent_frame": null,
+    "translation_m": null,
+    "quaternion_xyzw": null
+  },
+  "imagers": [],
+  "emitters": [],
+  "derived_outputs": [],
+  "calibration": {
+    "device_serial": null,
+    "firmware": null,
+    "source": null,
+    "date": null,
+    "quality": null
+  },
+  "backends": {
+    "isaac_sim": {
+      "version": null,
+      "configuration_status": "missing",
+      "validation_status": "not_run"
+    },
+    "mujoco": {
+      "version": null,
+      "configuration_status": "missing",
+      "validation_status": "not_run"
+    },
+    "gazebo": {
+      "version": null,
+      "configuration_status": "missing",
+      "validation_status": "not_run"
+    }
+  },
+  "notes": [
+    "Null means unknown, not zero or an ideal sensor.",
+    "Surface frames are geometric references, not calibrated optical centers.",
+    "Left/right geometry candidates need physical stream mapping verification.",
+    "Calibrated optics do not certify stitching, depth algorithms or simulator integration."
+  ]
+}

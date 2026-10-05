@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="insta360_x4_air">
+  <!--Independent approximate geometry; fixed sites are geometric references, not calibrated optical frames.-->
+  <compiler angle="radian" inertiafromgeom="false" strippath="false" />
+  <option timestep="0.002" gravity="0 0 -9.81" />
+  <asset>
+    <mesh name="x4_air_visual_mesh_0" file="../assets/meshes/visual/aperture.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="x4_air_visual_mesh_1" file="../assets/meshes/visual/coating_edge.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="x4_air_visual_mesh_2" file="../assets/meshes/visual/control.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="x4_air_visual_mesh_3" file="../assets/meshes/visual/display_edge.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="x4_air_visual_mesh_4" file="../assets/meshes/visual/glass_coating.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="x4_air_visual_mesh_5" file="../assets/meshes/visual/glass_outer.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="x4_air_visual_mesh_6" file="../assets/meshes/visual/housing.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="x4_air_visual_mesh_7" file="../assets/meshes/visual/housing_face.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="x4_air_visual_mesh_8" file="../assets/meshes/visual/lens_barrel.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="x4_air_visual_mesh_9" file="../assets/meshes/visual/lens_ring.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="x4_air_visual_mesh_10" file="../assets/meshes/visual/marking.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="x4_air_visual_mesh_11" file="../assets/meshes/visual/marking_dark.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="x4_air_visual_mesh_12" file="../assets/meshes/visual/mount_metal.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="x4_air_visual_mesh_13" file="../assets/meshes/visual/optical_glass.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="x4_air_visual_mesh_14" file="../assets/meshes/visual/rubber.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="x4_air_visual_mesh_15" file="../assets/meshes/visual/screen.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="x4_air_visual_mesh_16" file="../assets/meshes/visual/seam.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="x4_air_visual_mesh_17" file="../assets/meshes/visual/status_dim.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="x4_air_collision_mesh_0" file="../assets/meshes/collision/body.stl" scale="1 1 1" inertia="convex" />
+    <mesh name="x4_air_collision_mesh_1" file="../assets/meshes/collision/front_lens.stl" scale="1 1 1" inertia="convex" />
+    <mesh name="x4_air_collision_mesh_2" file="../assets/meshes/collision/rear_lens.stl" scale="1 1 1" inertia="convex" />
+  </asset>
+  <worldbody>
+    <body name="x4_air_link">
+      <inertial pos="0 0 0.0569" mass="0.165" diaginertia="0.00020716355 0.0001968923 4.791875e-05" quat="1 0 0 0" />
+      <geom name="x4_air_visual_0" type="mesh" mesh="x4_air_visual_mesh_0" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.006 0.008 0.012 1" />
+      <geom name="x4_air_visual_1" type="mesh" mesh="x4_air_visual_mesh_1" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.075 0.09 0.12 1" />
+      <geom name="x4_air_visual_2" type="mesh" mesh="x4_air_visual_mesh_2" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.13 0.14 0.155 1" />
+      <geom name="x4_air_visual_3" type="mesh" mesh="x4_air_visual_mesh_3" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.115 0.126 0.144 1" />
+      <geom name="x4_air_visual_4" type="mesh" mesh="x4_air_visual_mesh_4" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.025 0.047 0.04 1" />
+      <geom name="x4_air_visual_5" type="mesh" mesh="x4_air_visual_mesh_5" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.035 0.045 0.058 1" />
+      <geom name="x4_air_visual_6" type="mesh" mesh="x4_air_visual_mesh_6" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.115 0.12 0.132 1" />
+      <geom name="x4_air_visual_7" type="mesh" mesh="x4_air_visual_mesh_7" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.092 0.099 0.108 1" />
+      <geom name="x4_air_visual_8" type="mesh" mesh="x4_air_visual_mesh_8" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.06 0.068 0.078 1" />
+      <geom name="x4_air_visual_9" type="mesh" mesh="x4_air_visual_mesh_9" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.19 0.205 0.225 1" />
+      <geom name="x4_air_visual_10" type="mesh" mesh="x4_air_visual_mesh_10" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.72 0.73 0.75 1" />
+      <geom name="x4_air_visual_11" type="mesh" mesh="x4_air_visual_mesh_11" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.45 0.46 0.48 1" />
+      <geom name="x4_air_visual_12" type="mesh" mesh="x4_air_visual_mesh_12" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.27 0.285 0.31 1" />
+      <geom name="x4_air_visual_13" type="mesh" mesh="x4_air_visual_mesh_13" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.008 0.014 0.02 1" />
+      <geom name="x4_air_visual_14" type="mesh" mesh="x4_air_visual_mesh_14" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.065 0.075 0.085 1" />
+      <geom name="x4_air_visual_15" type="mesh" mesh="x4_air_visual_mesh_15" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.015 0.019 0.027 1" />
+      <geom name="x4_air_visual_16" type="mesh" mesh="x4_air_visual_mesh_16" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.025 0.03 0.035 1" />
+      <geom name="x4_air_visual_17" type="mesh" mesh="x4_air_visual_mesh_17" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.02 0.45 0.58 1" />
+      <geom name="x4_air_collision_0" type="mesh" mesh="x4_air_collision_mesh_0" pos="0 0 0" quat="1 0 0 0" density="0" group="3" contype="1" conaffinity="1" rgba="0 0 0 0" />
+      <geom name="x4_air_collision_1" type="mesh" mesh="x4_air_collision_mesh_1" pos="0 0 0" quat="1 0 0 0" density="0" group="3" contype="1" conaffinity="1" rgba="0 0 0 0" />
+      <geom name="x4_air_collision_2" type="mesh" mesh="x4_air_collision_mesh_2" pos="0 0 0" quat="1 0 0 0" density="0" group="3" contype="1" conaffinity="1" rgba="0 0 0 0" />
+      <site name="x4_air_mount" pos="0 0 0" quat="1 0 0 0" type="sphere" size="0.001" group="4" rgba="0 0 0 0" />
+      <site name="x4_air_rear_lens_surface" pos="-0.0185 0 0.0941126" quat="0.500000000002 -0.5 -0.499999999998 0.5" type="sphere" size="0.001" group="4" rgba="0 0 0 0" />
+      <site name="x4_air_front_lens_surface" pos="0.0185 0 0.0941126" quat="0.500000000002 -0.5 0.499999999998 -0.5" type="sphere" size="0.001" group="4" rgba="0 0 0 0" />
+    </body>
+  </worldbody>
+</mujoco>

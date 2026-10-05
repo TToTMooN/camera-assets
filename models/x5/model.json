@@ -3,5 +3,31 @@
   "visual": "assets/meshes/x5_visual.glb",
   "urdf": "urdf/insta360_x5.urdf",
   "config": "config/x5.json",
-  "status": "Reference-based exterior; not specimen-measured"
+  "status": "Reference-based exterior; not specimen-measured",
+  "family": "360",
+  "fidelity": "detailed_reference_exterior",
+  "root_link": "x5_link",
+  "mount_link": "x5_mount",
+  "sources": [
+    {
+      "url": "https://onlinemanual.insta360.com/x6/en-us/specs/hardware",
+      "title": "Insta360 X6 hardware specifications: X5 comparison column",
+      "fields": [
+        "width_mm",
+        "height_mm",
+        "overall_depth_mm",
+        "mass_kg",
+        "body_depth_mm"
+      ]
+    }
+  ],
+  "origin_description": "Bottom mount reference; interface and COM are unmeasured",
+  "mjcf": "mjcf/insta360_x5.xml",
+  "brand": "Insta360",
+  "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent approximate exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Uses the existing detailed X5 exterior model. Screen dimensions follow manufacturer data; small details and component placement are inferred.",
+  "lens_surface_frames": [
+    "x5_front_lens_surface",
+    "x5_rear_lens_surface"
+  ],
+  "sensor_manifest": "config/sensors.json"
 }

@@ -1,0 +1,29 @@
+{
+  "units": "millimeters for geometry, kilograms for mass",
+  "width_mm": 175.25,
+  "height_mm": 30.25,
+  "body_depth_mm": 43.1,
+  "overall_depth_mm": 43.1,
+  "mass_kg": 0.23,
+  "com_height_mm": 15.125,
+  "corner_radius_mm": 3.63,
+  "collision_tolerance_mm": 0.2,
+  "notes": "Manufacturer nominal exterior envelope and mass; independent approximate enclosure, aperture positions, ports, mounting reference, center of mass and uniform-envelope inertia. No optical calibration, calibrated stereo baseline or simulated depth output. Uses official store dimensions and 230 g mass. Official ZED USB 3 documentation and ZED 2i datasheet Rev 1.2 round the envelope to 175.3 \u00d7 30.3 \u00d7 43.1 mm and list 229 g. Lens variant, cables and locking connector clearance are not modeled.",
+  "sources": [
+    {
+      "url": "https://www.stereolabs.com/store/products/zed-2i",
+      "title": "Stereolabs ZED 2i official store specifications",
+      "fields": [
+        "width_mm",
+        "height_mm",
+        "overall_depth_mm",
+        "mass_kg"
+      ]
+    },
+    {
+      "url": "https://www.stereolabs.com/docs/products/cameras/zed/specifications",
+      "title": "ZED USB 3 hardware specifications; alternative rounded envelope and 229 g mass",
+      "fields": []
+    }
+  ]
+}

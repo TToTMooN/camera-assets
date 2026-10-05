@@ -1,0 +1,38 @@
+{
+  "name": "Insta360 GO 2",
+  "family": "wearable",
+  "brand": "Insta360",
+  "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Body depth and the division between body and lens protrusion are estimates. Standalone camera only. Official dimension labels are normalized to the upright camera orientation; Charging Case is separate.",
+  "visual": "assets/meshes/go2_visual.glb",
+  "urdf": "urdf/insta360_go2.urdf",
+  "config": "config/go2.json",
+  "root_link": "go2_link",
+  "mount_link": "go2_mount",
+  "status": "Reference-informed detailed exterior; unmeasured component geometry",
+  "fidelity": "reference_detailed_exterior",
+  "origin_description": "Bottom center of total envelope; nominal attachment reference, not a measured mount interface",
+  "appearance_revision": 2,
+  "component_count": 33,
+  "lens_surface_frames": [
+    "go2_front_lens_surface"
+  ],
+  "sources": [
+    {
+      "url": "https://www.insta360.com/product/insta360-go2",
+      "title": "Insta360 GO 2 official specifications: standalone camera",
+      "fields": [
+        "width_mm",
+        "height_mm",
+        "overall_depth_mm",
+        "mass_kg"
+      ]
+    }
+  ],
+  "appearance_sources": [
+    "https://res.insta360.com/static/infr_base/ec55c2c18e0035eb799da088ec11ffe8/GO2%20QuickStart%20Guide.pdf",
+    "https://www.insta360.com/product/insta360-go2",
+    "https://res.insta360.com/static/assets/storage/20210127/2a37389e65d816eea73be97237aec926/ic_inthebox01_pc.svg"
+  ],
+  "mjcf": "mjcf/insta360_go2.xml",
+  "sensor_manifest": "config/sensors.json"
+}

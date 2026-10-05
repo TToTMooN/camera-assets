@@ -1,0 +1,134 @@
+[
+  {
+    "name": "front_polymer",
+    "file": "../assets/meshes/visual/front_polymer.obj",
+    "rgba": [
+      0.0432336359153358,
+      0.04773199376700342,
+      0.05290079053734631,
+      1.0
+    ],
+    "triangles": 5952
+  },
+  {
+    "name": "gasket",
+    "file": "../assets/meshes/visual/gasket.obj",
+    "rgba": [
+      0.01341174889765847,
+      0.016338144740016113,
+      0.018478473287962097,
+      1.0
+    ],
+    "triangles": 13824
+  },
+  {
+    "name": "gold",
+    "file": "../assets/meshes/visual/gold.obj",
+    "rgba": [
+      0.47699978456654196,
+      0.22341399352485986,
+      0.024515013703524748,
+      1.0
+    ],
+    "triangles": 2016
+  },
+  {
+    "name": "housing",
+    "file": "../assets/meshes/visual/housing.obj",
+    "rgba": [
+      0.033104766570885055,
+      0.03797231989168777,
+      0.0432336359153358,
+      1.0
+    ],
+    "triangles": 5248
+  },
+  {
+    "name": "rear_polymer",
+    "file": "../assets/meshes/visual/rear_polymer.obj",
+    "rgba": [
+      0.025842879545199027,
+      0.028622072468987392,
+      0.03248503564942535,
+      1.0
+    ],
+    "triangles": 31360
+  },
+  {
+    "name": "screen",
+    "file": "../assets/meshes/visual/screen.obj",
+    "rgba": [
+      0.0014705882352941176,
+      0.002089783281733746,
+      0.002708978328173375,
+      1.0
+    ],
+    "triangles": 3584
+  },
+  {
+    "name": "screen_border",
+    "file": "../assets/meshes/visual/screen_border.obj",
+    "rgba": [
+      0.005422868676138171,
+      0.006571403616195705,
+      0.007985828279401842,
+      1.0
+    ],
+    "triangles": 3584
+  },
+  {
+    "name": "silver",
+    "file": "../assets/meshes/visual/silver.obj",
+    "rgba": [
+      0.40644830114675407,
+      0.46236136930676214,
+      0.4994581635400763,
+      1.0
+    ],
+    "triangles": 2688
+  },
+  {
+    "name": "slot",
+    "file": "../assets/meshes/visual/slot.obj",
+    "rgba": [
+      0.0019349845201238392,
+      0.0025541795665634678,
+      0.003018575851393189,
+      1.0
+    ],
+    "triangles": 16128
+  },
+  {
+    "name": "status",
+    "file": "../assets/meshes/visual/status.obj",
+    "rgba": [
+      0.033104766570885055,
+      0.5870163508936885,
+      0.7677687605549981,
+      1.0
+    ],
+    "triangles": 2688
+  },
+  {
+    "name": "subtle_print",
+    "file": "../assets/meshes/visual/subtle_print.obj",
+    "rgba": [
+      0.07323895587840543,
+      0.0835351274258047,
+      0.09462962659456918,
+      1.0
+    ],
+    "triangles": 34416
+  },
+  {
+    "name": "tray",
+    "file": "../assets/meshes/visual/tray.obj",
+    "rgba": [
+      0.005422868676138171,
+      0.006571403616195705,
+      0.008260390656757826,
+      1.0
+    ],
+    "triangles": 5504
+  }
+]

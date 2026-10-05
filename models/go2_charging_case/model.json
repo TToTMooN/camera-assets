@@ -1,0 +1,37 @@
+{
+  "name": "Insta360 GO 2 Charging Case (closed)",
+  "family": "accessory",
+  "brand": "Insta360",
+  "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Closed Charging Case only, upright orientation. Mass excludes the camera. The generic accessory exterior approximates the shell; internal cavity, folding legs and hinge are not modeled. Manufacturer dimensions list the long axis first; this entry uses width 48.5 mm and height 68.1 mm for an upright closed case.",
+  "visual": "assets/meshes/go2_charging_case_visual.glb",
+  "urdf": "urdf/insta360_go2_charging_case.urdf",
+  "config": "config/go2_charging_case.json",
+  "root_link": "go2_charging_case_link",
+  "mount_link": "go2_charging_case_mount",
+  "status": "Reference-informed detailed exterior; unmeasured component geometry",
+  "fidelity": "reference_detailed_exterior",
+  "origin_description": "Bottom center of total envelope; nominal attachment reference, not a measured mount interface",
+  "appearance_revision": 2,
+  "component_count": 24,
+  "lens_surface_frames": [],
+  "sources": [
+    {
+      "url": "https://www.insta360.com/product/insta360-go2",
+      "title": "Insta360 GO 2 official specifications: closed Charging Case",
+      "fields": [
+        "width_mm",
+        "height_mm",
+        "overall_depth_mm",
+        "mass_kg",
+        "body_depth_mm"
+      ]
+    }
+  ],
+  "appearance_sources": [
+    "https://res.insta360.com/static/infr_base/ec55c2c18e0035eb799da088ec11ffe8/GO2%20QuickStart%20Guide.pdf",
+    "https://www.insta360.com/product/insta360-go2",
+    "https://res.insta360.com/static/assets/storage/20210127/73827105fc1bab7e11a13bd11e293383/ic_inthebox02_pc.svg"
+  ],
+  "mjcf": "mjcf/insta360_go2_charging_case.xml",
+  "sensor_manifest": "config/sensors.json"
+}

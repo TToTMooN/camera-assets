@@ -1,0 +1,37 @@
+{
+  "name": "Insta360 ONE RS 360 configuration",
+  "family": "modular_360",
+  "brand": "Insta360",
+  "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Body depth and the division between body and lens protrusion are estimates. Complete nominal Core, Battery Base and 360 Lens configuration; independent fixed exterior, with no module separation or assembly mechanics.",
+  "visual": "assets/meshes/one_rs_360_visual.glb",
+  "urdf": "urdf/insta360_one_rs_360.urdf",
+  "config": "config/one_rs_360.json",
+  "root_link": "one_rs_360_link",
+  "mount_link": "one_rs_360_mount",
+  "status": "Reference-informed detailed exterior; unmeasured component geometry",
+  "fidelity": "reference_detailed_exterior",
+  "origin_description": "Bottom center of total envelope; nominal attachment reference, not a measured mount interface",
+  "appearance_revision": 2,
+  "component_count": 45,
+  "lens_surface_frames": [
+    "one_rs_360_rear_lens_surface",
+    "one_rs_360_front_lens_surface"
+  ],
+  "sources": [
+    {
+      "url": "https://www.insta360.com/product/insta360-oners",
+      "title": "Insta360 ONE RS official specifications: 360 Lens configuration",
+      "fields": [
+        "width_mm",
+        "height_mm",
+        "overall_depth_mm",
+        "mass_kg"
+      ]
+    }
+  ],
+  "appearance_sources": [
+    "https://onlinemanual.insta360.com/oners/en-us/camera/firstuse/introduction"
+  ],
+  "mjcf": "mjcf/insta360_one_rs_360.xml",
+  "sensor_manifest": "config/sensors.json"
+}

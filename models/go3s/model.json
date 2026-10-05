@@ -1,0 +1,38 @@
+{
+  "name": "Insta360 GO 3S",
+  "family": "wearable",
+  "brand": "Insta360",
+  "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Body depth and the division between body and lens protrusion are estimates. Standalone camera only; Action Pod is a separate catalog accessory.",
+  "visual": "assets/meshes/go3s_visual.glb",
+  "urdf": "urdf/insta360_go3s.urdf",
+  "config": "config/go3s.json",
+  "root_link": "go3s_link",
+  "mount_link": "go3s_mount",
+  "status": "Reference-informed detailed exterior; unmeasured component geometry",
+  "fidelity": "reference_detailed_exterior",
+  "origin_description": "Bottom center of total envelope; nominal attachment reference, not a measured mount interface",
+  "appearance_revision": 2,
+  "component_count": 40,
+  "lens_surface_frames": [
+    "go3s_front_lens_surface"
+  ],
+  "sources": [
+    {
+      "url": "https://onlinemanual.insta360.com/go3s/en-us/specs/hardware",
+      "title": "Insta360 GO 3S hardware specifications: standalone camera",
+      "fields": [
+        "width_mm",
+        "height_mm",
+        "overall_depth_mm",
+        "mass_kg"
+      ]
+    }
+  ],
+  "appearance_sources": [
+    "https://www.insta360.com/product/insta360-go3s",
+    "https://res.insta360.com/static/a3b716298df7f6da544fcdaf70ffe21f/GO3S.png",
+    "https://res.insta360.com/static/d70a8e271d0c8e5a4b14a658777c1e31/GO%203S_UserManual_EN.pdf"
+  ],
+  "mjcf": "mjcf/insta360_go3s.xml",
+  "sensor_manifest": "config/sensors.json"
+}

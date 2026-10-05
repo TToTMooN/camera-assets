@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="insta360_one_r_360">
+  <!--Independent approximate geometry; fixed sites are geometric references, not calibrated optical frames.-->
+  <compiler angle="radian" inertiafromgeom="false" strippath="false" />
+  <option timestep="0.002" gravity="0 0 -9.81" />
+  <asset>
+    <mesh name="one_r_360_visual_mesh_0" file="../assets/meshes/visual/display_black.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="one_r_360_visual_mesh_1" file="../assets/meshes/visual/housing.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="one_r_360_visual_mesh_2" file="../assets/meshes/visual/lens_ring.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="one_r_360_visual_mesh_3" file="../assets/meshes/visual/markings.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="one_r_360_visual_mesh_4" file="../assets/meshes/visual/modular_battery.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="one_r_360_visual_mesh_5" file="../assets/meshes/visual/muted_markings.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="one_r_360_visual_mesh_6" file="../assets/meshes/visual/optical_glass.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="one_r_360_visual_mesh_7" file="../assets/meshes/visual/rubber.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="one_r_360_visual_mesh_8" file="../assets/meshes/visual/screen.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="one_r_360_visual_mesh_9" file="../assets/meshes/visual/screw_metal.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="one_r_360_visual_mesh_10" file="../assets/meshes/visual/seam.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="one_r_360_visual_mesh_11" file="../assets/meshes/visual/status.obj" scale="1 1 1" inertia="shell" />
+    <mesh name="one_r_360_collision_mesh_0" file="../assets/meshes/collision/body.stl" scale="1 1 1" inertia="convex" />
+    <mesh name="one_r_360_collision_mesh_1" file="../assets/meshes/collision/core.stl" scale="1 1 1" inertia="convex" />
+    <mesh name="one_r_360_collision_mesh_2" file="../assets/meshes/collision/lens_-1.stl" scale="1 1 1" inertia="convex" />
+    <mesh name="one_r_360_collision_mesh_3" file="../assets/meshes/collision/lens_1.stl" scale="1 1 1" inertia="convex" />
+    <mesh name="one_r_360_collision_mesh_4" file="../assets/meshes/collision/lens_module.stl" scale="1 1 1" inertia="convex" />
+  </asset>
+  <worldbody>
+    <body name="one_r_360_link">
+      <inertial pos="0 0 0.024" mass="0.1305" diaginertia="8.1432e-05 4.5163875e-05 7.6483875e-05" quat="1 0 0 0" />
+      <geom name="one_r_360_visual_0" type="mesh" mesh="one_r_360_visual_mesh_0" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.01 0.013 0.015 1" />
+      <geom name="one_r_360_visual_1" type="mesh" mesh="one_r_360_visual_mesh_1" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.12 0.125 0.13 1" />
+      <geom name="one_r_360_visual_2" type="mesh" mesh="one_r_360_visual_mesh_2" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.21 0.215 0.22 1" />
+      <geom name="one_r_360_visual_3" type="mesh" mesh="one_r_360_visual_mesh_3" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.72 0.73 0.73 1" />
+      <geom name="one_r_360_visual_4" type="mesh" mesh="one_r_360_visual_mesh_4" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.75 0.047 0.065 1" />
+      <geom name="one_r_360_visual_5" type="mesh" mesh="one_r_360_visual_mesh_5" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.36 0.38 0.39 1" />
+      <geom name="one_r_360_visual_6" type="mesh" mesh="one_r_360_visual_mesh_6" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.026 0.045 0.042 1" />
+      <geom name="one_r_360_visual_7" type="mesh" mesh="one_r_360_visual_mesh_7" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.068 0.072 0.076 1" />
+      <geom name="one_r_360_visual_8" type="mesh" mesh="one_r_360_visual_mesh_8" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.037 0.043 0.047 1" />
+      <geom name="one_r_360_visual_9" type="mesh" mesh="one_r_360_visual_mesh_9" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.19 0.2 0.21 1" />
+      <geom name="one_r_360_visual_10" type="mesh" mesh="one_r_360_visual_mesh_10" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.018 0.02 0.022 1" />
+      <geom name="one_r_360_visual_11" type="mesh" mesh="one_r_360_visual_mesh_11" pos="0 0 0" quat="1 0 0 0" density="0" group="2" contype="0" conaffinity="0" rgba="0.13 0.5 0.57 1" />
+      <geom name="one_r_360_collision_0" type="mesh" mesh="one_r_360_collision_mesh_0" pos="0 0 0" quat="1 0 0 0" density="0" group="3" contype="1" conaffinity="1" rgba="0 0 0 0" />
+      <geom name="one_r_360_collision_1" type="mesh" mesh="one_r_360_collision_mesh_1" pos="0 0 0" quat="1 0 0 0" density="0" group="3" contype="1" conaffinity="1" rgba="0 0 0 0" />
+      <geom name="one_r_360_collision_2" type="mesh" mesh="one_r_360_collision_mesh_2" pos="0 0 0" quat="1 0 0 0" density="0" group="3" contype="1" conaffinity="1" rgba="0 0 0 0" />
+      <geom name="one_r_360_collision_3" type="mesh" mesh="one_r_360_collision_mesh_3" pos="0 0 0" quat="1 0 0 0" density="0" group="3" contype="1" conaffinity="1" rgba="0 0 0 0" />
+      <geom name="one_r_360_collision_4" type="mesh" mesh="one_r_360_collision_mesh_4" pos="0 0 0" quat="1 0 0 0" density="0" group="3" contype="1" conaffinity="1" rgba="0 0 0 0" />
+      <site name="one_r_360_mount" pos="0 0 0" quat="1 0 0 0" type="sphere" size="0.001" group="4" rgba="0 0 0 0" />
+      <site name="one_r_360_rear_lens_surface" pos="-0.0215 0.01773 0.0302" quat="0.500000000002 -0.5 -0.499999999998 0.5" type="sphere" size="0.001" group="4" rgba="0 0 0 0" />
+      <site name="one_r_360_front_lens_surface" pos="0.0215 0.01773 0.0302" quat="0.500000000002 -0.5 0.499999999998 -0.5" type="sphere" size="0.001" group="4" rgba="0 0 0 0" />
+    </body>
+  </worldbody>
+</mujoco>

@@ -5,3 +5,12 @@ __pycache__/
 .DS_Store
 *.zip
 **/preview/turntable_frames/
+# Manufacturer reference imagery stays local; source URL indexes are portable.
+references/**/*.png
+references/**/*.jpg
+references/**/*.jpeg
+references/**/*.webp
+references/**/*.svg
+references/**/*.pdf
+references/**/*.html
+references/**/*.txt

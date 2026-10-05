@@ -1,0 +1,37 @@
+{
+  "name": "Insta360 ONE RS 1-Inch 360 Edition",
+  "family": "modular_360",
+  "brand": "Insta360",
+  "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Body depth and the division between body and lens protrusion are estimates. Complete manufacturer configuration. Lens, vertical battery and core outlines are approximations; modules are fixed in this model.",
+  "visual": "assets/meshes/one_rs_1inch360_visual.glb",
+  "urdf": "urdf/insta360_one_rs_1inch360.urdf",
+  "config": "config/one_rs_1inch360.json",
+  "root_link": "one_rs_1inch360_link",
+  "mount_link": "one_rs_1inch360_mount",
+  "status": "Reference-informed detailed exterior; unmeasured component geometry",
+  "fidelity": "reference_detailed_exterior",
+  "origin_description": "Bottom center of total envelope; nominal attachment reference, not a measured mount interface",
+  "appearance_revision": 2,
+  "component_count": 84,
+  "lens_surface_frames": [
+    "one_rs_1inch360_rear_lens_surface",
+    "one_rs_1inch360_front_lens_surface"
+  ],
+  "sources": [
+    {
+      "url": "https://www.insta360.com/product/insta360-oners/1inch-360",
+      "title": "Insta360 ONE RS 1-Inch 360 Edition official specifications",
+      "fields": [
+        "width_mm",
+        "height_mm",
+        "overall_depth_mm",
+        "mass_kg"
+      ]
+    }
+  ],
+  "appearance_sources": [
+    "https://www.insta360.com/product/insta360-oners/1inch-360"
+  ],
+  "sensor_manifest": "config/sensors.json",
+  "mjcf": "mjcf/insta360_one_rs_1inch360.xml"
+}

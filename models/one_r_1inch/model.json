@@ -1,0 +1,36 @@
+{
+  "name": "Insta360 ONE R 1-Inch configuration",
+  "family": "modular_action",
+  "brand": "Insta360",
+  "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Body depth and the division between body and lens protrusion are estimates. Complete nominal 1-Inch Edition configuration; independent fixed exterior, with no module separation or assembly mechanics.",
+  "visual": "assets/meshes/one_r_1inch_visual.glb",
+  "urdf": "urdf/insta360_one_r_1inch.urdf",
+  "config": "config/one_r_1inch.json",
+  "root_link": "one_r_1inch_link",
+  "mount_link": "one_r_1inch_mount",
+  "status": "Reference-informed detailed exterior; unmeasured component geometry",
+  "fidelity": "reference_detailed_exterior",
+  "origin_description": "Bottom center of total envelope; nominal attachment reference, not a measured mount interface",
+  "appearance_revision": 2,
+  "component_count": 46,
+  "lens_surface_frames": [
+    "one_r_1inch_front_lens_surface"
+  ],
+  "sources": [
+    {
+      "url": "https://www.insta360.com/product/insta360-oner_1inch-edition",
+      "title": "Insta360 ONE R 1-Inch Edition official specifications",
+      "fields": [
+        "width_mm",
+        "height_mm",
+        "overall_depth_mm",
+        "mass_kg"
+      ]
+    }
+  ],
+  "appearance_sources": [
+    "https://onlinemanual.insta360.com/oner/en-us/camera/basic"
+  ],
+  "mjcf": "mjcf/insta360_one_r_1inch.xml",
+  "sensor_manifest": "config/sensors.json"
+}

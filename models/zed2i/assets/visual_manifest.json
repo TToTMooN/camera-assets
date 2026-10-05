@@ -1,0 +1,112 @@
+[
+  {
+    "name": "contact_gold",
+    "file": "../assets/meshes/visual/contact_gold.obj",
+    "rgba": [
+      0.3672464682101826,
+      0.19599417930148813,
+      0.033104766570885055,
+      1.0
+    ],
+    "triangles": 26880
+  },
+  {
+    "name": "glass_coating",
+    "file": "../assets/meshes/visual/glass_coating.obj",
+    "rgba": [
+      0.006571403616195705,
+      0.008540382112116999,
+      0.014349874706802563,
+      1.0
+    ],
+    "triangles": 1536
+  },
+  {
+    "name": "housing",
+    "file": "../assets/meshes/visual/housing.obj",
+    "rgba": [
+      0.006571403616195705,
+      0.007194409291082934,
+      0.008122432733629444,
+      1.0
+    ],
+    "triangles": 6144
+  },
+  {
+    "name": "lens_ring",
+    "file": "../assets/meshes/visual/lens_ring.obj",
+    "rgba": [
+      0.017389102368488736,
+      0.01960664851623822,
+      0.024515013703524748,
+      1.0
+    ],
+    "triangles": 1536
+  },
+  {
+    "name": "markings",
+    "file": "../assets/meshes/visual/markings.obj",
+    "rgba": [
+      0.5070785101492276,
+      0.5225215539683921,
+      0.5382355236010181,
+      1.0
+    ],
+    "triangles": 4636
+  },
+  {
+    "name": "optical_glass",
+    "file": "../assets/meshes/visual/optical_glass.obj",
+    "rgba": [
+      0.001625386996904025,
+      0.002708978328173375,
+      0.0034175790118209574,
+      1.0
+    ],
+    "triangles": 7168
+  },
+  {
+    "name": "rubber",
+    "file": "../assets/meshes/visual/rubber.obj",
+    "rgba": [
+      0.002089783281733746,
+      0.0022445820433436535,
+      0.002476780185758514,
+      1.0
+    ],
+    "triangles": 4224
+  },
+  {
+    "name": "screw_metal",
+    "file": "../assets/meshes/visual/screw_metal.obj",
+    "rgba": [
+      0.07828831963873101,
+      0.0835351274258047,
+      0.09462962659456918,
+      1.0
+    ],
+    "triangles": 4224
+  },
+  {
+    "name": "seam",
+    "file": "../assets/meshes/visual/seam.obj",
+    "rgba": [
+      0.0006191950464396285,
+      0.000696594427244582,
+      0.0009287925696594428,
+      1.0
+    ],
+    "triangles": 43456
+  },
+  {
+    "name": "status_blue",
+    "file": "../assets/meshes/visual/status_blue.obj",
+    "rgba": [
+      0.0019349845201238392,
+      0.021980947079887205,
+      0.17064493581555268,
+      1.0
+    ],
+    "triangles": 192
+  }
+]

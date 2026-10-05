@@ -1,0 +1,100 @@
+{
+  "model": "x4_air",
+  "status": "PASS",
+  "checks": [
+    "URDF graph and portable local mesh references",
+    "URDF load after relocation",
+    "meter dimensions and bottom reference origin",
+    "OBJ and GLB nondegenerate triangles",
+    "self-contained GLB and matching visual bounds",
+    "consistent linear RGB material factors",
+    "positive definite physically admissible nominal inertia",
+    "watertight convex URDF collision meshes",
+    "visual vertex coverage within 0.2 mm"
+  ],
+  "visual_triangles": 214076,
+  "visual_bounds_m": [
+    [
+      -0.0185,
+      -0.023,
+      0.0
+    ],
+    [
+      0.0185,
+      0.023,
+      0.1138
+    ]
+  ],
+  "dimension_order": "depth X, width Y, height Z",
+  "visual_dimensions_m": [
+    0.037,
+    0.046,
+    0.1138
+  ],
+  "materials": 18,
+  "embedded_texture_images": 3,
+  "collision": [
+    {
+      "name": "body",
+      "triangles": 604,
+      "watertight": true,
+      "convex": true
+    },
+    {
+      "name": "front_lens",
+      "triangles": 620,
+      "watertight": true,
+      "convex": true
+    },
+    {
+      "name": "rear_lens",
+      "triangles": 620,
+      "watertight": true,
+      "convex": true
+    }
+  ],
+  "collision_tolerance_mm": 0.2,
+  "max_visual_vertex_collision_halfspace_gap_mm": 0.000535376787057576,
+  "mass_kg": 0.165,
+  "inertia": [
+    {
+      "link": "x4_air_link",
+      "matrix_kg_m2": [
+        [
+          0.00020716355,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0001968923,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          4.791875e-05
+        ]
+      ],
+      "principal_moments_kg_m2": [
+        4.791875e-05,
+        0.0001968923,
+        0.00020716355
+      ]
+    }
+  ],
+  "inertia_diagonal_kg_m2": [
+    0.00020716355,
+    0.0001968923,
+    4.791875e-05
+  ],
+  "inertia_basis": "Unmeasured nominal homogeneous-body-box approximation",
+  "glb_sha256": "417574725c48cb2b2b1189bf84442c4bfc44703a5f110941a91671ac1a51102b",
+  "not_validated": [
+    "dimensional agreement with a measured physical specimen",
+    "optical calibration",
+    "mount interface fit",
+    "mass distribution",
+    "physics simulator-specific rendering and dynamics"
+  ]
+}

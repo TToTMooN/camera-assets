@@ -134,12 +134,12 @@
   <joint name="x5_front_lens_surface_fixed" type="fixed">
     <parent link="x5_link" />
     <child link="x5_front_lens_surface" />
-    <origin xyz="0.0191 0 0.10400000000000001" rpy="0 0 0" />
+    <origin xyz="0.0191 0 0.10400000000000001" rpy="-1.57079632679 0 -1.57079632679" />
   </joint>
   <link name="x5_rear_lens_surface" />
   <joint name="x5_rear_lens_surface_fixed" type="fixed">
     <parent link="x5_link" />
     <child link="x5_rear_lens_surface" />
-    <origin xyz="-0.0191 0 0.10400000000000001" rpy="0 0 0" />
+    <origin xyz="-0.0191 0 0.10400000000000001" rpy="-1.57079632679 0 1.57079632679" />
   </joint>
 </robot>

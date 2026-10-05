@@ -1,0 +1,88 @@
+{
+  "model": "realsense_d435i",
+  "status": "PASS",
+  "checks": [
+    "URDF graph and portable local mesh references",
+    "URDF load after relocation",
+    "meter dimensions and bottom reference origin",
+    "OBJ and GLB nondegenerate triangles",
+    "self-contained GLB and matching visual bounds",
+    "consistent linear RGB material factors",
+    "positive definite physically admissible nominal inertia",
+    "watertight convex URDF collision meshes",
+    "visual vertex coverage within 0.2 mm"
+  ],
+  "visual_triangles": 103260,
+  "visual_bounds_m": [
+    [
+      -0.0125,
+      -0.045,
+      0.0
+    ],
+    [
+      0.0125,
+      0.045,
+      0.025
+    ]
+  ],
+  "dimension_order": "depth X, width Y, height Z",
+  "visual_dimensions_m": [
+    0.025,
+    0.09,
+    0.025
+  ],
+  "materials": 9,
+  "embedded_texture_images": 2,
+  "collision": [
+    {
+      "name": "body",
+      "triangles": 612,
+      "watertight": true,
+      "convex": true
+    }
+  ],
+  "collision_tolerance_mm": 0.2,
+  "max_visual_vertex_collision_halfspace_gap_mm": 0.00022518899000373294,
+  "mass_kg": 0.075,
+  "inertia": [
+    {
+      "link": "realsense_d435i_link",
+      "matrix_kg_m2": [
+        [
+          5.453125e-05,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          7.8125e-06,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          5.453125e-05
+        ]
+      ],
+      "principal_moments_kg_m2": [
+        7.8125e-06,
+        5.453125e-05,
+        5.453125e-05
+      ]
+    }
+  ],
+  "inertia_diagonal_kg_m2": [
+    5.453125e-05,
+    7.8125e-06,
+    5.453125e-05
+  ],
+  "inertia_basis": "Unmeasured nominal homogeneous-body-box approximation",
+  "glb_sha256": "cbdce55d3c332c6902902c1e64f58a867ea3512d138ff89d6f15a953e3a722bc",
+  "not_validated": [
+    "dimensional agreement with a measured physical specimen",
+    "optical calibration",
+    "mount interface fit",
+    "mass distribution",
+    "physics simulator-specific rendering and dynamics"
+  ]
+}

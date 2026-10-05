@@ -1,0 +1,24 @@
+{
+  "units": "millimeters for geometry, kilograms for mass",
+  "width_mm": 71.9,
+  "height_mm": 52.15,
+  "body_depth_mm": 31.955,
+  "overall_depth_mm": 38.5,
+  "mass_kg": 0.1798,
+  "com_height_mm": 26.075,
+  "corner_radius_mm": 6.258,
+  "collision_tolerance_mm": 0.2,
+  "notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Body depth and the division between body and lens protrusion are estimates.",
+  "sources": [
+    {
+      "url": "https://onlinemanual.insta360.com/acepro2/en-us/specs/hardware",
+      "title": "Insta360 Ace Pro 2 hardware specifications: Ace Pro comparison column",
+      "fields": [
+        "width_mm",
+        "height_mm",
+        "overall_depth_mm",
+        "mass_kg"
+      ]
+    }
+  ]
+}

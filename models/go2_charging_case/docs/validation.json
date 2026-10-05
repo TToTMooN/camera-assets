@@ -1,0 +1,88 @@
+{
+  "model": "go2_charging_case",
+  "status": "PASS",
+  "checks": [
+    "URDF graph and portable local mesh references",
+    "URDF load after relocation",
+    "meter dimensions and bottom reference origin",
+    "OBJ and GLB nondegenerate triangles",
+    "self-contained GLB and matching visual bounds",
+    "consistent linear RGB material factors",
+    "positive definite physically admissible nominal inertia",
+    "watertight convex URDF collision meshes",
+    "visual vertex coverage within 0.2 mm"
+  ],
+  "visual_triangles": 54896,
+  "visual_bounds_m": [
+    [
+      -0.01325,
+      -0.02425,
+      0.0
+    ],
+    [
+      0.01325,
+      0.02425,
+      0.0681
+    ]
+  ],
+  "dimension_order": "depth X, width Y, height Z",
+  "visual_dimensions_m": [
+    0.0265,
+    0.0485,
+    0.0681
+  ],
+  "materials": 7,
+  "embedded_texture_images": 4,
+  "collision": [
+    {
+      "name": "body",
+      "triangles": 630,
+      "watertight": true,
+      "convex": true
+    }
+  ],
+  "collision_tolerance_mm": 0.2,
+  "max_visual_vertex_collision_halfspace_gap_mm": 0.0004992128059995438,
+  "mass_kg": 0.0635,
+  "inertia": [
+    {
+      "link": "go2_charging_case_link",
+      "matrix_kg_m2": [
+        [
+          3.69880091667e-05,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.82567591667e-05,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.61633958333e-05
+        ]
+      ],
+      "principal_moments_kg_m2": [
+        1.61633958333e-05,
+        2.82567591667e-05,
+        3.69880091667e-05
+      ]
+    }
+  ],
+  "inertia_diagonal_kg_m2": [
+    3.69880091667e-05,
+    2.82567591667e-05,
+    1.61633958333e-05
+  ],
+  "inertia_basis": "Unmeasured nominal homogeneous-body-box approximation",
+  "glb_sha256": "868877507acb583c95bc0686dee614d2a9d016696d08aec5cec67c29552bd008",
+  "not_validated": [
+    "dimensional agreement with a measured physical specimen",
+    "optical calibration",
+    "mount interface fit",
+    "mass distribution",
+    "physics simulator-specific rendering and dynamics"
+  ]
+}

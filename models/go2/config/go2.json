@@ -1,0 +1,24 @@
+{
+  "units": "millimeters for geometry, kilograms for mass",
+  "width_mm": 23.6,
+  "height_mm": 52.9,
+  "body_depth_mm": 16.56,
+  "overall_depth_mm": 20.7,
+  "mass_kg": 0.0265,
+  "com_height_mm": 26.45,
+  "corner_radius_mm": 11.700000000000001,
+  "collision_tolerance_mm": 0.2,
+  "notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Body depth and the division between body and lens protrusion are estimates. Standalone camera only. Official dimension labels are normalized to the upright camera orientation; Charging Case is separate.",
+  "sources": [
+    {
+      "url": "https://www.insta360.com/product/insta360-go2",
+      "title": "Insta360 GO 2 official specifications: standalone camera",
+      "fields": [
+        "width_mm",
+        "height_mm",
+        "overall_depth_mm",
+        "mass_kg"
+      ]
+    }
+  ]
+}

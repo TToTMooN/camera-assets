@@ -1,0 +1,44 @@
+{
+  "name": "Luxonis OAK-D (original enclosure)",
+  "family": "depth_stereo",
+  "brand": "Luxonis",
+  "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent approximate enclosure, aperture positions, ports, mounting reference, center of mass and uniform-envelope inertia. No optical calibration, calibrated stereo baseline or simulated depth output. Original enclosure configuration. Dimensions use the p5 mechanical drawing, not the conflicting compact 97 × 29.5 × 22.9 mm line on p1. Mass is the archived manufacturer hardware-document nominal value, preserved by a distributor mirror; it has not been independently verified for the currently sold SKU. No cable included.",
+  "visual": "assets/meshes/oak_d_visual.glb",
+  "urdf": "urdf/insta360_oak_d.urdf",
+  "config": "config/oak_d.json",
+  "root_link": "oak_d_link",
+  "mount_link": "oak_d_mount",
+  "status": "Reference-informed detailed exterior; unmeasured component geometry",
+  "fidelity": "reference_detailed_exterior",
+  "origin_description": "Bottom center of total envelope; nominal attachment reference, not a measured mount interface",
+  "appearance_revision": 2,
+  "component_count": 58,
+  "lens_surface_frames": [
+    "oak_d_left_lens_surface",
+    "oak_d_rgb_lens_surface",
+    "oak_d_right_lens_surface"
+  ],
+  "sources": [
+    {
+      "url": "https://github.com/luxonis/oak-hardware/blob/master/BW1098OAK_USB3C/Datasheet/OAK-D_Datasheet.pdf",
+      "title": "Luxonis OAK-D datasheet, December 2021, mechanical drawing p5",
+      "fields": [
+        "width_mm",
+        "height_mm",
+        "overall_depth_mm"
+      ]
+    },
+    {
+      "url": "https://media.distrelec.com/Web/Downloads/_t/ds/A00110-INTL_eng_tds.pdf",
+      "title": "Archived Luxonis DepthAI hardware documentation, distributor-hosted manufacturer document: Dimensions and Weight, 115 g total",
+      "fields": [
+        "mass_kg"
+      ]
+    }
+  ],
+  "appearance_sources": [
+    "https://docs.luxonis.com/hardware/products/OAK-D"
+  ],
+  "mjcf": "mjcf/insta360_oak_d.xml",
+  "sensor_manifest": "config/sensors.json"
+}

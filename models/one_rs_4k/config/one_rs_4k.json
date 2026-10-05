@@ -1,0 +1,24 @@
+{
+  "units": "millimeters for geometry, kilograms for mass",
+  "width_mm": 70.1,
+  "height_mm": 49.1,
+  "body_depth_mm": 27.058,
+  "overall_depth_mm": 32.6,
+  "mass_kg": 0.1253,
+  "com_height_mm": 24.55,
+  "corner_radius_mm": 5.892,
+  "collision_tolerance_mm": 0.2,
+  "notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Body depth and the division between body and lens protrusion are estimates. Complete nominal Core, Battery Base and 4K Boost Lens configuration; independent fixed exterior, with no module separation or assembly mechanics.",
+  "sources": [
+    {
+      "url": "https://www.insta360.com/product/insta360-oners",
+      "title": "Insta360 ONE RS official specifications: 4K Boost Lens configuration",
+      "fields": [
+        "width_mm",
+        "height_mm",
+        "overall_depth_mm",
+        "mass_kg"
+      ]
+    }
+  ]
+}

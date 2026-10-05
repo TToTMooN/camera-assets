@@ -1,0 +1,69 @@
+newmtl front_polymer
+Kd 0.93 0.935 0.925
+d 1
+illum 2
+
+newmtl gasket
+Kd 0.12 0.135 0.145
+d 1
+illum 2
+
+newmtl gold
+Kd 0.72 0.51 0.17
+d 1
+illum 2
+
+newmtl housing
+Kd 0.91 0.915 0.905
+d 1
+illum 2
+
+newmtl print
+Kd 0.19 0.21 0.22
+d 1
+illum 2
+
+newmtl rear_polymer
+Kd 0.87 0.885 0.875
+d 1
+illum 2
+
+newmtl rib
+Kd 0.255 0.277 0.285
+d 1
+illum 2
+
+newmtl screen
+Kd 0.019 0.027 0.035
+d 1
+illum 2
+
+newmtl screen_border
+Kd 0.065 0.075 0.086
+d 1
+illum 2
+
+newmtl silver
+Kd 0.67 0.71 0.735
+d 1
+illum 2
+
+newmtl slot
+Kd 0.025 0.033 0.039
+d 1
+illum 2
+
+newmtl status
+Kd 0.2 0.79 0.89
+d 1
+illum 2
+
+newmtl subtle_print
+Kd 0.78 0.8 0.79
+d 1
+illum 2
+
+newmtl tray
+Kd 0.21 0.23 0.24
+d 1
+illum 2

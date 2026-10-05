@@ -1,0 +1,24 @@
+{
+  "units": "millimeters for geometry, kilograms for mass",
+  "width_mm": 90,
+  "height_mm": 25,
+  "body_depth_mm": 25,
+  "overall_depth_mm": 25,
+  "mass_kg": 0.075,
+  "com_height_mm": 12.5,
+  "corner_radius_mm": 3.0,
+  "collision_tolerance_mm": 0.2,
+  "notes": "Manufacturer nominal exterior envelope and mass; independent approximate enclosure, aperture positions, ports, mounting reference, center of mass and uniform-envelope inertia. No optical calibration, calibrated stereo baseline or simulated depth output. Nominal mass tolerance is \u00b110%; bulk units may omit the USB cap (approximately 2.3 g). No cable or bracket included.",
+  "sources": [
+    {
+      "url": "https://dev.realsenseai.com/download/42003/",
+      "title": "RealSense D400 series datasheet, Revision 021 (October 2025), Table 3-52",
+      "fields": [
+        "width_mm",
+        "height_mm",
+        "overall_depth_mm",
+        "mass_kg"
+      ]
+    }
+  ]
+}

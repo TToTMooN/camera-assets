@@ -1,0 +1,51 @@
+{
+  "name": "Insta360 GO 3 / GO 3S Action Pod (folded)",
+  "family": "accessory",
+  "brand": "Insta360",
+  "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Action Pod only, with its screen folded. Mass excludes the standalone camera. Docking cavity, hinge and exact connection geometry are approximate; no docked or articulated assembly is supplied. Manufacturer confirms GO 3 and GO 3S Action Pod compatibility; the original GO 3 Action Pod requires updated firmware when used with GO 3S. The geometric proxy does not validate docking fit.",
+  "visual": "assets/meshes/go3_action_pod_visual.glb",
+  "urdf": "urdf/insta360_go3_action_pod.urdf",
+  "config": "config/go3_action_pod.json",
+  "root_link": "go3_action_pod_link",
+  "mount_link": "go3_action_pod_mount",
+  "status": "Reference-informed detailed exterior; unmeasured component geometry",
+  "fidelity": "reference_detailed_exterior",
+  "origin_description": "Bottom center of total envelope; nominal attachment reference, not a measured mount interface",
+  "appearance_revision": 2,
+  "component_count": 63,
+  "lens_surface_frames": [],
+  "sources": [
+    {
+      "url": "https://onlinemanual.insta360.com/go3s/en-us/specs/hardware",
+      "title": "Insta360 GO 3S hardware specifications: folded Action Pod",
+      "fields": [
+        "width_mm",
+        "height_mm",
+        "overall_depth_mm",
+        "mass_kg",
+        "body_depth_mm"
+      ]
+    },
+    {
+      "url": "https://store.insta360.com/product/go-3s-action-pod",
+      "title": "Insta360 GO 3S Action Pod: GO 3S and GO 3 compatibility",
+      "fields": [
+        "supported_models"
+      ]
+    },
+    {
+      "url": "https://res.insta360.com/static/d70a8e271d0c8e5a4b14a658777c1e31/GO%203S_UserManual_EN.pdf",
+      "title": "Insta360 GO 3S user manual: GO 3 Action Pod firmware requirement",
+      "fields": [
+        "supported_models"
+      ]
+    }
+  ],
+  "appearance_sources": [
+    "https://store.insta360.com/product/go-3s-action-pod",
+    "https://res.insta360.com/dynamic/store/eb7db16e0bde83d9b32b97c18c4fc12e/731_5501c62c-446e-4e6f-a6f6-7c8719e046bf.png",
+    "https://res.insta360.com/static/d70a8e271d0c8e5a4b14a658777c1e31/GO%203S_UserManual_EN.pdf"
+  ],
+  "mjcf": "mjcf/insta360_go3_action_pod.xml",
+  "sensor_manifest": "config/sensors.json"
+}

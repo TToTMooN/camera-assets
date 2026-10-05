@@ -1,0 +1,3 @@
+# Optional: compile and smoke-test the exported MuJoCo models.
+-r requirements.txt
+mujoco==3.14.0
