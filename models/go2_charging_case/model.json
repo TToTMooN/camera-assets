@@ -4,7 +4,7 @@
   "brand": "Insta360",
   "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Closed Charging Case only, upright orientation. Mass excludes the camera. The generic accessory exterior approximates the shell; internal cavity, folding legs and hinge are not modeled. Manufacturer dimensions list the long axis first; this entry uses width 48.5 mm and height 68.1 mm for an upright closed case.",
   "visual": "assets/meshes/go2_charging_case_visual.glb",
-  "urdf": "urdf/insta360_go2_charging_case.urdf",
+  "urdf": "urdf/go2_charging_case.urdf",
   "config": "config/go2_charging_case.json",
   "root_link": "go2_charging_case_link",
   "mount_link": "go2_charging_case_mount",
@@ -32,6 +32,6 @@
     "https://www.insta360.com/product/insta360-go2",
     "https://res.insta360.com/static/assets/storage/20210127/73827105fc1bab7e11a13bd11e293383/ic_inthebox02_pc.svg"
   ],
-  "mjcf": "mjcf/insta360_go2_charging_case.xml",
+  "mjcf": "mjcf/go2_charging_case.xml",
   "sensor_manifest": "config/sensors.json"
 }

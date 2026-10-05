@@ -4,7 +4,7 @@
   "brand": "RealSense",
   "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent approximate enclosure, aperture positions, ports, mounting reference, center of mass and uniform-envelope inertia. No optical calibration, calibrated stereo baseline or simulated depth output. Nominal mass tolerance is ±10%; bulk units may omit the USB cap (approximately 2.3 g). No cable or bracket included.",
   "visual": "assets/meshes/realsense_d435i_visual.glb",
-  "urdf": "urdf/insta360_realsense_d435i.urdf",
+  "urdf": "urdf/realsense_d435i.urdf",
   "config": "config/realsense_d435i.json",
   "root_link": "realsense_d435i_link",
   "mount_link": "realsense_d435i_mount",
@@ -34,6 +34,6 @@
   "appearance_sources": [
     "https://www.realsenseai.com/wp-content/uploads/2023/07/Intel-RealSense-D400-Series-Datasheet-July-2023.pdf"
   ],
-  "mjcf": "mjcf/insta360_realsense_d435i.xml",
+  "mjcf": "mjcf/realsense_d435i.xml",
   "sensor_manifest": "config/sensors.json"
 }

@@ -4,7 +4,7 @@
   "brand": "Stereolabs",
   "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent approximate enclosure, aperture positions, ports, mounting reference, center of mass and uniform-envelope inertia. No optical calibration, calibrated stereo baseline or simulated depth output. Uses official store dimensions and 230 g mass. Official ZED USB 3 documentation and ZED 2i datasheet Rev 1.2 round the envelope to 175.3 × 30.3 × 43.1 mm and list 229 g. Lens variant, cables and locking connector clearance are not modeled.",
   "visual": "assets/meshes/zed2i_visual.glb",
-  "urdf": "urdf/insta360_zed2i.urdf",
+  "urdf": "urdf/zed2i.urdf",
   "config": "config/zed2i.json",
   "root_link": "zed2i_link",
   "mount_link": "zed2i_mount",
@@ -37,6 +37,6 @@
   "appearance_sources": [
     "https://www.stereolabs.com/store/products/zed-2i"
   ],
-  "mjcf": "mjcf/insta360_zed2i.xml",
+  "mjcf": "mjcf/zed2i.xml",
   "sensor_manifest": "config/sensors.json"
 }

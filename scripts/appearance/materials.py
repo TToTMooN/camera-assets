@@ -38,9 +38,7 @@ def material_properties(name,overrides):
     return params
 
 
-def apply_materials(parts,colors,overrides,model_dir):
-    textures=model_dir/'assets/textures'
-    saved=set()
+def apply_materials(parts,colors,overrides):
     for name,mesh,material,_ in parts:
         rgba=np.asarray(colors[material],dtype=float)
         props=material_properties(material,overrides)
@@ -50,11 +48,6 @@ def apply_materials(parts,colors,overrides,model_dir):
         elif any(s in material for s in ('aluminum','brushed')):kind='metal'
         if kind:
             props['normalTexture']=normal_image(kind)
-            textures.mkdir(parents=True,exist_ok=True)
-            dest=textures/f'{kind}_normal.png'
-            if kind not in saved:
-                normal_image(kind).save(dest)
-                saved.add(kind)
         normals=mesh.vertex_normals
         vertices=mesh.vertices
         # Triplanar projection chosen at vertices; mapping scale is physical.

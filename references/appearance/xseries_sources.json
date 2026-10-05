@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "retrieved_on": "2026-10-03",
-  "purpose": "Manufacturer reference views for local exterior modeling and review only. These images are not model texture maps and are not included in GLB/OBJ/URDF/MJCF exports. Manufacturer copyright applies; no redistribution license is asserted.",
+  "purpose": "Manufacturer reference views for exterior modeling. These images are not model texture maps and are not included in GLB/OBJ/URDF/MJCF exports. Manufacturer copyright applies; no redistribution license is asserted.",
   "geometry_status": "Independent reference-informed exterior reconstruction. Published envelope/display dimensions are used; small geometry, lens profiles, control positions, threads, seams, COM and inertia are estimates, not measured scans or calibrated optical data.",
   "product_pages": {
     "x6": "https://onlinemanual.insta360.com/x6/en-us/camera/product-introduction/insta360-x6",

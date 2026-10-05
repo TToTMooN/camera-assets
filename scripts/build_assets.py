@@ -1,7 +1,7 @@
 """Build source-grounded camera envelope assets without Blender.
 
 New exteriors are independent approximations, not reconstructed scans. The
-existing detailed X5 asset is retained; rebuild it with build_model.py.
+existing detailed X5 asset is retained; rebuild it with x5/build_model.py.
 Authoring is mm, export is m: X depth/front, Y width, Z up, bottom origin.
 """
 from pathlib import Path
@@ -66,7 +66,7 @@ def obj_file(path, parts, mtl=None):
 
 def write_urdf(model_dir, config, manifest, collisions, surfaces):
     model_id = model_dir.name
-    robot = ET.Element("robot", name=f"insta360_{model_id}")
+    robot = ET.Element("robot", name=model_id)
     link = ET.SubElement(robot, "link", name=f"{model_id}_link")
     inertial = ET.SubElement(link, "inertial")
     ET.SubElement(inertial, "origin", xyz=f"0 0 {config['com_height_mm']*.001:.12g}", rpy="0 0 0")
@@ -98,7 +98,7 @@ def write_urdf(model_dir, config, manifest, collisions, surfaces):
         ET.SubElement(joint, "child", link=name)
         ET.SubElement(joint, "origin", xyz=" ".join(f"{v:.12g}" for v in pos), rpy=" ".join(f"{v:.12g}" for v in rpy))
     ET.indent(robot, space="  ")
-    ET.ElementTree(robot).write(model_dir / f"urdf/insta360_{model_id}.urdf", encoding="utf-8", xml_declaration=True)
+    ET.ElementTree(robot).write(model_dir / f"urdf/{model_id}.urdf", encoding="utf-8", xml_declaration=True)
 
 
 def build(camera):
@@ -106,7 +106,7 @@ def build(camera):
     model_dir = ROOT / "models" / model_id
     if model_id == "x5":
         if not (model_dir / "assets/meshes/x5_visual.glb").is_file():
-            raise ValueError("Detailed X5 missing: run scripts/build_model.py with bpy first")
+            raise ValueError("Detailed X5 missing: run scripts/x5/build_model.py with bpy first")
         meta = json.loads((model_dir / "model.json").read_text())
         # These remain geometric surface references, not optical centers. Keep
         # the same local +Z-outward convention as the other camera families.
@@ -271,7 +271,7 @@ def build(camera):
     if decorated:
         collision_proxies.clear()
     from appearance.materials import apply_materials
-    apply_materials(parts,colors,material_settings,model_dir)
+    apply_materials(parts,colors,material_settings)
     meshes = model_dir / "assets/meshes"
     # These two generated directories must exactly match the current manifest;
     # stale proxy meshes otherwise remain visible in collision previews.
@@ -330,7 +330,7 @@ def build(camera):
     write_urdf(model_dir, config, manifest, collisions, surfaces)
     metadata = dict(name=camera["name"], family=camera["family"], brand=camera.get("brand", "Insta360"),
                     accuracy_notes=camera["accuracy_notes"], visual=f"assets/meshes/{model_id}_visual.glb",
-                    urdf=f"urdf/insta360_{model_id}.urdf", config=f"config/{model_id}.json",
+                    urdf=f"urdf/{model_id}.urdf", config=f"config/{model_id}.json",
                     root_link=f"{model_id}_link", mount_link=f"{model_id}_mount",
                     status="Reference-informed detailed exterior; unmeasured component geometry",
                     fidelity="reference_detailed_exterior" if decorated else "envelope_proxy", origin_description="Bottom center of total envelope; nominal attachment reference, not a measured mount interface",

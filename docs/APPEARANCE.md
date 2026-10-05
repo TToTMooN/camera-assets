@@ -1,49 +1,57 @@
-# 外观打磨与验证
+# Geometry and materials
 
-本轮保留原有 X5 详细模型，对新增的 27 个相机、模块配置和配件分别重做外观。
-细节参考厂商产品图、器件说明和机械图，按标称外廓约束尺寸；没有用产品照片
-代替几何或贴到壳体上，也没有声称是实物扫描或厂商原始 CAD。
+Exterior models are built independently from manufacturer product views, component
+diagrams and mechanical drawings, constrained by the nominal envelopes in
+[the catalog](../catalog/cameras.json). They are reference-based approximations,
+not physical scans or manufacturer CAD.
 
-| 型号组 | 已重建的结构 |
+| Model group | Modeled exterior features |
 | --- | --- |
-| X6／X4 Air／X4／X3 | 各款独立屏幕与控制布局、曲面双镜头、护圈、机壳分层、防风罩、侧门与底部接口 |
-| ONE X／ONE X2 | 不同大小的圆形显示器、快门与状态键、胶囊式镜头头部、机身接缝 |
-| GO 2／GO 3／GO 3S | 白色一体快拍按面、平滑胶囊外壳、不同护圈与分层曲面镜片、后接点和肋条 |
-| GO Ultra | 右上镜头、网孔麦克风、环境光窗口、整面按键、后部磁环与触点 |
-| GO 配件 | Action Pod 的真实凹槽、内壁、托盘、金属触点、折叠屏与铰链；GO 2 盒的盖缝、闭合脚架与接口 |
-| Ace／Ace Pro／Ace Pro 2 | 独立前屏、型号特有指示灯、方形护镜框与分层镜组、折叠屏、侧门和锁扣；Pro 2 的通孔麦克风罩 |
-| ONE R／RS | 镜头、核心、电池的独立几何；核心半幅背屏、不同扬声器、4K 方形护镜、1 英寸齿圈、双面 360 镜头 |
-| ONE RS 1-Inch 360 | 宽镜头头部、核心与黑电池三段轮廓、支架导轨、卡扣与背屏 |
-| RealSense／ZED／OAK-D | 不同合金壳、光学窗口、光学层、背部接口与安装孔；D455 四窗口和原版 OAK-D 的 T 形轮廓 |
+| X6, X4 Air, X4, X3 | Model-specific displays and controls, curved dual lenses, retaining rings, layered housings, wind guards, side doors and bottom interfaces |
+| ONE X, ONE X2 | Different circular displays, shutter and status controls, capsule-shaped lens heads and body seams |
+| GO 2, GO 3, GO 3S | Integrated capture faces, smooth capsule shells, distinct guards and curved lens layers, rear contacts and ribs |
+| GO Ultra | Upper-right lens, perforated microphone, ambient light window, full-face button, rear magnetic ring and contacts |
+| GO accessories | Recessed Action Pod wells, inner walls, trays, contacts, folded displays and hinges; closed GO 2 case seams, folded tripod legs and interfaces |
+| Ace, Ace Pro, Ace Pro 2 | Separate front displays, model-specific indicators, square guards and lens layers, folded rear displays, side doors and latches; Ace Pro 2 perforated wind guard |
+| ONE R, ONE RS | Separate lens, core and battery geometry, core rear displays, speaker layouts, square 4K guards, knurled 1-inch rings and dual-sided 360 lenses |
+| ONE RS 1-Inch 360 | Wide lens head, core and black battery sections, bracket rails, clips and rear display |
+| RealSense, ZED, OAK-D | Distinct housings, optical windows and layers, rear interfaces and mounting holes; D455 four-window layout and original OAK-D T-shaped enclosure |
 
-模型采用真实圆弧倒角，面板平面与边缘法线分开，避免整块壳体出现分面或
-不合理鼓起。镜片、护圈、密封圈与内镜组分别建模。铭牌使用矢量字体轮廓，
-所以在 GLB、OBJ、URDF 和 MJCF 中都存在。
+Rounded bevels use curved geometry. Planar panel and edge normals are separated
+to preserve flat faces. Glass, retaining rings, seals and inner lens layers are
+separate parts. Lettering uses vector outlines, so these details remain present
+in GLB, OBJ, URDF and MJCF exports.
 
-GLB 的材质区分塑料、橡胶、金属、屏幕与镀膜玻璃。微表面法线纹理独立生成，
-GLB 内嵌全部资源；颜色采用 glTF 要求的线性 RGB。玻璃使用反射与 clearcoat，
-为保证机器人渲染器的基本一致性没有依赖透明传输模拟。URDF 与默认 MJCF
-保留实体细节与颜色，PBR／法线效果取决于渲染器。
+GLB materials distinguish plastic, rubber, metal, displays and coated glass.
+Surface normal textures are generated independently and embedded in each GLB;
+material color factors use linear RGB. Glass uses reflection and clearcoat
+without requiring transmission rendering. URDF and default MJCF exports retain
+geometry and colors; PBR and normal-map appearance depends on the renderer.
 
-每款 `preview/studio_hero.png` 和 `preview/studio_back.png` 都由实际交付的 GLB
-在 Blender Cycles 中渲染。`preview/studio_render.json` 记录 GLB 的 SHA256、视图、
-采样与曝光，可核对图片是否对应当前模型。总览使用各款独立构图，尺寸标签才是
-物理大小；`make_catalog_preview.py --software` 可另做统一物理比例图。
+The `preview/studio_hero.png` and `preview/studio_back.png` images are rendered
+from the delivered GLB in Blender Cycles. `preview/studio_render.json` records
+the GLB SHA256, views, samples and exposure. Catalog tiles use individual framing;
+their dimension labels indicate physical size. `make_catalog_preview.py --software`
+produces an overview with a shared physical scale.
 
-外观网格和碰撞网格分开：细镜片、文字与机壳细节不会直接进入高密度物理碰撞。
-碰撞采用保守支持平面，导出 STL 前处理微小交点，检查闭合、凸性、覆盖、包络、
-质量、惯量和可搬迁路径。MuJoCo 测试也覆盖加载与落地接触。这些测试不衡量
-照片相似度，也不等于实物动力学或安装配合已标定。
+Visual and collision meshes are separate. Collision meshes use conservative
+convex approximations instead of every small exterior feature. Validation checks
+closure, convexity, coverage, envelope dimensions, mass properties and portable
+file references. MuJoCo tests check loading and bounded floor contact; they do
+not establish measured dynamics or mounting fit.
 
-外廓与质量有官方来源；小特征尺寸、镜头剖面、安装配合、重心与惯量仍是估计。
-屏幕为关闭状态，配件为折叠／闭合状态，模块保持固定。
+Nominal envelopes and masses have published sources. Small feature dimensions,
+lens profiles, mounting interfaces, center of mass and inertia remain estimates.
+Displays are off, accessories are folded or closed, and modular configurations
+remain fixed. Imaging parameters and optical frames require separate calibration.
 
-## 参考索引
+## Reference indexes
 
-- [X 系列官方视图](../references/appearance/xseries_sources.json)
-- [GO 系列官方图与手册](../references/wearable/SOURCES.json)
-- [Ace 与 ONE R／RS 官方器件图](../references/appearance/action/SOURCES.json)
-- [深度与双目相机官方来源](../references/appearance/stereo/SOURCES.json)
+- [X series product views](../references/appearance/xseries_sources.json)
+- [GO series images and manuals](../references/wearable/SOURCES.json)
+- [Ace and ONE R / RS component views](../references/appearance/action/SOURCES.json)
+- [Depth and stereo camera references](../references/appearance/stereo/SOURCES.json)
 
-参考照片与手册保存在本地 `references/`，并通过 `.gitignore` 排除打包；索引记录
-官方 URL 和用途，不主张这些参考图的再分发许可。
+The indexes retain source URLs and modeling observations. Downloaded photographs
+and manuals are local references excluded by `.gitignore`; they are not exported
+as model textures. No redistribution license for manufacturer imagery is asserted.

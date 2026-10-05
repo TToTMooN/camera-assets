@@ -4,7 +4,7 @@
   "brand": "Insta360",
   "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Body depth and the division between body and lens protrusion are estimates.",
   "visual": "assets/meshes/ace_visual.glb",
-  "urdf": "urdf/insta360_ace.urdf",
+  "urdf": "urdf/ace.urdf",
   "config": "config/ace.json",
   "root_link": "ace_link",
   "mount_link": "ace_mount",
@@ -31,6 +31,6 @@
   "appearance_sources": [
     "https://www.insta360.com/product/insta360-ace-pro"
   ],
-  "mjcf": "mjcf/insta360_ace.xml",
+  "mjcf": "mjcf/ace.xml",
   "sensor_manifest": "config/sensors.json"
 }

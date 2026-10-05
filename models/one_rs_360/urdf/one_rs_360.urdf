@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="one_rs_360">
+  <link name="one_rs_360_link">
+    <inertial>
+      <origin xyz="0 0 0.02455" rpy="0 0 0" />
+      <mass value="0.1353" />
+      <inertia ixx="8.25873455e-05" iyy="4.802935775e-05" izz="7.625293775e-05" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual name="display_black">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/display_black.obj" scale="1 1 1" />
+      </geometry>
+      <material name="display_black">
+        <color rgba="0.010000 0.013000 0.015000 1.000000" />
+      </material>
+    </visual>
+    <visual name="housing">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/housing.obj" scale="1 1 1" />
+      </geometry>
+      <material name="housing">
+        <color rgba="0.120000 0.125000 0.130000 1.000000" />
+      </material>
+    </visual>
+    <visual name="lens_ring">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/lens_ring.obj" scale="1 1 1" />
+      </geometry>
+      <material name="lens_ring">
+        <color rgba="0.210000 0.215000 0.220000 1.000000" />
+      </material>
+    </visual>
+    <visual name="markings">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/markings.obj" scale="1 1 1" />
+      </geometry>
+      <material name="markings">
+        <color rgba="0.720000 0.730000 0.730000 1.000000" />
+      </material>
+    </visual>
+    <visual name="modular_battery">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/modular_battery.obj" scale="1 1 1" />
+      </geometry>
+      <material name="modular_battery">
+        <color rgba="0.750000 0.047000 0.065000 1.000000" />
+      </material>
+    </visual>
+    <visual name="muted_markings">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/muted_markings.obj" scale="1 1 1" />
+      </geometry>
+      <material name="muted_markings">
+        <color rgba="0.360000 0.380000 0.390000 1.000000" />
+      </material>
+    </visual>
+    <visual name="optical_glass">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/optical_glass.obj" scale="1 1 1" />
+      </geometry>
+      <material name="optical_glass">
+        <color rgba="0.026000 0.045000 0.042000 1.000000" />
+      </material>
+    </visual>
+    <visual name="optics_black">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/optics_black.obj" scale="1 1 1" />
+      </geometry>
+      <material name="optics_black">
+        <color rgba="0.022000 0.025000 0.026000 1.000000" />
+      </material>
+    </visual>
+    <visual name="rubber">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/rubber.obj" scale="1 1 1" />
+      </geometry>
+      <material name="rubber">
+        <color rgba="0.068000 0.072000 0.076000 1.000000" />
+      </material>
+    </visual>
+    <visual name="screen">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/screen.obj" scale="1 1 1" />
+      </geometry>
+      <material name="screen">
+        <color rgba="0.037000 0.043000 0.047000 1.000000" />
+      </material>
+    </visual>
+    <visual name="screw_metal">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/screw_metal.obj" scale="1 1 1" />
+      </geometry>
+      <material name="screw_metal">
+        <color rgba="0.190000 0.200000 0.210000 1.000000" />
+      </material>
+    </visual>
+    <visual name="seam">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/seam.obj" scale="1 1 1" />
+      </geometry>
+      <material name="seam">
+        <color rgba="0.018000 0.020000 0.022000 1.000000" />
+      </material>
+    </visual>
+    <visual name="status">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/status.obj" scale="1 1 1" />
+      </geometry>
+      <material name="status">
+        <color rgba="0.130000 0.500000 0.570000 1.000000" />
+      </material>
+    </visual>
+    <collision name="body">
+      <geometry>
+        <mesh filename="../assets/meshes/collision/body.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision name="core">
+      <geometry>
+        <mesh filename="../assets/meshes/collision/core.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision name="lens_-1">
+      <geometry>
+        <mesh filename="../assets/meshes/collision/lens_-1.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision name="lens_1">
+      <geometry>
+        <mesh filename="../assets/meshes/collision/lens_1.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision name="lens_module">
+      <geometry>
+        <mesh filename="../assets/meshes/collision/lens_module.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="one_rs_360_mount" />
+  <joint name="one_rs_360_mount_fixed" type="fixed">
+    <parent link="one_rs_360_link" />
+    <child link="one_rs_360_mount" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="one_rs_360_rear_lens_surface" />
+  <joint name="one_rs_360_rear_lens_surface_fixed" type="fixed">
+    <parent link="one_rs_360_link" />
+    <child link="one_rs_360_rear_lens_surface" />
+    <origin xyz="-0.0215 0.017255 0.0313" rpy="-1.57079632679 0 1.57079632679" />
+  </joint>
+  <link name="one_rs_360_front_lens_surface" />
+  <joint name="one_rs_360_front_lens_surface_fixed" type="fixed">
+    <parent link="one_rs_360_link" />
+    <child link="one_rs_360_front_lens_surface" />
+    <origin xyz="0.0215 0.017255 0.0313" rpy="-1.57079632679 0 -1.57079632679" />
+  </joint>
+</robot>

@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="ace">
+  <link name="ace_link">
+    <inertial>
+      <origin xyz="0 0 0.026075" rpy="0 0 0" />
+      <mass value="0.1768" />
+      <inertia ixx="0.000116234692167" iyy="6.19075881667e-05" izz="9.80040706667e-05" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual name="accent_red">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/accent_red.obj" scale="1 1 1" />
+      </geometry>
+      <material name="accent_red">
+        <color rgba="0.860000 0.075000 0.105000 1.000000" />
+      </material>
+    </visual>
+    <visual name="display_black">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/display_black.obj" scale="1 1 1" />
+      </geometry>
+      <material name="display_black">
+        <color rgba="0.010000 0.013000 0.015000 1.000000" />
+      </material>
+    </visual>
+    <visual name="housing">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/housing.obj" scale="1 1 1" />
+      </geometry>
+      <material name="housing">
+        <color rgba="0.120000 0.125000 0.130000 1.000000" />
+      </material>
+    </visual>
+    <visual name="lens_ring">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/lens_ring.obj" scale="1 1 1" />
+      </geometry>
+      <material name="lens_ring">
+        <color rgba="0.210000 0.215000 0.220000 1.000000" />
+      </material>
+    </visual>
+    <visual name="markings">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/markings.obj" scale="1 1 1" />
+      </geometry>
+      <material name="markings">
+        <color rgba="0.720000 0.730000 0.730000 1.000000" />
+      </material>
+    </visual>
+    <visual name="muted_markings">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/muted_markings.obj" scale="1 1 1" />
+      </geometry>
+      <material name="muted_markings">
+        <color rgba="0.360000 0.380000 0.390000 1.000000" />
+      </material>
+    </visual>
+    <visual name="optical_glass">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/optical_glass.obj" scale="1 1 1" />
+      </geometry>
+      <material name="optical_glass">
+        <color rgba="0.026000 0.045000 0.042000 1.000000" />
+      </material>
+    </visual>
+    <visual name="optics_black">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/optics_black.obj" scale="1 1 1" />
+      </geometry>
+      <material name="optics_black">
+        <color rgba="0.022000 0.025000 0.026000 1.000000" />
+      </material>
+    </visual>
+    <visual name="optics_coating">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/optics_coating.obj" scale="1 1 1" />
+      </geometry>
+      <material name="optics_coating">
+        <color rgba="0.033000 0.059000 0.078000 1.000000" />
+      </material>
+    </visual>
+    <visual name="rubber">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/rubber.obj" scale="1 1 1" />
+      </geometry>
+      <material name="rubber">
+        <color rgba="0.068000 0.072000 0.076000 1.000000" />
+      </material>
+    </visual>
+    <visual name="screen">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/screen.obj" scale="1 1 1" />
+      </geometry>
+      <material name="screen">
+        <color rgba="0.037000 0.043000 0.047000 1.000000" />
+      </material>
+    </visual>
+    <visual name="screw_metal">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/screw_metal.obj" scale="1 1 1" />
+      </geometry>
+      <material name="screw_metal">
+        <color rgba="0.190000 0.200000 0.210000 1.000000" />
+      </material>
+    </visual>
+    <visual name="seam">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/seam.obj" scale="1 1 1" />
+      </geometry>
+      <material name="seam">
+        <color rgba="0.018000 0.020000 0.022000 1.000000" />
+      </material>
+    </visual>
+    <collision name="body">
+      <geometry>
+        <mesh filename="../assets/meshes/collision/body.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision name="front_lens">
+      <geometry>
+        <mesh filename="../assets/meshes/collision/front_lens.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="ace_mount" />
+  <joint name="ace_mount_fixed" type="fixed">
+    <parent link="ace_link" />
+    <child link="ace_mount" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="ace_front_lens_surface" />
+  <joint name="ace_front_lens_surface_fixed" type="fixed">
+    <parent link="ace_link" />
+    <child link="ace_front_lens_surface" />
+    <origin xyz="0.01925 0.0169684 0.034419" rpy="-1.57079632679 0 -1.57079632679" />
+  </joint>
+</robot>

@@ -4,7 +4,7 @@
   "brand": "Insta360",
   "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Camera only. The 22.4 mm depth includes the Lens Guard; 18.3 mm is the published depth without it. Lens Guard shape is approximated.",
   "visual": "assets/meshes/go_ultra_visual.glb",
-  "urdf": "urdf/insta360_go_ultra.urdf",
+  "urdf": "urdf/go_ultra.urdf",
   "config": "config/go_ultra.json",
   "root_link": "go_ultra_link",
   "mount_link": "go_ultra_mount",
@@ -35,6 +35,6 @@
     "https://res.insta360.com/dynamic/store/e4dec99e2983ce0b30ed231da0defc1f/314_3375f88e-d083-4b48-90b4-64332703e15d.jpg",
     "https://res.insta360.com/static/780b3076f6404c5ea75e6d56ad04dc34/GOUltra_UserManual_EN.pdf"
   ],
-  "mjcf": "mjcf/insta360_go_ultra.xml",
+  "mjcf": "mjcf/go_ultra.xml",
   "sensor_manifest": "config/sensors.json"
 }

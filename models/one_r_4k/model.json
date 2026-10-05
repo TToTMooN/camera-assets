@@ -4,7 +4,7 @@
   "brand": "Insta360",
   "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Body depth and the division between body and lens protrusion are estimates. Complete nominal Core, Battery Base and 4K Wide Angle Mod configuration; independent fixed exterior, with no module separation or assembly mechanics.",
   "visual": "assets/meshes/one_r_4k_visual.glb",
-  "urdf": "urdf/insta360_one_r_4k.urdf",
+  "urdf": "urdf/one_r_4k.urdf",
   "config": "config/one_r_4k.json",
   "root_link": "one_r_4k_link",
   "mount_link": "one_r_4k_mount",
@@ -31,6 +31,6 @@
   "appearance_sources": [
     "https://onlinemanual.insta360.com/oner/en-us/camera/basic"
   ],
-  "mjcf": "mjcf/insta360_one_r_4k.xml",
+  "mjcf": "mjcf/one_r_4k.xml",
   "sensor_manifest": "config/sensors.json"
 }

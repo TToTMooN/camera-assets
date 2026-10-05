@@ -1,31 +1,46 @@
-# Camera assets for KIWI
+# Camera Model Library
 
-Portable camera geometry for robot layout, payload comparison, collision checks
-and scene collection workflows. The catalog includes **28 configurations** across
-X6, X5, X4 Air, X4, X3, ONE X2, ONE X; GO Ultra, GO 3S, GO 3, GO 2; Ace Pro 2,
-Ace Pro, Ace; and ONE R / ONE RS lens configurations. GO Action Pods and the GO 2
-Charging Case are separate accessories. RealSense D435i and D455, Stereolabs ZED 2i,
-and the original Luxonis OAK-D enclosure cover depth and stereo hardware.
+Portable camera and accessory models for robotics, simulation, and visualization.
+The library contains **25 camera configurations and 3 accessory configurations**,
+with detailed visual meshes, lightweight convex collisions, URDF and MuJoCo
+exports, and imaging parameter templates.
 
-![KIWI camera catalog](catalog/catalog.png)
+![Camera model catalog](catalog/catalog.png)
 
-The X5 retains its detailed exterior model. The other 27 entries now use
-reference-informed detailed exteriors with model-specific component layouts,
-smooth edge bevels, layered optics, screens, controls, seals, contact pins and
-vector markings. Manufacturer nominal dimensions and mass remain authoritative.
-Plastic microtexture, molded grip, metal rings and coated glass use separate PBR
-materials. Product photographs are references, not substituted model textures.
-The [machine-readable catalog](catalog/cameras.json) records the source for each
-published field and identifies estimated geometry.
+| Family | Model IDs |
+| --- | --- |
+| 360 cameras | `x6`, `x5`, `x4_air`, `x4`, `x3`, `one_x2`, `one_x` |
+| Wearable cameras | `go_ultra`, `go3s`, `go3`, `go2` |
+| Action cameras | `ace_pro2`, `ace_pro`, `ace` |
+| Modular cameras | `one_rs_4k`, `one_rs_360`, `one_rs_1inch`, `one_rs_1inch360`, `one_r_4k`, `one_r_360`, `one_r_1inch` |
+| Stereo and depth cameras | `realsense_d435i`, `realsense_d455`, `zed2i`, `oak_d` |
+| Accessories | `go3_action_pod`, `go_ultra_action_pod`, `go2_charging_case` |
 
-![X6, GO 3S and Ace Pro 2 exterior detail](catalog/detail_showcase.png)
+The [catalog](catalog/cameras.json) records manufacturer nominal dimensions,
+mass, sources, and configuration limits. Exterior details and PBR materials are
+independently modeled from product references. Fine geometry, mounting interfaces,
+center of mass, and inertia remain estimates; imaging parameters are uncalibrated.
 
-Studio previews are rendered from the **delivered GLB itself** in Blender Cycles.
-Each model has `preview/studio_hero.png` and `preview/studio_back.png`. Catalog
-tiles use individual framing for inspection; use `--software` below for a
-separate sheet at a common physical scale.
+## Use the delivered assets
 
-## View and build
+Copy the entire `models/<id>/` folder into your project and preserve its relative
+paths. `model.json` identifies the visual, URDF, MJCF, and sensor manifest files.
+The GLB embeds its visual materials and textures. URDF and MJCF provide geometry,
+nominal mass, estimated inertia, and fixed placement references.
+
+For example, [GO 3S](models/go3s/) includes a [GLB](models/go3s/assets/meshes/go3s_visual.glb),
+[URDF](models/go3s/urdf/go3s.urdf), [MJCF](models/go3s/mjcf/go3s.xml), and
+[sensor manifest](models/go3s/config/sensors.json).
+
+Create and calibrate imaging sensors in your simulator separately. The
+[simulation guide](docs/SIMULATION.md) covers Isaac Sim, MuJoCo, and Gazebo,
+including optical frames, intrinsics, distortion, stereo/depth, and timing.
+Camera bodies and accessories are separate assets; pods and cases are supplied
+closed or folded, and modular camera configurations are rigid assemblies.
+
+## Browse locally
+
+Run from the repository root with Python 3.11 or later:
 
 ```bash
 git clone https://github.com/TToTMooN/insta360-urdf.git
@@ -34,99 +49,93 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 python scripts/viewer.py --list
-python scripts/viewer.py --model x6
+python scripts/viewer.py --model go3s
 ```
 
-Open [localhost:8080](http://127.0.0.1:8080/).
+Open [localhost:8080](http://127.0.0.1:8080/). Replace `go3s` with any model ID.
+The viewer exposes visual meshes, collision geometry, and placement frames.
 
-Generate and check the complete catalog, or replace `all` with a model ID:
+## Model layout
 
-```bash
-python scripts/build_assets.py --model all
-python scripts/validate.py --model all
-python scripts/sensor_manifest.py --model all --check
-python scripts/make_catalog_preview.py
-```
+Each `models/<id>/` folder is self-contained:
 
-Examples include `x6`, `x5`, `go3`, `go3s`, `go_ultra`, `ace_pro2` and
-`one_rs_1inch360`, `realsense_d435i`, `realsense_d455`, `zed2i` and `oak_d`.
-Use `viewer.py --list` for the full list.
+| Path | Contents |
+| --- | --- |
+| `model.json` | Metadata and entry-point paths |
+| `config/<id>.json` | Mechanical and geometry parameters |
+| `config/sensors.json` | Per-imager calibration/mode templates, emitters, derived outputs, and backend records |
+| `assets/meshes/<id>_visual.glb` | Visual model with embedded PBR materials and textures |
+| `assets/meshes/<id>_visual.obj` and `.mtl` | Combined visual geometry and colors |
+| `assets/meshes/visual/` | Material-separated visual meshes used by URDF/MJCF |
+| `assets/meshes/collision/` | Convex collision meshes |
+| `assets/visual_manifest.json` | Visual part and material mapping |
+| `urdf/<id>.urdf` | Mechanical model and fixed reference frames |
+| `mjcf/<id>.xml` | Default fixed mounted MuJoCo export |
+| `preview/studio_hero.png`, `studio_back.png`, `studio_render.json` | GLB renders and their source hash/settings |
+| `docs/validation.json` | Geometry validation results |
 
-For MuJoCo compilation, portable mesh loading and contact smoke tests:
+Mesh and simulator lengths are meters; mass is kilograms. The catalog stores
+mechanical dimensions in millimeters. URDF/MJCF body axes are X depth, Y width,
+and Z height, with a bottom placement origin. GLB is Y-up. Lens surface frames
+are geometric references, and require measured optical poses for imaging.
+
+## Validate
 
 ```bash
 pip install -r requirements-sim.txt
+python scripts/validate.py --model all --no-write
+python scripts/sensor_manifest.py --model all --check
 python -m unittest discover -s tests -v
 ```
 
-`build_assets.py` keeps the existing detailed X5 visual. Its Blender rebuild
-scripts remain `build_model.py` and `build_urdf.py`; install
-`requirements-blender.txt` in a separate Python 3.13 environment for that workflow.
-Building also refreshes the default mounted MJCF and creates missing sensor
-parameter templates. Existing calibration files are preserved. Use
-`export_mjcf.py --model <id> --free` after building for a free-body export.
+Replace `all` with a model ID to check one asset. Tests cover geometry, portable
+paths, sensor-manifest structure, and MuJoCo compilation and contact. Schema
+validity does not certify optical calibration or a working imaging backend.
+`--require-calibrated` intentionally fails for the shipped uncalibrated cameras.
 
-The same separate Blender environment can render every delivered model:
+## Regenerate assets
+
+The delivered assets can be used without rebuilding. Mechanical source parameters
+live in `catalog/cameras.json`; exterior details live in `scripts/appearance/`.
+After changing a procedural model's source, run:
 
 ```bash
-python scripts/render_studio.py --model all --views hero back --size 900 --samples 48
-python scripts/make_catalog_preview.py
-# Optional: a second, geometrically rendered common-scale catalog
-python scripts/make_catalog_preview.py --software
+python scripts/build_assets.py --model go3s
+python scripts/validate.py --model go3s
 ```
 
-[Exterior modeling notes](docs/APPEARANCE.md) record the reference workflow,
-model distinctions, material handling and remaining limits.
+Builds refresh the fixed mounted MJCF and create missing sensor templates;
+existing calibration files are preserved. For a free body, run
+`python scripts/export_mjcf.py --model go3s --free` after building.
 
-## Model files
+Studio rendering uses a separate Python 3.13 environment:
 
-Each entry lives in `models/<id>/`:
+```bash
+python3.13 -m venv .venv-blender
+.venv-blender/bin/pip install -r requirements-blender.txt
+.venv-blender/bin/python scripts/render_studio.py --model go3s --views hero back --size 900 --samples 48
+python scripts/make_catalog_preview.py
+```
 
-- `assets/meshes/<id>_visual.glb` and `.obj`: exterior geometry.
-- `assets/meshes/collision/`: convex collision meshes.
-- `urdf/insta360_<id>.urdf`: mass, estimated inertia, collision geometry and fixed frames.
-- `mjcf/insta360_<id>.xml`: MuJoCo import artifact generated by `export_mjcf.py`.
-- `config/<id>.json` and `docs/validation.json`: model parameters and validation results.
-- `config/sensors.json`: per-imager calibration/mode template and separate emitter,
-  panorama/depth and backend records. Unknown imaging parameters are `null`.
+After changing geometry, rerender its previews before composing the catalog;
+the composer verifies each view against the current GLB hash. Use `--model all`
+to build or render every configuration. `make_catalog_preview.py --software`
+produces an optional geometry overview at a common physical scale.
 
-The historical `insta360_` filename prefix is retained for all brands for compatibility.
+X5 has a separate Blender source workflow in `scripts/x5/`:
 
-MJCF exports default to a fixed mounted root. Add `--free` for a free body. Exports
-contain geometry, mass and fixed frame sites; scenes, lighting and imaging sensors
-are supplied by the simulator integration.
+```bash
+.venv-blender/bin/python scripts/x5/build_model.py
+python scripts/x5/build_urdf.py
+python scripts/build_assets.py --model x5
+```
 
-Keep the folder layout when moving URDF or MJCF assets. Mesh and simulator units
-are meters; the catalog stores millimeters and kilograms. URDF coordinates are
-X = depth, Y = width and Z = height, with the origin at the bottom mounting
-reference. GLB uses Y-up; the viewer converts it.
+Its editable source is [x5_source.blend](models/x5/assets/x5_source.blend).
+The generic builder retains the delivered X5 visual. Rerender after rebuilding
+its source, as for other models.
 
-[KIWI integration notes](docs/KIWI.md) explain the intended use and frame limits.
-[Simulator and imaging parameters](docs/SIMULATION.md) cover Isaac Sim, MuJoCo and
-Gazebo integration, coordinate conversions and the remaining calibration work.
-Lens surface frames are geometric references; optical centers, intrinsics,
-distortion and camera response are uncalibrated. Mass distribution, small
-features, mounts and controls remain estimates. Separate accessories are supplied
-in the listed closed or folded pose; docked and articulated assemblies are not
-included.
+[Geometry and material notes](docs/APPEARANCE.md) describe exterior features,
+previews, and accuracy limits. [Source notes](docs/SOURCES.md) document mechanical
+references and specification discrepancies.
 
-Check template structure with `sensor_manifest.py --model all --check`. Adding
-`--require-calibrated` deliberately fails for the shipped uncalibrated imaging
-devices; schema validity does not certify image generation or a simulator backend.
-Studio catalogs verify each view's current GLB hash and render record. After
-changing geometry, rerender its hero/back views before regenerating the catalog.
-
-## Detailed X5 reference
-
-<p align="center">
-  <img src="models/x5/preview/turntable.gif" alt="Insta360 X5 model" width="420">
-</p>
-
-![X5 front, rear and both sides](models/x5/preview/orthographic_sheet.png)
-
-![X5 collision geometry](models/x5/preview/collision_sheet.png)
-
-[GLB](models/x5/assets/meshes/x5_visual.glb) · [OBJ](models/x5/assets/meshes/x5_visual.obj) · [URDF](models/x5/urdf/insta360_x5.urdf) · [Blender source](models/x5/assets/x5_source.blend)
-
-Independent geometry based on [official references](docs/SOURCES.md).
-[MIT license](LICENSE); not affiliated with the camera manufacturers.
+[MIT license](LICENSE). Independent models; not affiliated with the manufacturers.

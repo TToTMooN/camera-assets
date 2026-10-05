@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "KIWI camera imaging parameter manifest",
+  "title": "Camera imaging parameter manifest",
   "type": "object",
   "additionalProperties": false,
   "required": ["schema_version", "model_id", "sensor_class", "status", "root_frame", "conventions", "geometry_frames", "T_robot_body", "imagers", "emitters", "derived_outputs", "calibration", "backends", "notes"],

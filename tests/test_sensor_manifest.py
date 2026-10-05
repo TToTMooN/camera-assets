@@ -12,7 +12,7 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import sensor_manifest as sensors
-import make_detail_showcase as previews
+import preview_assets as previews
 
 
 class SensorManifestTests(unittest.TestCase):

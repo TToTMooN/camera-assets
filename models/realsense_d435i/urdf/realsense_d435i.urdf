@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="realsense_d435i">
+  <link name="realsense_d435i_link">
+    <inertial>
+      <origin xyz="0 0 0.0125" rpy="0 0 0" />
+      <mass value="0.075" />
+      <inertia ixx="5.453125e-05" iyy="7.8125e-06" izz="5.453125e-05" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual name="aluminum">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/aluminum.obj" scale="1 1 1" />
+      </geometry>
+      <material name="aluminum">
+        <color rgba="0.690000 0.700000 0.710000 1.000000" />
+      </material>
+    </visual>
+    <visual name="contact_gold">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/contact_gold.obj" scale="1 1 1" />
+      </geometry>
+      <material name="contact_gold">
+        <color rgba="0.640000 0.480000 0.200000 1.000000" />
+      </material>
+    </visual>
+    <visual name="glass_coating">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/glass_coating.obj" scale="1 1 1" />
+      </geometry>
+      <material name="glass_coating">
+        <color rgba="0.075000 0.090000 0.125000 1.000000" />
+      </material>
+    </visual>
+    <visual name="lens_ring">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/lens_ring.obj" scale="1 1 1" />
+      </geometry>
+      <material name="lens_ring">
+        <color rgba="0.140000 0.150000 0.170000 1.000000" />
+      </material>
+    </visual>
+    <visual name="markings">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/markings.obj" scale="1 1 1" />
+      </geometry>
+      <material name="markings">
+        <color rgba="0.740000 0.750000 0.760000 1.000000" />
+      </material>
+    </visual>
+    <visual name="optical_glass">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/optical_glass.obj" scale="1 1 1" />
+      </geometry>
+      <material name="optical_glass">
+        <color rgba="0.021000 0.035000 0.044000 1.000000" />
+      </material>
+    </visual>
+    <visual name="rubber">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/rubber.obj" scale="1 1 1" />
+      </geometry>
+      <material name="rubber">
+        <color rgba="0.027000 0.029000 0.032000 1.000000" />
+      </material>
+    </visual>
+    <visual name="screw_metal">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/screw_metal.obj" scale="1 1 1" />
+      </geometry>
+      <material name="screw_metal">
+        <color rgba="0.310000 0.320000 0.340000 1.000000" />
+      </material>
+    </visual>
+    <visual name="seam">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/seam.obj" scale="1 1 1" />
+      </geometry>
+      <material name="seam">
+        <color rgba="0.008000 0.009000 0.012000 1.000000" />
+      </material>
+    </visual>
+    <collision name="body">
+      <geometry>
+        <mesh filename="../assets/meshes/collision/body.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="realsense_d435i_mount" />
+  <joint name="realsense_d435i_mount_fixed" type="fixed">
+    <parent link="realsense_d435i_link" />
+    <child link="realsense_d435i_mount" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="realsense_d435i_left_lens_surface" />
+  <joint name="realsense_d435i_left_lens_surface_fixed" type="fixed">
+    <parent link="realsense_d435i_link" />
+    <child link="realsense_d435i_left_lens_surface" />
+    <origin xyz="0.0125 -0.025 0.0125" rpy="-1.57079632679 0 -1.57079632679" />
+  </joint>
+  <link name="realsense_d435i_projector_lens_surface" />
+  <joint name="realsense_d435i_projector_lens_surface_fixed" type="fixed">
+    <parent link="realsense_d435i_link" />
+    <child link="realsense_d435i_projector_lens_surface" />
+    <origin xyz="0.0125 -0.01 0.0125" rpy="-1.57079632679 0 -1.57079632679" />
+  </joint>
+  <link name="realsense_d435i_right_lens_surface" />
+  <joint name="realsense_d435i_right_lens_surface_fixed" type="fixed">
+    <parent link="realsense_d435i_link" />
+    <child link="realsense_d435i_right_lens_surface" />
+    <origin xyz="0.0125 0.025 0.0125" rpy="-1.57079632679 0 -1.57079632679" />
+  </joint>
+  <link name="realsense_d435i_rgb_lens_surface" />
+  <joint name="realsense_d435i_rgb_lens_surface_fixed" type="fixed">
+    <parent link="realsense_d435i_link" />
+    <child link="realsense_d435i_rgb_lens_surface" />
+    <origin xyz="0.0125 0.0095 0.0125" rpy="-1.57079632679 0 -1.57079632679" />
+  </joint>
+</robot>

@@ -4,7 +4,7 @@
   "brand": "Insta360",
   "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Body depth and the division between body and lens protrusion are estimates. Complete manufacturer configuration. Lens, vertical battery and core outlines are approximations; modules are fixed in this model.",
   "visual": "assets/meshes/one_rs_1inch360_visual.glb",
-  "urdf": "urdf/insta360_one_rs_1inch360.urdf",
+  "urdf": "urdf/one_rs_1inch360.urdf",
   "config": "config/one_rs_1inch360.json",
   "root_link": "one_rs_1inch360_link",
   "mount_link": "one_rs_1inch360_mount",
@@ -33,5 +33,5 @@
     "https://www.insta360.com/product/insta360-oners/1inch-360"
   ],
   "sensor_manifest": "config/sensors.json",
-  "mjcf": "mjcf/insta360_one_rs_1inch360.xml"
+  "mjcf": "mjcf/one_rs_1inch360.xml"
 }

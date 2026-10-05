@@ -4,7 +4,7 @@
   "brand": "Insta360",
   "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Body depth and the division between body and lens protrusion are estimates. Uses the standard-version manual mass of 182 g. The relaunched version is listed at 184 g, and another official product comparison lists 177.2 g; use the actual hardware version for precise payload calculations.",
   "visual": "assets/meshes/ace_pro2_visual.glb",
-  "urdf": "urdf/insta360_ace_pro2.urdf",
+  "urdf": "urdf/ace_pro2.urdf",
   "config": "config/ace_pro2.json",
   "root_link": "ace_pro2_link",
   "mount_link": "ace_pro2_mount",
@@ -31,6 +31,6 @@
   "appearance_sources": [
     "https://www.insta360.com/product/insta360-ace-pro2"
   ],
-  "mjcf": "mjcf/insta360_ace_pro2.xml",
+  "mjcf": "mjcf/ace_pro2.xml",
   "sensor_manifest": "config/sensors.json"
 }

@@ -36,9 +36,9 @@
         }
       ],
       "use_cases": [
-        "机器人全景观察",
-        "场景采集与重建",
-        "安装空间和碰撞检查"
+        "Panoramic observation",
+        "Scene capture and reconstruction",
+        "Installation clearance and collision checks"
       ],
       "estimated_geometry": {},
       "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration.",
@@ -80,9 +80,9 @@
         }
       ],
       "use_cases": [
-        "机器人全景观察",
-        "场景采集与重建",
-        "详细外观参考"
+        "Panoramic observation",
+        "Scene capture and reconstruction",
+        "Detailed exterior reference"
       ],
       "estimated_geometry": {},
       "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent approximate exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Uses the existing detailed X5 exterior model. Screen dimensions follow manufacturer data; small details and component placement are inferred.",
@@ -120,9 +120,9 @@
         }
       ],
       "use_cases": [
-        "轻量全景载荷",
-        "机器人观察",
-        "运动采集"
+        "Lightweight panoramic payload",
+        "Platform observation",
+        "Motion capture"
       ],
       "estimated_geometry": {},
       "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration.",
@@ -164,9 +164,9 @@
         }
       ],
       "use_cases": [
-        "已有设备复用",
-        "全景场景采集",
-        "载荷比较"
+        "Existing equipment reuse",
+        "Panoramic scene capture",
+        "Payload comparison"
       ],
       "estimated_geometry": {},
       "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration.",
@@ -207,9 +207,9 @@
         }
       ],
       "use_cases": [
-        "已有设备复用",
-        "全景观察",
-        "安装方案比较"
+        "Existing equipment reuse",
+        "Panoramic observation",
+        "Mounting layout comparison"
       ],
       "estimated_geometry": {
         "body_depth_mm": 25.818
@@ -252,9 +252,9 @@
         }
       ],
       "use_cases": [
-        "旧设备复用",
-        "轻量全景观察",
-        "安装方案比较"
+        "Legacy equipment reuse",
+        "Lightweight panoramic observation",
+        "Mounting layout comparison"
       ],
       "estimated_geometry": {
         "body_depth_mm": 23.244
@@ -297,9 +297,9 @@
         }
       ],
       "use_cases": [
-        "旧设备复用",
-        "低重量全景载荷",
-        "安装空间比较"
+        "Legacy equipment reuse",
+        "Low-mass panoramic payload",
+        "Installation clearance comparison"
       ],
       "estimated_geometry": {
         "body_depth_mm": 21.84
@@ -343,9 +343,9 @@
         }
       ],
       "use_cases": [
-        "末端或头部视角",
-        "轻量随身采集",
-        "狭小安装空间"
+        "End-effector or head-mounted viewpoint",
+        "Lightweight wearable capture",
+        "Compact mounting spaces"
       ],
       "estimated_geometry": {},
       "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Camera only. The 22.4 mm depth includes the Lens Guard; 18.3 mm is the published depth without it. Lens Guard shape is approximated.",
@@ -389,9 +389,9 @@
         }
       ],
       "use_cases": [
-        "末端或头部视角",
-        "轻量随身采集",
-        "狭小安装空间"
+        "End-effector or head-mounted viewpoint",
+        "Lightweight wearable capture",
+        "Compact mounting spaces"
       ],
       "estimated_geometry": {
         "body_depth_mm": 19.84
@@ -436,9 +436,9 @@
         }
       ],
       "use_cases": [
-        "已有设备复用",
-        "轻量随身采集",
-        "末端视角"
+        "Existing equipment reuse",
+        "Lightweight wearable capture",
+        "End-effector viewpoint"
       ],
       "estimated_geometry": {
         "body_depth_mm": 18.56
@@ -483,9 +483,9 @@
         }
       ],
       "use_cases": [
-        "旧设备复用",
-        "最轻随身采集",
-        "末端视角"
+        "Legacy equipment reuse",
+        "Minimal-mass wearable capture",
+        "End-effector viewpoint"
       ],
       "estimated_geometry": {
         "body_depth_mm": 16.56
@@ -545,9 +545,9 @@
         }
       ],
       "use_cases": [
-        "充电和控制附件安装",
-        "运输空间检查",
-        "附件载荷预算"
+        "Charging and control accessory mounting",
+        "Transport clearance checks",
+        "Accessory payload budgeting"
       ],
       "estimated_geometry": {},
       "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Action Pod only, with its screen folded. Mass excludes the standalone camera. Docking cavity, hinge and exact connection geometry are approximate; no docked or articulated assembly is supplied. Manufacturer confirms GO 3 and GO 3S Action Pod compatibility; the original GO 3 Action Pod requires updated firmware when used with GO 3S. The geometric proxy does not validate docking fit.",
@@ -595,9 +595,9 @@
         }
       ],
       "use_cases": [
-        "充电和控制附件安装",
-        "运输空间检查",
-        "附件载荷预算"
+        "Charging and control accessory mounting",
+        "Transport clearance checks",
+        "Accessory payload budgeting"
       ],
       "estimated_geometry": {},
       "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Action Pod only, with its screen folded. Mass excludes the standalone camera. Docking cavity, hinge and exact connection geometry are approximate; no docked or articulated assembly is supplied.",
@@ -642,9 +642,9 @@
         }
       ],
       "use_cases": [
-        "充电附件运输",
-        "附件载荷预算",
-        "收纳空间检查"
+        "Charging accessory transport",
+        "Accessory payload budgeting",
+        "Storage clearance checks"
       ],
       "estimated_geometry": {},
       "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Closed Charging Case only, upright orientation. Mass excludes the camera. The generic accessory exterior approximates the shell; internal cavity, folding legs and hinge are not modeled. Manufacturer dimensions list the long axis first; this entry uses width 48.5 mm and height 68.1 mm for an upright closed case.",
@@ -687,9 +687,9 @@
         }
       ],
       "use_cases": [
-        "前向视角采集",
-        "机器人机身安装",
-        "运动场景记录"
+        "Forward-facing capture",
+        "Platform mounting",
+        "Action recording"
       ],
       "estimated_geometry": {
         "body_depth_mm": 31.54
@@ -732,9 +732,9 @@
         }
       ],
       "use_cases": [
-        "前向视角采集",
-        "已有设备复用",
-        "运动场景记录"
+        "Forward-facing capture",
+        "Existing equipment reuse",
+        "Action recording"
       ],
       "estimated_geometry": {
         "body_depth_mm": 31.955
@@ -777,9 +777,9 @@
         }
       ],
       "use_cases": [
-        "前向视角采集",
-        "已有设备复用",
-        "载荷比较"
+        "Forward-facing capture",
+        "Existing equipment reuse",
+        "Payload comparison"
       ],
       "estimated_geometry": {
         "body_depth_mm": 31.955
@@ -822,9 +822,9 @@
         }
       ],
       "use_cases": [
-        "模块化前向视角",
-        "已有设备复用",
-        "安装空间比较"
+        "Modular forward-facing viewpoint",
+        "Existing equipment reuse",
+        "Installation clearance comparison"
       ],
       "estimated_geometry": {
         "body_depth_mm": 27.058
@@ -867,9 +867,9 @@
         }
       ],
       "use_cases": [
-        "模块化全景观察",
-        "已有设备复用",
-        "安装空间比较"
+        "Modular panoramic observation",
+        "Existing equipment reuse",
+        "Installation clearance comparison"
       ],
       "estimated_geometry": {
         "body_depth_mm": 33.54
@@ -912,9 +912,9 @@
         }
       ],
       "use_cases": [
-        "模块化前向参考采集",
-        "已有设备复用",
-        "载荷和安装空间比较"
+        "Modular forward-facing reference capture",
+        "Existing equipment reuse",
+        "Payload and installation clearance comparison"
       ],
       "estimated_geometry": {
         "body_depth_mm": 39.176
@@ -957,9 +957,9 @@
         }
       ],
       "use_cases": [
-        "高质量全景场景采集",
-        "固定或手持参考采集",
-        "载荷和遮挡比较"
+        "High-quality panoramic scene capture",
+        "Fixed or handheld reference capture",
+        "Payload and occlusion comparison"
       ],
       "estimated_geometry": {
         "body_depth_mm": 38.61
@@ -1002,9 +1002,9 @@
         }
       ],
       "use_cases": [
-        "旧模块化设备复用",
-        "前向采集",
-        "安装空间比较"
+        "Legacy modular equipment reuse",
+        "Forward-facing capture",
+        "Installation clearance comparison"
       ],
       "estimated_geometry": {
         "body_depth_mm": 26.892
@@ -1047,9 +1047,9 @@
         }
       ],
       "use_cases": [
-        "旧模块化设备复用",
-        "全景观察",
-        "安装空间比较"
+        "Legacy modular equipment reuse",
+        "Panoramic observation",
+        "Installation clearance comparison"
       ],
       "estimated_geometry": {
         "body_depth_mm": 33.54
@@ -1092,9 +1092,9 @@
         }
       ],
       "use_cases": [
-        "旧模块化设备复用",
-        "前向参考采集",
-        "载荷和安装空间比较"
+        "Legacy modular equipment reuse",
+        "Forward-facing reference capture",
+        "Payload and installation clearance comparison"
       ],
       "estimated_geometry": {
         "body_depth_mm": 39.176
@@ -1138,9 +1138,9 @@
         }
       ],
       "use_cases": [
-        "机器人安装空间与碰撞检查",
-        "深度与双目视觉硬件载荷比较",
-        "机器人感知设备布局"
+        "Installation clearance and collision checks",
+        "Depth and stereo hardware payload comparison",
+        "Perception hardware layout"
       ],
       "estimated_geometry": {
         "lens_radius_mm": 4.0
@@ -1183,9 +1183,9 @@
         }
       ],
       "use_cases": [
-        "机器人安装空间与碰撞检查",
-        "深度与双目视觉硬件载荷比较",
-        "机器人感知设备布局"
+        "Installation clearance and collision checks",
+        "Depth and stereo hardware payload comparison",
+        "Perception hardware layout"
       ],
       "estimated_geometry": {
         "lens_radius_mm": 4.64
@@ -1233,9 +1233,9 @@
         }
       ],
       "use_cases": [
-        "机器人安装空间与碰撞检查",
-        "深度与双目视觉硬件载荷比较",
-        "机器人感知设备布局"
+        "Installation clearance and collision checks",
+        "Depth and stereo hardware payload comparison",
+        "Perception hardware layout"
       ],
       "estimated_geometry": {
         "lens_radius_mm": 4.84
@@ -1284,9 +1284,9 @@
         }
       ],
       "use_cases": [
-        "机器人安装空间与碰撞检查",
-        "深度与双目视觉硬件载荷比较",
-        "机器人感知设备布局"
+        "Installation clearance and collision checks",
+        "Depth and stereo hardware payload comparison",
+        "Perception hardware layout"
       ],
       "estimated_geometry": {
         "lens_radius_mm": 7.15

@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="oak_d">
+  <link name="oak_d_link">
+    <inertial>
+      <origin xyz="0 0 0.02725" rpy="0 0 0" />
+      <mass value="0.115" />
+      <inertia ixx="0.000144423229167" iyy="3.89011458333e-05" izz="0.000126394583333" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual name="contact_gold">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/contact_gold.obj" scale="1 1 1" />
+      </geometry>
+      <material name="contact_gold">
+        <color rgba="0.640000 0.480000 0.200000 1.000000" />
+      </material>
+    </visual>
+    <visual name="glass_coating">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/glass_coating.obj" scale="1 1 1" />
+      </geometry>
+      <material name="glass_coating">
+        <color rgba="0.075000 0.090000 0.125000 1.000000" />
+      </material>
+    </visual>
+    <visual name="housing">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/housing.obj" scale="1 1 1" />
+      </geometry>
+      <material name="housing">
+        <color rgba="0.190000 0.195000 0.200000 1.000000" />
+      </material>
+    </visual>
+    <visual name="lens_ring">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/lens_ring.obj" scale="1 1 1" />
+      </geometry>
+      <material name="lens_ring">
+        <color rgba="0.140000 0.150000 0.170000 1.000000" />
+      </material>
+    </visual>
+    <visual name="markings">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/markings.obj" scale="1 1 1" />
+      </geometry>
+      <material name="markings">
+        <color rgba="0.740000 0.750000 0.760000 1.000000" />
+      </material>
+    </visual>
+    <visual name="optical_glass">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/optical_glass.obj" scale="1 1 1" />
+      </geometry>
+      <material name="optical_glass">
+        <color rgba="0.021000 0.035000 0.044000 1.000000" />
+      </material>
+    </visual>
+    <visual name="rubber">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/rubber.obj" scale="1 1 1" />
+      </geometry>
+      <material name="rubber">
+        <color rgba="0.027000 0.029000 0.032000 1.000000" />
+      </material>
+    </visual>
+    <visual name="screw_metal">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/screw_metal.obj" scale="1 1 1" />
+      </geometry>
+      <material name="screw_metal">
+        <color rgba="0.310000 0.320000 0.340000 1.000000" />
+      </material>
+    </visual>
+    <visual name="seam">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/seam.obj" scale="1 1 1" />
+      </geometry>
+      <material name="seam">
+        <color rgba="0.008000 0.009000 0.012000 1.000000" />
+      </material>
+    </visual>
+    <collision name="body">
+      <geometry>
+        <mesh filename="../assets/meshes/collision/body.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision name="body_bar">
+      <geometry>
+        <mesh filename="../assets/meshes/collision/body_bar.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision name="body_stem">
+      <geometry>
+        <mesh filename="../assets/meshes/collision/body_stem.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="oak_d_mount" />
+  <joint name="oak_d_mount_fixed" type="fixed">
+    <parent link="oak_d_link" />
+    <child link="oak_d_mount" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="oak_d_left_lens_surface" />
+  <joint name="oak_d_left_lens_surface_fixed" type="fixed">
+    <parent link="oak_d_link" />
+    <child link="oak_d_left_lens_surface" />
+    <origin xyz="0.0165 -0.0375 0.0425" rpy="-1.57079632679 0 -1.57079632679" />
+  </joint>
+  <link name="oak_d_rgb_lens_surface" />
+  <joint name="oak_d_rgb_lens_surface_fixed" type="fixed">
+    <parent link="oak_d_link" />
+    <child link="oak_d_rgb_lens_surface" />
+    <origin xyz="0.0165 0 0.0425" rpy="-1.57079632679 0 -1.57079632679" />
+  </joint>
+  <link name="oak_d_right_lens_surface" />
+  <joint name="oak_d_right_lens_surface_fixed" type="fixed">
+    <parent link="oak_d_link" />
+    <child link="oak_d_right_lens_surface" />
+    <origin xyz="0.0165 0.0375 0.0425" rpy="-1.57079632679 0 -1.57079632679" />
+  </joint>
+</robot>

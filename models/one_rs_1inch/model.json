@@ -4,7 +4,7 @@
   "brand": "Insta360",
   "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Body depth and the division between body and lens protrusion are estimates. Complete nominal ONE RS Core, Battery Base and 1-Inch Wide Angle Lens configuration; independent fixed exterior, with no module separation or assembly mechanics.",
   "visual": "assets/meshes/one_rs_1inch_visual.glb",
-  "urdf": "urdf/insta360_one_rs_1inch.urdf",
+  "urdf": "urdf/one_rs_1inch.urdf",
   "config": "config/one_rs_1inch.json",
   "root_link": "one_rs_1inch_link",
   "mount_link": "one_rs_1inch_mount",
@@ -31,6 +31,6 @@
   "appearance_sources": [
     "https://onlinemanual.insta360.com/oners/en-us/camera/firstuse/introduction"
   ],
-  "mjcf": "mjcf/insta360_one_rs_1inch.xml",
+  "mjcf": "mjcf/one_rs_1inch.xml",
   "sensor_manifest": "config/sensors.json"
 }

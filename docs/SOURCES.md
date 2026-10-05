@@ -8,13 +8,13 @@ dimensions are normalized to width, height and depth in millimeters, and mass is
 converted to kilograms. A dimension order printed on a manufacturer page should
 not be assumed to match the project coordinate order.
 
-The second exterior revision additionally uses manufacturer product photographs,
-parts diagrams and mechanical views to distinguish each model. Reference indexes
+Exterior details use manufacturer product photographs, parts diagrams and
+mechanical views to distinguish each model. Reference indexes
 are linked in [appearance notes](APPEARANCE.md). Images remain local references;
 exported texture maps are independently generated surface normals. Fine geometry
 and optical layers are estimates, even where their layout follows an official view.
 
-Sources checked on 2026-10-03:
+## Specification sources
 
 - [X6 hardware specifications and X series comparison](https://onlinemanual.insta360.com/x6/en-us/specs/hardware): X6, X5, X4 Air, X4, X3, ONE X2 and ONE X nominal envelope and mass; published body depth where available.
 - [GO 3S hardware specifications](https://onlinemanual.insta360.com/go3s/en-us/specs/hardware): standalone GO 3S and GO 3, and folded Action Pod.
@@ -25,18 +25,19 @@ Sources checked on 2026-10-03:
 - [ONE RS 1-Inch 360 Edition official product specifications](https://www.insta360.com/product/insta360-oners/1inch-360): complete vertical 360 configuration.
 - [ONE R Twin Edition official product specifications](https://www.insta360.com/product/insta360-oner_twin-edition): complete 4K Wide Angle and Dual-Lens 360 configurations.
 - [ONE R 1-Inch Edition official product specifications](https://www.insta360.com/product/insta360-oner_1inch-edition): complete 1-Inch configuration.
-
-- [RealSense D400 series datasheet, Revision 021, October 2025](https://dev.realsenseai.com/download/42003/): D435i nominal envelope and 75 g mass (Table 3-52), and D455 nominal envelope and 116 g mass (Table 3-53).
-- [Stereolabs ZED 2i official store](https://www.stereolabs.com/store/products/zed-2i): 175.25 × 30.25 × 43.10 mm exterior and 230 g nominal mass.
-- [Luxonis OAK-D official datasheet](https://github.com/luxonis/oak-hardware/blob/master/BW1098OAK_USB3C/Datasheet/OAK-D_Datasheet.pdf): December 2021 mechanical drawing on p5 gives the original enclosure width 110 mm, height 54.5 mm and total depth 33 mm.
+- [RealSense D400 series datasheet, Revision 021, October 2025](https://dev.realsenseai.com/download/42003/): D435i nominal envelope and mass (Table 3-52), and D455 nominal envelope and mass (Table 3-53).
+- [Stereolabs ZED 2i official store](https://www.stereolabs.com/store/products/zed-2i): nominal exterior and mass.
+- [Luxonis OAK-D official datasheet](https://github.com/luxonis/oak-hardware/blob/master/BW1098OAK_USB3C/Datasheet/OAK-D_Datasheet.pdf): December 2021 mechanical drawing on page 5 gives the original enclosure dimensions.
 - [Archived Luxonis hardware documentation, mirrored by Distrelec](https://media.distrelec.com/Web/Downloads/_t/ds/A00110-INTL_eng_tds.pdf): manufacturer-authored Dimensions and Weight section gives 115 g total original OAK-D mass; this is a legacy nominal value rather than a certification of the currently sold SKU.
 
-The detailed X5 exterior also uses [official component diagrams](https://onlinemanual.insta360.com/x5/en-us/camera/productdescription/first)
+The X5 exterior also uses [official component diagrams](https://onlinemanual.insta360.com/x5/en-us/camera/productdescription/first)
 and [official product photographs](https://store.insta360.com/product/x5) as visual
 references. No product photograph or purchased mesh is redistributed.
 
-Only manufacturer envelope dimensions and nominal mass are treated as sourced
-measurements. Body depth is estimated when the source publishes only overall
+## Modeling limits
+
+Published envelope dimensions, display dimensions where provided, and nominal
+mass are sourced values. Body depth is estimated when the source publishes only overall
 depth. Lens curvature and position, controls, ports, screen placement, body
 rounding, colors, mounts, center of mass and inertia are independently estimated.
 The detailed X5 display size follows official specifications; its other small

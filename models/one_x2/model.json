@@ -4,7 +4,7 @@
   "brand": "Insta360",
   "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Body depth and the division between body and lens protrusion are estimates. ONE X2 is labelled X2 in the official comparison table; dimension axes are normalized to width, height and depth.",
   "visual": "assets/meshes/one_x2_visual.glb",
-  "urdf": "urdf/insta360_one_x2.urdf",
+  "urdf": "urdf/one_x2.urdf",
   "config": "config/one_x2.json",
   "root_link": "one_x2_link",
   "mount_link": "one_x2_mount",
@@ -32,6 +32,6 @@
   "appearance_sources": [
     "https://www.insta360.com/product/insta360-onex2"
   ],
-  "mjcf": "mjcf/insta360_one_x2.xml",
+  "mjcf": "mjcf/one_x2.xml",
   "sensor_manifest": "config/sensors.json"
 }

@@ -4,7 +4,7 @@
   "brand": "Insta360",
   "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Body depth and the division between body and lens protrusion are estimates.",
   "visual": "assets/meshes/x3_visual.glb",
-  "urdf": "urdf/insta360_x3.urdf",
+  "urdf": "urdf/x3.urdf",
   "config": "config/x3.json",
   "root_link": "x3_link",
   "mount_link": "x3_mount",
@@ -32,6 +32,6 @@
   "appearance_sources": [
     "https://onlinemanual.insta360.com/x3/en-us/camera/firstuse/introduction"
   ],
-  "mjcf": "mjcf/insta360_x3.xml",
+  "mjcf": "mjcf/x3.xml",
   "sensor_manifest": "config/sensors.json"
 }

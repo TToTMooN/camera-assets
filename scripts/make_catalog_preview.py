@@ -8,13 +8,13 @@ import math
 import argparse
 
 from PIL import Image, ImageDraw, ImageFont, ImageOps
-from make_detail_showcase import load_render
+from preview_assets import load_render
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 def save_png(image, path):
-    # Replace atomically rather than opening an existing cloud placeholder.
+    # Replace only after the complete image has been written.
     temporary = path.with_name('.' + path.name + '.tmp')
     image.save(temporary, format='PNG')
     temporary.replace(path)
@@ -106,7 +106,7 @@ def main():
     rows = math.ceil(len(cameras)/columns)
     sheet = Image.new("RGB", (columns*tile_w, 165+rows*tile_h+80), (241, 243, 244))
     draw = ImageDraw.Draw(sheet)
-    draw.text((40, 28), "KIWI / CAMERA ASSET LIBRARY", font=font(38), fill=(25, 34, 42))
+    draw.text((40, 28), "CAMERA MODEL LIBRARY", font=font(38), fill=(25, 34, 42))
     scale_text='common physical scale' if args.software else 'individual studio framing'
     draw.text((40, 80), f"{len(cameras)} configurations  /  {scale_text}  /  reference-informed exterior", font=font(23), fill=(70, 80, 88))
     draw.text((40, 115), "Actual delivered geometry. Published envelope + mass; fine geometry, mounts and inertia remain unmeasured.", font=font(20), fill=(82, 92, 101))
@@ -117,7 +117,6 @@ def main():
             image=ImageOps.pad(studio_images[camera['id']],(440,465),color=(241,243,244))
         else:
             image = render(model_dir)
-        save_png(image, model_dir / "preview/catalog.png")
         sheet.paste(image, (x+20, y))
         draw.text((x+27, y+470), camera["name"].replace("Insta360 ", ""), font=font(22), fill=(28, 37, 45))
         dim = f"{camera['width_mm']:g} x {camera['height_mm']:g} x {camera['overall_depth_mm']:g} mm"

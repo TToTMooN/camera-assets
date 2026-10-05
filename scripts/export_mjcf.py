@@ -146,10 +146,10 @@ def export_model(model_id, free=False):
     if not output_dir.resolve().is_relative_to(model_dir.resolve()):
         raise ValueError("MJCF output directory escapes model directory")
     output_dir.mkdir(parents=True, exist_ok=True)
-    output_path = output_dir / f"insta360_{model_id}.xml"
+    output_path = output_dir / f"{model_id}.xml"
     if not output_path.resolve().is_relative_to(model_dir.resolve()):
         raise ValueError("MJCF output file escapes model directory")
-    mjcf = ET.Element("mujoco", model=f"insta360_{model_id}")
+    mjcf = ET.Element("mujoco", model=model_id)
     mjcf.append(ET.Comment("Independent approximate geometry; fixed sites are geometric references, not calibrated optical frames."))
     ET.SubElement(mjcf, "compiler", angle="radian", inertiafromgeom="false", strippath="false")
     ET.SubElement(mjcf, "option", timestep="0.002", gravity="0 0 -9.81")

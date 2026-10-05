@@ -4,7 +4,7 @@
   "brand": "Insta360",
   "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Body depth and the division between body and lens protrusion are estimates. Standalone camera only; Action Pod is a separate catalog accessory.",
   "visual": "assets/meshes/go3_visual.glb",
-  "urdf": "urdf/insta360_go3.urdf",
+  "urdf": "urdf/go3.urdf",
   "config": "config/go3.json",
   "root_link": "go3_link",
   "mount_link": "go3_mount",
@@ -33,6 +33,6 @@
     "https://res.insta360.com/static/d78e79ba23e097dc53578184664348ca/GO3.png",
     "https://res.insta360.com/static/d70a8e271d0c8e5a4b14a658777c1e31/GO%203S_UserManual_EN.pdf"
   ],
-  "mjcf": "mjcf/insta360_go3.xml",
+  "mjcf": "mjcf/go3.xml",
   "sensor_manifest": "config/sensors.json"
 }

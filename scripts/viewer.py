@@ -48,7 +48,7 @@ def main(argv=None):
         initial_data = load_model(args.model)
     except (OSError, KeyError, ValueError) as error:
         parser.error(f"Cannot load {args.model}: {error}")
-    server = viser.ViserServer(host=args.host, port=args.port, label="KIWI camera asset library")
+    server = viser.ViserServer(host=args.host, port=args.port, label="Camera Model Library")
     server.gui.configure_theme(dark_mode=True, show_logo=False,
                                show_share_button=False, brand_color=(58, 185, 206))
     server.gui.main_panel.dock_right()

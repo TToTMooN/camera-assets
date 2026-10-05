@@ -4,7 +4,7 @@
   "brand": "Insta360",
   "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Action Pod only, with its screen folded. Mass excludes the standalone camera. Docking cavity, hinge and exact connection geometry are approximate; no docked or articulated assembly is supplied. Manufacturer confirms GO 3 and GO 3S Action Pod compatibility; the original GO 3 Action Pod requires updated firmware when used with GO 3S. The geometric proxy does not validate docking fit.",
   "visual": "assets/meshes/go3_action_pod_visual.glb",
-  "urdf": "urdf/insta360_go3_action_pod.urdf",
+  "urdf": "urdf/go3_action_pod.urdf",
   "config": "config/go3_action_pod.json",
   "root_link": "go3_action_pod_link",
   "mount_link": "go3_action_pod_mount",
@@ -46,6 +46,6 @@
     "https://res.insta360.com/dynamic/store/eb7db16e0bde83d9b32b97c18c4fc12e/731_5501c62c-446e-4e6f-a6f6-7c8719e046bf.png",
     "https://res.insta360.com/static/d70a8e271d0c8e5a4b14a658777c1e31/GO%203S_UserManual_EN.pdf"
   ],
-  "mjcf": "mjcf/insta360_go3_action_pod.xml",
+  "mjcf": "mjcf/go3_action_pod.xml",
   "sensor_manifest": "config/sensors.json"
 }

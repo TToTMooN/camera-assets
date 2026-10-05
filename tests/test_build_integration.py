@@ -5,6 +5,7 @@ from pathlib import Path
 import importlib
 import json
 import math
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -50,7 +51,7 @@ class BuilderIntegrationTests(unittest.TestCase):
         self.assertIsNotNone(ET.parse(directory / metadata["mjcf"]).find("worldbody/body/freejoint"))
         camera["height_mm"] = 110
         directory, metadata, exported = self.build(camera)
-        self.assertEqual(metadata["mjcf"], "mjcf/insta360_fixturecam.xml")
+        self.assertEqual(metadata["mjcf"], "mjcf/fixturecam.xml")
         self.assertIsNone(exported.find("worldbody/body/freejoint"), "Rebuild must refresh the default mounted export")
         self.assertNotEqual(exported.find("worldbody/body/inertial").get("diaginertia"), initial_inertia)
         source = ET.parse(directory / metadata["urdf"]).find("link/inertial/inertia")
@@ -69,9 +70,9 @@ class BuilderIntegrationTests(unittest.TestCase):
         mesh.export(directory / "assets/meshes/x5_visual.obj")
         mesh.export(directory / "assets/meshes/collision/body.stl")
         (directory / "config/x5.json").write_text(json.dumps(dict(mass_kg=.2)))
-        metadata = dict(urdf="urdf/insta360_x5.urdf", config="config/x5.json", visual="assets/meshes/x5_visual.glb")
+        metadata = dict(urdf="urdf/x5.urdf", config="config/x5.json", visual="assets/meshes/x5_visual.glb")
         (directory / "model.json").write_text(json.dumps(metadata))
-        urdf = '''<robot name="insta360_x5">
+        urdf = '''<robot name="x5">
   <link name="x5_link"><inertial><mass value="0.2"/><inertia ixx="0.0001" iyy="0.0001" izz="0.0001" ixy="0" ixz="0" iyz="0"/></inertial>
     <visual><geometry><mesh filename="../assets/meshes/x5_visual.obj"/></geometry></visual>
     <collision><geometry><mesh filename="../assets/meshes/collision/body.stl"/></geometry></collision>
@@ -94,6 +95,35 @@ class BuilderIntegrationTests(unittest.TestCase):
                 np.testing.assert_allclose([roll, pitch, yaw], [-math.pi/2, 0, -sign*math.pi/2], atol=1e-10)
                 quaternion = tuple(np.fromstring(sites[name].get("quat"), sep=" "))
                 np.testing.assert_allclose(exporter.rotate(quaternion, (0, 0, 1)), (sign, 0, 0), atol=1e-10)
+
+    def test_x5_urdf_source_builder_uses_package_root_and_canonical_filename(self):
+        directory = self.root / "models/x5"
+        for subdirectory in ("assets/meshes/visual", "config", "urdf"):
+            (directory / subdirectory).mkdir(parents=True, exist_ok=True)
+        config = dict(width_mm=46, height_mm=124.5, body_depth_mm=26.2,
+                      overall_depth_mm=38.2, mass_kg=.2, com_height_mm=62.25,
+                      lens_center_height_mm=104)
+        (directory / "config/x5.json").write_text(json.dumps(config))
+        body = trimesh.creation.box(extents=[.0262, .046, .1245])
+        body.apply_translation([0, 0, .06225])
+        body.export(directory / "assets/meshes/x5_visual.obj")
+        body.export(directory / "assets/meshes/visual/body.obj")
+        (directory / "assets/visual_manifest.json").write_text(json.dumps([
+            dict(name="body", file="../assets/meshes/visual/body.obj", rgba=[.2, .2, .2, 1])]))
+        scripts = self.root / "scripts/x5"
+        scripts.mkdir(parents=True)
+        script = scripts / "build_urdf.py"
+        script.write_text((SCRIPTS / "x5/build_urdf.py").read_text())
+        result = subprocess.run([sys.executable, str(script)], cwd=self.root,
+                                capture_output=True, text=True, check=False)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        path = directory / "urdf/x5.urdf"
+        robot = ET.parse(path)
+        self.assertEqual(robot.getroot().get("name"), "x5")
+        self.assertEqual([p.name for p in (directory / "urdf").glob("*.urdf")], ["x5.urdf"])
+        frames = exporter.geometric_frames(robot.getroot(), "x5_link")
+        for name, sign in (("x5_front_lens_surface", 1), ("x5_rear_lens_surface", -1)):
+            np.testing.assert_allclose(exporter.rotate(frames[name][1], (0, 0, 1)), (sign, 0, 0), atol=1e-10)
 
 
 if __name__ == "__main__":

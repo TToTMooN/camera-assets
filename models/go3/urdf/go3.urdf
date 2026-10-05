@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="go3">
+  <link name="go3_link">
+    <inertial>
+      <origin xyz="0 0 0.0272" rpy="0 0 0" />
+      <mass value="0.0355" />
+      <inertia ixx="1.06935466667e-05" iyy="1.03470666667e-05" izz="3.53106666667e-06" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    <visual name="front_polymer">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/front_polymer.obj" scale="1 1 1" />
+      </geometry>
+      <material name="front_polymer">
+        <color rgba="0.930000 0.935000 0.925000 1.000000" />
+      </material>
+    </visual>
+    <visual name="gasket">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/gasket.obj" scale="1 1 1" />
+      </geometry>
+      <material name="gasket">
+        <color rgba="0.120000 0.135000 0.145000 1.000000" />
+      </material>
+    </visual>
+    <visual name="gold">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/gold.obj" scale="1 1 1" />
+      </geometry>
+      <material name="gold">
+        <color rgba="0.720000 0.510000 0.170000 1.000000" />
+      </material>
+    </visual>
+    <visual name="housing">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/housing.obj" scale="1 1 1" />
+      </geometry>
+      <material name="housing">
+        <color rgba="0.910000 0.915000 0.905000 1.000000" />
+      </material>
+    </visual>
+    <visual name="lens_coating">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/lens_coating.obj" scale="1 1 1" />
+      </geometry>
+      <material name="lens_coating">
+        <color rgba="0.078000 0.123000 0.133000 1.000000" />
+      </material>
+    </visual>
+    <visual name="lens_ring">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/lens_ring.obj" scale="1 1 1" />
+      </geometry>
+      <material name="lens_ring">
+        <color rgba="0.105000 0.115000 0.122000 1.000000" />
+      </material>
+    </visual>
+    <visual name="optical_glass">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/optical_glass.obj" scale="1 1 1" />
+      </geometry>
+      <material name="optical_glass">
+        <color rgba="0.014000 0.024000 0.028000 1.000000" />
+      </material>
+    </visual>
+    <visual name="pupil">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/pupil.obj" scale="1 1 1" />
+      </geometry>
+      <material name="pupil">
+        <color rgba="0.004000 0.007000 0.009000 1.000000" />
+      </material>
+    </visual>
+    <visual name="rear_polymer">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/rear_polymer.obj" scale="1 1 1" />
+      </geometry>
+      <material name="rear_polymer">
+        <color rgba="0.870000 0.885000 0.875000 1.000000" />
+      </material>
+    </visual>
+    <visual name="rim_edge">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/rim_edge.obj" scale="1 1 1" />
+      </geometry>
+      <material name="rim_edge">
+        <color rgba="0.250000 0.278000 0.290000 1.000000" />
+      </material>
+    </visual>
+    <visual name="silver">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/silver.obj" scale="1 1 1" />
+      </geometry>
+      <material name="silver">
+        <color rgba="0.670000 0.710000 0.735000 1.000000" />
+      </material>
+    </visual>
+    <visual name="slot">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/slot.obj" scale="1 1 1" />
+      </geometry>
+      <material name="slot">
+        <color rgba="0.025000 0.033000 0.039000 1.000000" />
+      </material>
+    </visual>
+    <visual name="status">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/status.obj" scale="1 1 1" />
+      </geometry>
+      <material name="status">
+        <color rgba="0.200000 0.790000 0.890000 1.000000" />
+      </material>
+    </visual>
+    <visual name="subtle_print">
+      <geometry>
+        <mesh filename="../assets/meshes/visual/subtle_print.obj" scale="1 1 1" />
+      </geometry>
+      <material name="subtle_print">
+        <color rgba="0.780000 0.800000 0.790000 1.000000" />
+      </material>
+    </visual>
+    <collision name="body">
+      <geometry>
+        <mesh filename="../assets/meshes/collision/body.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+    <collision name="front_lens">
+      <geometry>
+        <mesh filename="../assets/meshes/collision/front_lens.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="go3_mount" />
+  <joint name="go3_mount_fixed" type="fixed">
+    <parent link="go3_link" />
+    <child link="go3_mount" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+  <link name="go3_front_lens_surface" />
+  <joint name="go3_front_lens_surface_fixed" type="fixed">
+    <parent link="go3_link" />
+    <child link="go3_front_lens_surface" />
+    <origin xyz="0.0116 0 0.0416" rpy="-1.57079632679 0 -1.57079632679" />
+  </joint>
+</robot>

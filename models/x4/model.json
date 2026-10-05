@@ -4,7 +4,7 @@
   "brand": "Insta360",
   "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration.",
   "visual": "assets/meshes/x4_visual.glb",
-  "urdf": "urdf/insta360_x4.urdf",
+  "urdf": "urdf/x4.urdf",
   "config": "config/x4.json",
   "root_link": "x4_link",
   "mount_link": "x4_mount",
@@ -33,6 +33,6 @@
   "appearance_sources": [
     "https://onlinemanual.insta360.com/x4/en-us/camera/productdescription/first"
   ],
-  "mjcf": "mjcf/insta360_x4.xml",
+  "mjcf": "mjcf/x4.xml",
   "sensor_manifest": "config/sensors.json"
 }

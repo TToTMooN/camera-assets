@@ -1,7 +1,7 @@
 {
   "name": "Insta360 X5",
   "visual": "assets/meshes/x5_visual.glb",
-  "urdf": "urdf/insta360_x5.urdf",
+  "urdf": "urdf/x5.urdf",
   "config": "config/x5.json",
   "status": "Reference-based exterior; not specimen-measured",
   "family": "360",
@@ -22,7 +22,7 @@
     }
   ],
   "origin_description": "Bottom mount reference; interface and COM are unmeasured",
-  "mjcf": "mjcf/insta360_x5.xml",
+  "mjcf": "mjcf/x5.xml",
   "brand": "Insta360",
   "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent approximate exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Uses the existing detailed X5 exterior model. Screen dimensions follow manufacturer data; small details and component placement are inferred.",
   "lens_surface_frames": [

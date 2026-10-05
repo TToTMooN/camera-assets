@@ -4,7 +4,7 @@
   "brand": "Insta360",
   "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Body depth and the division between body and lens protrusion are estimates. Complete nominal Core, Battery Base and 360 Lens configuration; independent fixed exterior, with no module separation or assembly mechanics.",
   "visual": "assets/meshes/one_rs_360_visual.glb",
-  "urdf": "urdf/insta360_one_rs_360.urdf",
+  "urdf": "urdf/one_rs_360.urdf",
   "config": "config/one_rs_360.json",
   "root_link": "one_rs_360_link",
   "mount_link": "one_rs_360_mount",
@@ -32,6 +32,6 @@
   "appearance_sources": [
     "https://onlinemanual.insta360.com/oners/en-us/camera/firstuse/introduction"
   ],
-  "mjcf": "mjcf/insta360_one_rs_360.xml",
+  "mjcf": "mjcf/one_rs_360.xml",
   "sensor_manifest": "config/sensors.json"
 }

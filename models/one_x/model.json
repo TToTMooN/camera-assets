@@ -4,7 +4,7 @@
   "brand": "Insta360",
   "accuracy_notes": "Manufacturer nominal exterior envelope and mass; independent reference-informed detailed exterior, controls, lens positions, mounting geometry, center of mass and inertia. No measured specimen or optical calibration. Body depth and the division between body and lens protrusion are estimates. The official dimensions are reordered into width, height and depth.",
   "visual": "assets/meshes/one_x_visual.glb",
-  "urdf": "urdf/insta360_one_x.urdf",
+  "urdf": "urdf/one_x.urdf",
   "config": "config/one_x.json",
   "root_link": "one_x_link",
   "mount_link": "one_x_mount",
@@ -32,6 +32,6 @@
   "appearance_sources": [
     "https://www.insta360.com/product/insta360-onex"
   ],
-  "mjcf": "mjcf/insta360_one_x.xml",
+  "mjcf": "mjcf/one_x.xml",
   "sensor_manifest": "config/sensors.json"
 }
